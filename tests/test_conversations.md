@@ -5,7 +5,7 @@
 ## open incident
 * greet: hello
     - utter_greet
-    - utter_help
+    - utter_green_help
 * open_incident: I need to open an incident
     - open_incident_form
     - form{"name": "open_incident_form"}
@@ -21,7 +21,7 @@
 ## email incident
 * greet: hello
     - utter_greet
-    - utter_help
+    - utter_green_help
 * problem_email: I have a problem with my email
     - open_incident_form
     - form{"name": "open_incident_form"}
@@ -32,6 +32,6 @@
     - open_incident_form
     - form{"name": "open_incident_form"}
 * help: help
-    - utter_help
+    - utter_green_help
     - open_incident_form
     - form{"name": null}
