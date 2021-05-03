@@ -1,6 +1,7 @@
 version: "2.0"
 
 intents:
+- bot_challenge
 - greet
 - goodbye
 - password_reset
