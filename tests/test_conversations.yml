@@ -1,0 +1,44 @@
+version: "2.0"
+stories:
+- story: out of scope path
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+- story: help
+  steps:
+  - intent: help
+  - action: utter_green_help
+- story: thank
+  steps:
+  - intent: thank
+  - action: utter_welcome
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_green_help
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- story: green hydrojet machine
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_green_help
+  - intent: hydrojet_machine_option
+  - action: utter_green_option_hydrojet_machine
+- story: green booster pump
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_green_help
+  - intent: booster_pump_option
+  - action: utter_green_option_booster_pump
+- story: green vacuum truck
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_green_help
+  - intent: vacuum_truck_option
+  - action: utter_green_option_vacuum_truck
