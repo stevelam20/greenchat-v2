@@ -1,0 +1,177 @@
+version: "2.0"
+
+intents:
+- greet
+- goodbye
+- password_reset
+- inform
+- thank
+- help
+- problem_email
+- open_incident:
+    use_entities: []
+- incident_status
+- out_of_scope
+- restart
+- affirm
+- deny
+- chitchat
+- hydrojet_machine_option
+- booster_pump_option
+- vacuum_truck_option
+
+
+entities:
+- priority
+- number
+- email
+
+slots:
+  confirm:
+    type: any
+  incident_title:
+    type: any
+  problem_description:
+    type: any
+  username:
+    type: any
+    initial_value: "Rasa user"
+  number:
+    type: any
+  email:
+    type: any
+
+
+responses:
+  utter_out_of_scope:
+  - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
+  utter_greet:
+  - text: Hello, {username}! I'm your IT Helpdesk Assistant.
+  - text: Hi, I am an IT Helpdesk Assistant. Ready to help you out.
+  utter_goodbye:
+  - text: Goodbye!
+  utter_ask_incident_title:
+  - text: What should we use for the title of this incident?
+  utter_ask_problem_description:
+  - text: What is the problem description for the issue?
+  utter_help:
+  - text: "I can help you open a service request ticket, or check the status of your open incidents.
+      \nYou can ask me things like:
+      \n- Open an incident
+      \n- Help me reset my password
+      \n- I'm having a issue with my email
+      \n- What's the status of the ticket I opened?"
+
+  utter_green_help:
+  - text: "I can asisst you with some training and learning of following operations
+      \nYou can choose the following learning options
+      \n- Operating of Hydrojet Machine
+      \n- Operating of Booster Pump
+      \n- Operating of Vacuum Truck"
+
+  utter_green_option_hydrojet_machine:
+  - text: "Awesome, in here we will be covering the following chapters 20 000 psi hydrojet machine
+      \n1. Hydrojet Checklist/Inspection
+      \n2. Hoses Connection To Gun
+      \n3. Start of Engine
+      \n4. Check For Leakage
+      \n5. Monitoring
+      \n6. Stop of Engine
+      \n7. Housekeeping"
+  utter_green_option_booster_pump:
+  - text: "Great, in here we shall be covering the following chapters for 12 bar booster pump
+      \n1. Booster Pump Setup & Inspection
+      \n2. Booster Pump Hoses Connection
+      \n3. Booster Pump Start Engine
+      \n4. Booster Pump Speed Lever Adjustment
+      \n5. Booster Pump Monitor Pressure
+      \n6. Booster Pump Check For Leakage
+      \n7. Booster Pump Initiating To Power Down Procedures
+      \n8. Booster Pump Speed Lever Down Adjustment
+      \n9. Booster Pump Pull The Stop Lever
+      \n10. Booster Pump Pressure Discharge
+      \n11. Booster Pump Outlet Valve
+      \n12. Booster Pump Disconnection All Hoses"
+  utter_green_option_vacuum_truck:
+  - text: "Perfect, in here we are covering the following chapters for Vacuum Truck
+      \n1. Vacuum Truck Pre-Work Setup
+      \n2. Vacuum Truck Engine Start
+      \n3. Vacuum Truck Hoses Connection
+      \n4. Vacuum Truck Configuration Onboard Control Panel
+      \n5. Vacuum Truck Commence Suction
+      \n6. Vacuum Truck End Suction
+      \n7. Vacuum Truck End Configuration Onboard Control Panel
+      \n8. Vacuum Truck Disconnection Transfer Hoses
+      \n9. Vacuum Truck Power-Down
+      \n10. Housekeeping"
+  utter_welcome:
+  - text: You're welcome!
+  utter_default:
+  - text: I didn't quite understand that. Could you rephrase?
+  utter_ask_confirm:
+  - text: "Should I open an incident with the following details?
+          \n    Title: {incident_title}
+          \n    Description: {problem_description}"
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No, cancel the incident
+      payload: /deny
+  utter_incident_creation_canceled:
+  - text: Alright, I have cancelled the incident.
+  utter_ask_whatelse:
+    - text: What else can I help you with?
+
+  utter_chitchat/ask_weather:
+    - text: I am not a weather presenter but I hope it will be sunny outside.
+  utter_chitchat/bot_challenge:
+    - text: Yes, indeed. I was created by a developer of Steve.
+  utter_chitchat/not_human_challenge:
+    - text: No, I am not a human.
+    - text: You must have misunderstood me as a human.
+    - text: Don't take me as a human. I am created by smartest human in the world.
+    - text: If you think so, please ask my master Steve.
+  utter_ask_number:
+    - text: What is your user id?
+  utter_ask_email:
+    - text: What is your email?
+
+actions:
+- action_incident_status
+
+forms:
+  open_incident_form:
+    email:
+      - type: from_entity
+        entity: email
+    problem_description:
+      - type: from_text
+        not_intent:
+          - incident_status
+          - help
+          - affirm
+          - deny
+    incident_title:
+      - type: from_trigger_intent
+        intent: password_reset
+        value: "Problem with password"
+      - type: from_trigger_intent
+        intent: problem_email
+        value: "Problem with email"
+      - type: from_text
+        not_intent:
+          - incident_status
+          - help
+          - affirm
+          - deny
+    confirm:
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+
+session_config:
+  session_expiration_time: 0.0
+  carry_over_slots_to_new_session: true

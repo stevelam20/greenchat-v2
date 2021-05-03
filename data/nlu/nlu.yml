@@ -1,0 +1,196 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - hey there
+    - hi there
+    - hello there
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+    - see ya
+    - buh bye
+- intent: thank
+  examples: |
+    - thanks!
+    - thank you
+    - thanks a lot
+    - great thanks
+    - appreciate it
+    - cool thanks
+- intent: password_reset
+  examples: |
+    - need to reset my password
+    - need help resetting my password
+    - I can't reset my password
+    - need help with my password
+    - having issues resetting my password
+    - freaking password won't work
+    - reset my password
+    - password reset
+    - forgot my password and can't reset it
+- intent: open_incident
+  examples: |
+    - I need to open an incident
+    - Can you open a case for me
+    - I have an issue I need to open a incident for
+    - open incident
+    - Open a ticket
+    - can you help me open a incident please
+    - I want to open a new incident
+    - I want to open a incident
+    - I'm having a weird issue.
+    - I'm having a problem
+    - I'm having a issue I need to open a incident for.
+    - I have a issue I need to open a case for.
+    - open an incident for aileen.mottern@example.com
+- intent: help
+  examples: |
+    - I need help
+    - what can you help me with
+    - can you help me
+    - what can you do
+    - I need some help
+    - help me
+    - can you please help me
+- intent: problem_email
+  examples: |
+    - my outlook application won't open
+    - I'm having issues with outlook.
+    - issues with outlook
+    - outlook application will not open
+    - there's a problem with my email
+    - something is broken with outlook
+    - I can't log in to my email
+    - can't log in to outlook
+    - my email won't let me log in
+    - i have a problem with my email
+- intent: inform
+  examples: |
+    - [low](priority)
+    - [medium](priority)
+    - [high](priority)
+    - it should be a [low](priority) priority
+    - it should be [medium](priority)
+    - [escalated]{"entity": "priority", "value": "high"}
+    - [escalate]{"entity": "priority", "value": "high"}
+    - [super high](priority)
+    - [12345](number)
+    - [54231](number)
+    - it' [345512](number)
+    - [j@email.com] (email)
+    - [c@email.com](email)
+    - it's [d@email.com](email)
+- intent: out_of_scope
+  examples: |
+    - what is the square root of 5
+    - I want to know the weather
+    - what is the meaning of life.
+    - Fridge Isn't Running
+    - my tv isn't working
+    - I want a pizza
+    - my washing machine isn't working
+    - what year is it
+    - order a pizza
+    - I want to order a pizza
+    - what is the weather today
+    - what is the weather
+- intent: incident_status
+  examples: |
+    - I want to check if my ticket has been closed
+    - what's the status of my incident?
+    - Has the incident been closed yet?
+    - Is my ticket in progress?
+    - What has happened with my open ticket?
+    - what's going on with the incident I opened?
+    - Do I have any open incidents at the moment?
+    - Can I check the status of my open tickets?
+    - Can I see the status of the ticket I opened?
+    - Check ticket status
+    - check incident status
+    - look up ticket status
+- intent: hydrojet_machine_option
+  examples: |
+    - I would like to choose hydrojet machine training
+    - I would like to learn about hydrojet machine
+    - Please guide me on hydrojet machine
+    - Please train me on hydrojet machine
+    - Please teach me on hydrojet machine
+    - how to operate hydrojet machine?
+    - Show me how to operate hydrojet machine
+- intent: booster_pump_option
+  examples: |
+    - I would like to choose booster pump training
+    - I would like to learn about booster pump
+    - Please guide me on booster pump
+    - Please train me on booster pump
+    - Please teach me on booster pump
+    - how to operate booster pump?
+    - Show me how to operate booster pump
+- intent: vacuum_truck_option
+  examples: |
+    - I would like to choose vacuum truck training
+    - I would like to learn about vacuum truck
+    - Please guide me on vacuum truck
+    - Please train me on vacuum truck
+    - Please teach me on vacuum truck
+    - how to operate vacuum truck?
+    - Show me how to operate vacuum truck
+- intent: affirm
+  examples: |
+    - yes
+    - yes please
+    - yes I would
+    - please do
+    - yup
+    - yep
+    - that's right
+    - indeed
+    - Yes, please
+    - yeah
+    - sure
+    - yes thanks
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - no thanks
+    - not that one
+    - don't use that
+    - please no
+    - no don't do that
+    - no, use abraham.lincoln@example.com
+- intent: chitchat/ask_weather
+  examples: |
+    - What's the weather outside?
+    - Can you tell me the weather
+    - I would like to know what the weather will be tomorrow?
+    - Tell me the weather
+- intent: chitchat/bot_challenge
+  examples: |
+    - Are you a bot?
+    - Am i talking to a chatbot?
+    - Are you a bot of a human?
+    - I think you are a bot
+- intent: chitchat/not_human_challenge
+  examples: |
+    - Are you a human?
+    - you human?
+    - are you a dude?
+    - human you?
+    - Am i talkiing to a human?
+    - Are you born to be human?
+- synonym: high
+  examples: |
+    - urgent
+    - really important
+    - escalated
+    - escalate
