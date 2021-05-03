@@ -10,6 +10,11 @@ rules:
   - intent: chitchat
   - action: utter_chitchat
 
+- rule: Handle chathydrojet
+  steps:
+  - intent: chathydrojet
+  - action: utter_chathydrojet
+
 - rule: Start incident form
   steps:
   - or:

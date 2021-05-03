@@ -188,6 +188,140 @@ nlu:
     - human you?
     - Am i talkiing to a human?
     - Are you born to be human?
+
+## IT IS ALL ABOUT HYDROJET MACHINE
+## OPERATIONS
+
+- intent: chathydrojet/positioning_hydrojet_machine
+  examples: |
+    - What if the machine is placed on uneven ground?
+    - What about putting on slope?
+    - What floor/surface can the machine be place on?
+    - Where can i put the machine?
+    - How can i put the machine?
+    - How shall we place the machine?
+    - Does the machine need to be placed on flat ground?
+    - Can the machine operate efficiently on uneven ground?
+    - Can we place on anywhere?
+    - Will it be possible to put on anywhere?
+    - Must it place on even ground?
+    - Is it possible to place the machine on any ground?
+    - If it is place on uneven ground/surface?
+    - Can the machine be place any surfaces/ground?
+- intent: chathydrojet/transfer_hydrojet_machine
+  examples: |
+    - What is the means of transport for the crane?
+    - What can i shift the machine?
+    - What is the lorry crane? (Show Picture)
+    - What does the lorry crane look like? (Show Picture)
+    - What is crane?
+    - How to transport/move the Hydrojetting machine from point to point?
+    - How can the machine be transported?
+    - How to lift the hydrojet machine?
+    - How to move the hydrojet machine?
+    - How to switch the hydrojet machine?
+    - How to transfer the hydrojet machine?
+    - How can i shift the hydrojet machine?
+    - How can i bring the hydrojet machine?
+    - How does the lorry crane look like? (Show Picture)
+    - Can the hydojet machine be transported?
+    - Can the hydrojet machine be move?
+    - Can you help me on lifting the hydrojet machine?
+    - Show me the lorry crane (Show Picture)
+    - Show me a photo/picture/image of the lorry crane (Show Picture)
+    - Can i see a photo/picture/image of the lorry crane? (Show Picture)
+    - Do you have a photo/picture/image of the lorry crane? (Show Picture)
+- intent: chathydrojet/hydrojet_machine_checklist
+  examples: |
+    - What is needed to power on the hydrojet machine?
+    - When to check for hydrojet machine battery connection?
+    - How do you check the battery indicator?
+    - how to know if the hydrojet is able to power up?
+- intent: chathydrojet/hydrojet_diesel_checklist
+  examples: |
+    - what is the hydrojet machine diesel level?
+    - where to check for hydrojet machine diesel level?
+    - where is the hydrojet machine diesel indicator?
+    - when do i check for hydrojet machine diesel level?
+    - how do you check the hydrojet machine diesel level?
+    - how to know if there is enough diesel in hydrojet machine?
+- intent: chathydrojet/hydrojet_water_tank_checklist
+  examples: |
+    - where to fill up the water of hydrojet machine?
+    - When do you fill up the water of hydrojet machine?
+    - How much to fill up the water tank of hydrojet machine?
+
+## TECHNICAL SPECIFICATIONS
+
+- intent: chathydrojet/hydrojet_weight
+  examples: |
+    - What is the weight of the hydrojet Machine?
+    - What is the weight limit of hydrojet machine?
+    - How much does hydrojet machine weight
+    - How heavy is the Hydrojet machine?
+    - The Weight of hydrojet machine?
+- intent: chathydrojet/hydrojet_dimension
+  examples: |
+    - What is the measurement for hydrojet machine?
+    - What is the size of the hydrojet machine?
+    - What is the size limit of the hydrojet machine?
+    - Where can i know the dimension of the hydrojet machine?
+    - How much size is the hydrojet machine?
+    - How big is the hydrojet machine?
+    - How do you measure the hydrojet machine?
+- intent: chathydrojet/hydrojet_max_pressure
+  examples: |
+    - What is the maximum pressure of the hydrojet machine?
+    - What is the pressure limit of the hydrojet machine?
+    - What is the max hydrojet machine pressure?
+    - What is the maximum working pressure for hydrojet machine?
+    - What is the highest operating pressue of the hydrojet machine?
+    - What is the working pressure maximum for the hydrojet machine?
+    - What is the maximum working pressire for hydrojet machine?
+    - How much is the maximum pressure for the hydrojet machine?
+    - How do you know the maximum pressure of hydrojet machine?
+    - How much must the maximum pressure reach for cleaning using hydrojet machine?
+    - hydrojet machine maximum pressure is?
+    - Hydrojet machine highest pressure?
+- intent: chathydrojet/hydrojet_buildin_watertank
+  examples: |
+    - What is the capacity of the water tank for hydrojet machine?
+    - What is the size of the hydrojet machine water tank?
+    - What is the use of the hydrojet machine water tank?
+    - How many litres does the hydrojet machine water hold?
+    - How many gallon does the hydrojet machine water hold?
+    - How much water is in the hydrojet machine tank?
+    - How much water can the hydrojet machine internal water tank hold?
+    - How big is the hydrojet machine water tank
+    - hydrojet machine water tank how big?
+    - hydrojet machine water tank size?
+- intent: chathydrojet/hydrojet_diesel_tank_size
+  examples: |
+    - What is the capacity of the hydrojet machine diesel tank?
+    - What is the size of the hydrojet machine diesel tank?
+    - What is the use of the hydrojet machine diesel tank?
+    - How many litres does the hydrojet machine diesel tank hold?
+    - How many gallon does the hydrojet machine diesel tank hold?
+    - How much diesel is in the hydrojet machine diesel tank?
+    - How much diesel can the hydrojet machine diesel tank hold?
+    - How big is the hydrojet machine diesel tank?
+    - Diesel tank of hydrojet machine how big?
+    - Size of hydrojet machine diesel tank?
+- intent: chathydrojet/hydrojet_splitter_use
+  examples: |
+    - What is a hydrojet machine splitter?
+    - What is the function of the hydrojet machine splitter?
+    - What equipment is required when i need to use 2 hydrojet guns?
+    - Where can i monitor the hydrojet machine pressure?
+    - Where is the monitor gauge for hydrojet machine?
+    - Where is the secondary pressure gauge for hydrojet machine gun?
+    - Why do i need a spliter for hydrojet machine?
+    - When will i need a hydrojet machine splitter?
+    - How can the dual hydrojet machine gun connection be connected?
+    - Can the splitter gauge for hydrojet machine be use?
+    - Secondary pressure gauge for hydrojet machine gun?
+    - Any secondary monitor gauge for hydrojet machine gun available?
+
 - synonym: high
   examples: |
     - urgent

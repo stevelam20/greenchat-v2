@@ -16,6 +16,7 @@ intents:
 - affirm
 - deny
 - chitchat
+- chathydrojet
 - hydrojet_machine_option
 - booster_pump_option
 - vacuum_truck_option
@@ -43,6 +44,47 @@ slots:
 
 
 responses:
+
+  ## HYDROJET CHAT LIST ONLY
+
+  ## OPERATIONS
+  utter_chathydrojet/positioning_hydrojet_machine:
+  - text: It is recommended that the machine is to be place on a flat and even ground
+  utter_chathydrojet/transfer_hydrojet_machine:
+  - text: A lorry crane is required to lift up/down the machine and transport it to the required destination
+    image:
+  utter_chathydrojet/hydrojet_machine_checklist:
+  - text: Check the battery polarity to ensure good connection and also battery indicator.
+  utter_chathydrojet/hydrojet_diesel_checklist:
+  - text: Ensure suffiecient Euro 4 and above diesel is used in the diesel tank by looking at the diesel gauge.
+  utter_chathydrojet/hydrojet_water_tank_checklist:
+  - text: Ensure water is full in the water tank.
+    image:
+
+  ## TECHNICAL SPECIFICATIONS
+  utter_chathydrojet/hydrojet_weight:
+  - text: The hydrojetting machine weight up to 5000kg.
+    image:
+  utter_chathydrojet/hydrojet_dimension:
+  - text: Dimension of the Hydrojet machine (LengthxWidthxHeight) = 5m X 2.5m X 2m
+    image:
+  utter_chathydrojet/hydrojet_max_pressure:
+  - text: There are two different setting for hydrojet machine maximum operating pressure.
+          \n 1) 20 000 PSI or,
+          \n 2) 40 000 PSI
+          \n
+          \nAs for 40 000 PSI you will required to install ultra high pressure kit.
+          \n
+          \nTo know more on the installion for 40 000PSI please look for our supervisor.
+  utter_chathydrojet/hydrojet_buildin_watertank:
+  - text: The water tank capacity can contain up to 379Liters which is (100 gallon) and it should contain fresh water or demin water only.
+    image:
+  utter_chathydrojet/hydrojet_diesel_tank_size:
+  - text: Hydrojet machine diesel tank capacity can store up to 246 Liters which is 65 gallon of diesel
+  utter_chathydrojet/hydrojet_splitter_use:
+  - text: Splitter is use as a dual gun connection and a secondary pressure gauge is available to monitor the pressure.
+
+
   utter_out_of_scope:
   - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
   utter_greet:
@@ -56,54 +98,54 @@ responses:
   - text: What is the problem description for the issue?
   utter_help:
   - text: "I can help you open a service request ticket, or check the status of your open incidents.
-      \nYou can ask me things like:
-      \n- Open an incident
-      \n- Help me reset my password
-      \n- I'm having a issue with my email
-      \n- What's the status of the ticket I opened?"
+          \nYou can ask me things like:
+          \n- Open an incident
+          \n- Help me reset my password
+          \n- I'm having a issue with my email
+          \n- What's the status of the ticket I opened?"
 
   utter_green_help:
   - text: "I can asisst you with some training and learning of following operations
-      \nYou can choose the following learning options
-      \n- Operating of Hydrojet Machine
-      \n- Operating of Booster Pump
-      \n- Operating of Vacuum Truck"
+          \nYou can choose the following learning options
+          \n- Operating of Hydrojet Machine
+          \n- Operating of Booster Pump
+          \n- Operating of Vacuum Truck"
 
   utter_green_option_hydrojet_machine:
   - text: "Awesome, in here we will be covering the following chapters 20 000 psi hydrojet machine
-      \n1. Hydrojet Checklist/Inspection
-      \n2. Hoses Connection To Gun
-      \n3. Start of Engine
-      \n4. Check For Leakage
-      \n5. Monitoring
-      \n6. Stop of Engine
-      \n7. Housekeeping"
+          \n1. Hydrojet Checklist/Inspection
+          \n2. Hoses Connection To Gun
+          \n3. Start of Engine
+          \n4. Check For Leakage
+          \n5. Monitoring
+          \n6. Stop of Engine
+          \n7. Housekeeping"
   utter_green_option_booster_pump:
   - text: "Great, in here we shall be covering the following chapters for 12 bar booster pump
-      \n1. Booster Pump Setup & Inspection
-      \n2. Booster Pump Hoses Connection
-      \n3. Booster Pump Start Engine
-      \n4. Booster Pump Speed Lever Adjustment
-      \n5. Booster Pump Monitor Pressure
-      \n6. Booster Pump Check For Leakage
-      \n7. Booster Pump Initiating To Power Down Procedures
-      \n8. Booster Pump Speed Lever Down Adjustment
-      \n9. Booster Pump Pull The Stop Lever
-      \n10. Booster Pump Pressure Discharge
-      \n11. Booster Pump Outlet Valve
-      \n12. Booster Pump Disconnection All Hoses"
+          \n1. Booster Pump Setup & Inspection
+          \n2. Booster Pump Hoses Connection
+          \n3. Booster Pump Start Engine
+          \n4. Booster Pump Speed Lever Adjustment
+          \n5. Booster Pump Monitor Pressure
+          \n6. Booster Pump Check For Leakage
+          \n7. Booster Pump Initiating To Power Down Procedures
+          \n8. Booster Pump Speed Lever Down Adjustment
+          \n9. Booster Pump Pull The Stop Lever
+          \n10. Booster Pump Pressure Discharge
+          \n11. Booster Pump Outlet Valve
+          \n12. Booster Pump Disconnection All Hoses"
   utter_green_option_vacuum_truck:
   - text: "Perfect, in here we are covering the following chapters for Vacuum Truck
-      \n1. Vacuum Truck Pre-Work Setup
-      \n2. Vacuum Truck Engine Start
-      \n3. Vacuum Truck Hoses Connection
-      \n4. Vacuum Truck Configuration Onboard Control Panel
-      \n5. Vacuum Truck Commence Suction
-      \n6. Vacuum Truck End Suction
-      \n7. Vacuum Truck End Configuration Onboard Control Panel
-      \n8. Vacuum Truck Disconnection Transfer Hoses
-      \n9. Vacuum Truck Power-Down
-      \n10. Housekeeping"
+          \n1. Vacuum Truck Pre-Work Setup
+          \n2. Vacuum Truck Engine Start
+          \n3. Vacuum Truck Hoses Connection
+          \n4. Vacuum Truck Configuration Onboard Control Panel
+          \n5. Vacuum Truck Commence Suction
+          \n6. Vacuum Truck End Suction
+          \n7. Vacuum Truck End Configuration Onboard Control Panel
+          \n8. Vacuum Truck Disconnection Transfer Hoses
+          \n9. Vacuum Truck Power-Down
+          \n10. Housekeeping"
   utter_welcome:
   - text: You're welcome!
   utter_default:
