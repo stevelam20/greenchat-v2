@@ -126,6 +126,8 @@ nlu:
     - Please teach me on hydrojet machine
     - how to operate hydrojet machine?
     - Show me how to operate hydrojet machine
+    - operating hydrojet machine
+    - operating of hydrojet machine
 - intent: booster_pump_option
   examples: |
     - I would like to choose booster pump training
@@ -188,10 +190,6 @@ nlu:
     - human you?
     - Am i talkiing to a human?
     - Are you born to be human?
-
-## IT IS ALL ABOUT HYDROJET MACHINE
-## OPERATIONS
-
 - intent: chathydrojet/positioning_hydrojet_machine
   examples: |
     - What if the machine is placed on uneven ground?
@@ -250,9 +248,6 @@ nlu:
     - where to fill up the water of hydrojet machine?
     - When do you fill up the water of hydrojet machine?
     - How much to fill up the water tank of hydrojet machine?
-
-## TECHNICAL SPECIFICATIONS
-
 - intent: chathydrojet/hydrojet_weight
   examples: |
     - What is the weight of the hydrojet Machine?
@@ -321,10 +316,9 @@ nlu:
     - Can the splitter gauge for hydrojet machine be use?
     - Secondary pressure gauge for hydrojet machine gun?
     - Any secondary monitor gauge for hydrojet machine gun available?
-
 - synonym: high
   examples: |
-    - urgent
-    - really important
     - escalated
     - escalate
+    - urgent
+    - really important
