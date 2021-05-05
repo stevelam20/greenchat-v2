@@ -17,6 +17,7 @@ intents:
 - deny
 - chitchat
 - chathydrojet
+- chatbooster
 - hydrojet_machine_option
 - booster_pump_option
 - vacuum_truck_option
@@ -84,6 +85,55 @@ responses:
   utter_chathydrojet/hydrojet_splitter_use:
   - text: Splitter is use as a dual gun connection and a secondary pressure gauge is available to monitor the pressure.
 
+## END OF HYDROJET MACHINE ##
+
+## BOOSTER PUMP MACHINE ##
+
+## GENERAL
+
+  utter_chatbooster/booster_intro:
+  - text: Booster pump is to increase high flow low pressure water jetting
+          \nIt provides the extra boost needed to bring fluid pressure to the desire level
+    image: https://imgur.com/Y6xxsDB
+  utter_chatbooster/booster_types:
+  - text: There are three types of booster pump pressure to achieve
+          \n1) 10 Bar
+          \n2) 15 Bar
+          \n3) 20 Bar
+  utter_chatbooster/deploy_booster_pump:
+  - text: Booster pump is use for tank cleaning operations.
+          \nIt is to connect to the gamma jet/sprinkle system that will be attached on the top of the tank.
+          \nBesides that, you may also use as a pump to transfer less hazardous products.
+  utter_chatbooster/booster_operator:
+  - text: Booster pump is not a complicated machine to operate
+          \nThere are not many procedure to operate a booster pump.
+          \nThus, the booster pump operator is able to operate without any specific training program.
+          \nFor better understanding, Booster Pump operator must go through the introduction video.
+  utter_chatbooster/booster_material_usage:
+  - text: Water is recommended for the usage
+          \nOil/corrossive material are not recommended as it will damage the internal part of the machine and shorten the life span of the machine
+          \nIt is advisable to verify the Material Safety Data Sheet (MSDS) before using the booster pump.
+  utter_chatbooster/booster_operating_procedures:
+  - text: I can show you the operating procedures
+
+##  BOOSTER OPERATIONS
+
+  utter_chatbooster/booster_in_out_connection:
+  - text: The inlet and outlet connection on the booster pump are 3" (inch) male adapter
+          \nYou may refer to the attached image (Fig. 1.2)
+    image: https://imgur.com/Y6xxsDB
+  utter_chatbooster/booster_hoses_connection:
+  - text: The inlet and outlet of the hoses connection must be 3" (inch) female Camlock coupling
+          \n Please refer to attached image (Fig. 1.1)
+    image: https://imgur.com/XaILht5
+  utter_chatbooster/booster_speed_lever:
+  - text: Speed lever is a means of controlling an engine's power by regulating the amount of fuel or air intake.
+          \nBooster pump operator can increase or decrease the power of the engine by adjusting the speed lever.
+          \nTo maintain the booster pump pressure, the speed leverl is to slide to the desired pressure and lock it by tightening the but.
+          \nYou may refer to the attached image (Fig. 1.6)
+    image: https://imgur.com/GxMQiG3
+
+##                    END OF BOOSTER PUMP         ##
 
   utter_out_of_scope:
   - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
