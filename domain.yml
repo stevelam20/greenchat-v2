@@ -70,7 +70,7 @@ responses:
   - text: Dimension of the Hydrojet machine (LengthxWidthxHeight) = 5m X 2.5m X 2m
     image:
   utter_chathydrojet/hydrojet_max_pressure:
-  - text: "There are two different setting for hydrojet machine maximum operating pressure.\n\n1) 20 000 PSI or,\n2) 40 000 PSI\nAs for 40 000 PSI\n\nyou will required to install ultra high pressure kit.\n\nTo know more on the installion for 40 000PSI please look for our supervisor."
+  - text: "There are two different setting for hydrojet machine maximum operating pressure.\n1) 20 000 PSI or,\n2) 40 000 PSI\nAs for 40 000 PSI\nyou will required to install ultra high pressure kit.\nTo know more on the installion for 40 000PSI please look for our supervisor."
   utter_chathydrojet/hydrojet_buildin_watertank:
   - text: The water tank capacity can contain up to 379Liters which is (100 gallon) and it should contain fresh water or demin water only.
     image:
@@ -93,7 +93,6 @@ responses:
     image: "https://i.imgur.com/Y6xxsDB.jpg"
   utter_chatbooster/booster_types:
   - text: "There are three types of booster pump pressure to achieve\n
-  
           1) 10 Bar\n
           2) 15 Bar\n
           3) 20 Bar"
