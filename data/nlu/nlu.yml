@@ -316,6 +316,170 @@ nlu:
     - Can the splitter gauge for hydrojet machine be use?
     - Secondary pressure gauge for hydrojet machine gun?
     - Any secondary monitor gauge for hydrojet machine gun available?
+
+
+  ## THE END OF HYDROJET MACHINE
+
+                ## BOOSTER PUMP MACHINE
+## GENERAL
+
+- intent: chatbooster/booster_intro
+  examples: |
+    - What is a Booster Pump?
+    - What is the Booster pump?
+    - What can a booster pump do?
+    - What is the booster pump used for?
+    - What is the booster pump for?
+    - What is the purpose of the booster pump?
+    - What is the function of the booster pump?
+    - What is Booster Pump?
+    - Why do i need a booster pump?
+    - How does a booster pump work?
+    - How does the booster pump look like?
+    - How the booster pump looks like?
+    - Can you tell me more about booster pump?
+    - Can you show me how a booster pump looks like?
+    - Can you show me the booster pump?
+    - Do you have a picture of booster pump?
+    - Show me booster pump image
+    - Show me booster pump picture
+- intent: chatbooster/booster_types
+  examples: |
+    - What is the maximum pressure for Booster pump?
+    - What the booster pump pressure is?
+    - What is the pressure limit of a booster pump?
+    - What is the highest pressure allowable on the booster pump?
+    - What is the most pressure the booster pump can produce?
+    - What is the operating pressure of the booster pump?
+    - What's the pressure of the booster pump?
+    - What is the safe operating pressure of the booster pump?
+    - How much pressure can the booster pump produces?
+    - The pressure of the booster pump?
+    - Pressure of the booster pump?
+    - Booster pump pressure is?
+- intent: chatbooster/deploy_booster_pump
+  examples: |
+    - What is the application of booster pump?
+    - What else can i use the booster pump for?
+    - Where can i deploy a booster pump?
+    - Where do i implement a booster pump?
+    - Where can i implement a booster pump?
+    - Where do i deploy a booster pump?
+    - Where can i apply a booster pump to?
+    - Can i use a booster pump for tank cleaning?
+    - Beside tank cleaning, can i use for other purposes?
+    - Can i use for other product transfer?
+- intent: chatbooster/booster_operator
+  examples: |
+    - What kind of training do booster pump operators need to go through/undergo?
+    - What is the requirement/criteria for booster pump operators to be qualified?
+    - What are the training requirement needed for a booster pump operator?
+    - How does someone qualify to be a booster pump operator?
+    - How do I train the booster pump operator?
+    - How can i be a booster pump operator?
+    - Does a person need to be competent to operate the booster pump?
+    - Do you need to be trained to operate Booster Pump?
+    - Is the booster pump operator required to attend any training/license?
+    - Must booster pump operators go through training before starting work?
+    - Can anyone be a booster pump operator?
+- intent: chatbooster/booster_material_usage
+  examples: |
+    - What type of product is suitable to use for booster pump?
+    - What is the suitable/recommended substance/liquid for the booster pump?
+    - What should the booster pump be filled with?
+    - What type of material is suitable to use on booster pump?
+    - What will happen to the booster pump, if oil/corrosive material is being used?
+    - Why can't we use oil/corrosive material on the booster pump?
+    - Can we use the booster pump to transfer oil/corrosive materials?
+    - Besides water, what other material can be used on the booster pump?
+    - Can any substance/liquid be used on the booster pump?
+    - Can we use corrosive material on the booster pump?
+    - Will the booster pump be damaged if oil/corrosive material is being used?
+    - If oil/corrosive material is being used, what will happen to the booster pump?
+    - Is there any specific product to be used on booster pump?
+    - Is there any specific material to be used on booster pump?
+
+##              PROMPTING TO ASK FOR THE TRAINING LEARNING VIDEO
+##              MAY BE ABLE TO REMOVE FROM CHATBOOSTER FAQ
+- intent: chatbooster/booster_operating_procedures
+  examples: |
+    - What are the booster pump operating procedures?
+    - How to use a booster pump?
+    - How does the booster pump function?
+    - How do i operate a booster pump?
+    - How to operate a booster pump?
+    - Can you show me how to operate the booster pump?
+    - Is there any booster pump operation procedures?
+
+##              CONSIDERED INTENT
+##  OPERATIONS
+
+- intent: chatbooster/booster_in_out_connection
+  examples: |
+    - What are the types of inlet and outlet connection on the booster pump?
+    - What type of inlet and outlet connection are used on the booster pump?
+    - What type of connector is used on the booster pump?
+    - What are the sizes of the inlet and outlet connection on the booster pump?
+    - What type of inlet and outlet connection are used on the booster pump?
+    - What does the inlet and outlet connection booster pump look like?
+    - What are the inlet and outlet connection of the booster pump?
+    - Where do i connect the hoses on the booster pump?
+    - Where can i find the inlet and outlet connection on the booster pump?
+    - Where can i find the inlet and outlet on the booster pump?
+    - Where can i connect the hoses to the inlet and outlet connection on the booster pump?
+    - Where do i connect the hose to the inlet and outlet connection on the booster pump?
+    - How big is the inlet and outlet connection on the booster pump?
+    - How does the inlet and outlet connection on the booster pump look like?
+    - How do i connect the booster pump?
+    - How can i connect the hoses to the inlet and outlet connection on the booster pump?
+    - How do i connect the hoses to the inlet and outlet connection on the booster pump?
+    - Are the inlet and outlet of the booster pump connection male adapter?
+    - Show me the inlet and outlet connection on the booster pump?
+    - Show me the photo/picture/image of the inlet and outlet connection on the booster pump?
+    - Can I see the photo/picture/ image of the inlet and outlet connection on the booster pump?
+    - Do you have photo/picture/image of the inlet and outlet connection on the booster pump?
+    - Can i know what size are the inlet and outlet connection on the booster pump?
+- intent: chatbooster/booster_hoses_connection
+  examples: |
+    - What type of inlet and outlet hoses connection to be connected on booster pump?
+    - What type of hoses connection to be used on the booster pump?
+    - What type of hose connectors to be used on the booster pump?
+    - What are the sizes of the inlet and outlet hoses connection on the booster pump?
+    - What does the booster pump hoses connection look like?
+    - What are the sizes of the inlet and outlet hoses connection on the booster pump?
+    - What type of inlet and outlet should be used on the booster pump?
+    - What are the hoses connection on the booster pump?
+    - What do the booster pump inlet and outlet hoses connection look like?
+    - What type of connection to use to connect to the inlet and outlet connection on the booster pump?
+    - How big are the booster pump inlet and outlet hoses connection?
+    - How does the inlet and outlet hoses connection look like?
+    - How do i connect to the booster pump?
+    - How do i connect to the inlet and outlet on the booster pump?
+    - Is it a camlock coupling connection for booster pump?
+    - Show me the booster pump hose connection
+    - Show me the photo/picture/image of the booster pump inlet and outlet hoses connection
+    - Can I see the photo/picture/ image of the booster pump inlet and outlet hose connection?
+    - Do you have the photo/picture/image of the booster pump inlet and outlet hose connection?
+    - Can i know what are sizes of the booster pump inlet and outlet hoses connection?
+- intent: chatbooster/booster_speed_lever
+  examples: |
+    - What is the booster pump speed lever?
+    - What does the booster pump speed lever look like?
+    - Where is the booster pump speed lever?
+    - Where do I maintain/adjust the pressure of the booster pump
+    - Why do i need to lock the booster pump speed lever?
+    - How does the booster pump speed lever look like?
+    - How can i maintain/adjust the pressure of the booster pump?
+    - How to maintain/adjust the pressure of the booster pump?
+    - Show me the booster pump speed lever
+    - Show me the photo/picture/image of the booster pump speed lever
+    - Can I see the photo/picture/ image of the booster pump speed lever?
+    - Do you have the photo/picture/image of the booster pump speed lever?
+    - Can i maintain/adjust the pressure of the booster pump?
+    - Is it possible to maintain/adjust the pressure of the booster pump?
+
+=======
+>>>>>>> 301edab664d5d38680a3606ccda638db952872c8
 - synonym: high
   examples: |
     - escalated
