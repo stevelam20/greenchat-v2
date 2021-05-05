@@ -71,13 +71,11 @@ responses:
     image:
   utter_chathydrojet/hydrojet_max_pressure:
   - text: |
-            "There are two different setting for hydrojet machine maximum operating pressure:
-            
-            1) 20 000 PSI or,
-            2) 40 000 PSI
-            
-            As for 40 000 PSI you will required to install ultra high pressure kit.
-            To know more on the installion for 40 000PSI please look for our supervisor."
+      "There are two different setting for hydrojet machine maximum operating pressure.
+      1) 20 000 PSI or,
+      2) 40 000 PSI
+      As for 40 000 PSI you will required to install ultra high pressure kit."
+      To know more on the installion for 40 000PSI please look for our supervisor.
   utter_chathydrojet/hydrojet_buildin_watertank:
   - text: The water tank capacity can contain up to 379Liters which is (100 gallon) and it should contain fresh water or demin water only.
     image:
@@ -93,18 +91,17 @@ responses:
 ## GENERAL
 
   utter_chatbooster/booster_intro:
-  - text: "Booster pump is to increase high flow low pressure water jetting
+  - text: "Booster pump is to increase high flow low pressure water jetting.\n
           
-          It provides the extra boost needed to bring fluid pressure to the desire level"
+          It provides the extra boost needed to bring fluid pressure to the desire level."
           
     image: "https://i.imgur.com/Y6xxsDB.jpg"
   utter_chatbooster/booster_types:
   - text: |
-            There are three types of booster pump pressure to achieve
-                
-                1) 10 Bar
-                2) 15 Bar
-                3) 20 Bar
+      "There are three types of booster pump pressure to achieve:
+      1) 10 Bar
+      2) 15 Bar
+      3) 20 Bar"
   utter_chatbooster/deploy_booster_pump:
   - text: |
             Booster pump is use for tank cleaning operations.
