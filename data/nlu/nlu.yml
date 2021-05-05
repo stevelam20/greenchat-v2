@@ -316,13 +316,6 @@ nlu:
     - Can the splitter gauge for hydrojet machine be use?
     - Secondary pressure gauge for hydrojet machine gun?
     - Any secondary monitor gauge for hydrojet machine gun available?
-
-
-  ## THE END OF HYDROJET MACHINE
-
-                ## BOOSTER PUMP MACHINE
-## GENERAL
-
 - intent: chatbooster/booster_intro
   examples: |
     - What is a Booster Pump?
@@ -343,6 +336,7 @@ nlu:
     - Do you have a picture of booster pump?
     - Show me booster pump image
     - Show me booster pump picture
+    - what is booster pump ?
 - intent: chatbooster/booster_types
   examples: |
     - What is the maximum pressure for Booster pump?
@@ -398,9 +392,6 @@ nlu:
     - If oil/corrosive material is being used, what will happen to the booster pump?
     - Is there any specific product to be used on booster pump?
     - Is there any specific material to be used on booster pump?
-
-##              PROMPTING TO ASK FOR THE TRAINING LEARNING VIDEO
-##              MAY BE ABLE TO REMOVE FROM CHATBOOSTER FAQ
 - intent: chatbooster/booster_operating_procedures
   examples: |
     - What are the booster pump operating procedures?
@@ -410,17 +401,12 @@ nlu:
     - How to operate a booster pump?
     - Can you show me how to operate the booster pump?
     - Is there any booster pump operation procedures?
-
-##              CONSIDERED INTENT
-##  OPERATIONS
-
 - intent: chatbooster/booster_in_out_connection
   examples: |
     - What are the types of inlet and outlet connection on the booster pump?
     - What type of inlet and outlet connection are used on the booster pump?
     - What type of connector is used on the booster pump?
     - What are the sizes of the inlet and outlet connection on the booster pump?
-    - What type of inlet and outlet connection are used on the booster pump?
     - What does the inlet and outlet connection booster pump look like?
     - What are the inlet and outlet connection of the booster pump?
     - Where do i connect the hoses on the booster pump?
@@ -446,7 +432,6 @@ nlu:
     - What type of hose connectors to be used on the booster pump?
     - What are the sizes of the inlet and outlet hoses connection on the booster pump?
     - What does the booster pump hoses connection look like?
-    - What are the sizes of the inlet and outlet hoses connection on the booster pump?
     - What type of inlet and outlet should be used on the booster pump?
     - What are the hoses connection on the booster pump?
     - What do the booster pump inlet and outlet hoses connection look like?
@@ -477,7 +462,6 @@ nlu:
     - Do you have the photo/picture/image of the booster pump speed lever?
     - Can i maintain/adjust the pressure of the booster pump?
     - Is it possible to maintain/adjust the pressure of the booster pump?
-
 - synonym: high
   examples: |
     - escalated
