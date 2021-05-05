@@ -21,6 +21,9 @@ pipeline:
 - name: ResponseSelector
   epochs: 100
   retrieval_intent: chathydrojet
+- name: ResponseSelector
+  epochs: 100
+  retrieval_intent: chatbooster
 - name: DucklingEntityExtractor
   url: https://duckling.botpress.io/
   dimensions: ["number", "email"]
