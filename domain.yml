@@ -98,9 +98,9 @@ responses:
   utter_chatbooster/booster_types:
   - text: "There are three types of booster pump pressure to achieve\n
   
-          \n 1) 10 Bar\n
-          \n 2) 15 Bar\n
-          \n 3) 20 Bar"
+          1) 10 Bar\n
+          2) 15 Bar\n
+          3) 20 Bar"
   utter_chatbooster/deploy_booster_pump:
   - text: Booster pump is use for tank cleaning operations.
           \nIt is to connect to the gamma jet/sprinkle system that will be attached on the top of the tank.
