@@ -337,6 +337,7 @@ nlu:
     - Show me booster pump image
     - Show me booster pump picture
     - what is booster pump ?
+    - what is booster pump
 - intent: chatbooster/booster_types
   examples: |
     - What is the maximum pressure for Booster pump?
