@@ -478,8 +478,6 @@ nlu:
     - Can i maintain/adjust the pressure of the booster pump?
     - Is it possible to maintain/adjust the pressure of the booster pump?
 
-=======
->>>>>>> 301edab664d5d38680a3606ccda638db952872c8
 - synonym: high
   examples: |
     - escalated
