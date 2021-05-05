@@ -96,13 +96,13 @@ responses:
           
           It provides the extra boost needed to bring fluid pressure to the desire level"
           
-    image: "https://imgur.com/Y6xxsDB"
+    image: "https://i.imgur.com/Y6xxsDB.jpg"
   utter_chatbooster/booster_types:
   - text: "There are three types of booster pump pressure to achieve
   
-          1) 10 Bar
-          2) 15 Bar
-          3) 20 Bar"
+          \n 1) 10 Bar
+          \n 2) 15 Bar
+          \n 3) 20 Bar"
   utter_chatbooster/deploy_booster_pump:
   - text: Booster pump is use for tank cleaning operations.
           \nIt is to connect to the gamma jet/sprinkle system that will be attached on the top of the tank.
@@ -113,9 +113,9 @@ responses:
           \nThus, the booster pump operator is able to operate without any specific training program.
           \nFor better understanding, Booster Pump operator must go through the introduction video.
   utter_chatbooster/booster_material_usage:
-  - text: Water is recommended for the usage
-          \nOil/corrossive material are not recommended as it will damage the internal part of the machine and shorten the life span of the machine
-          \nIt is advisable to verify the Material Safety Data Sheet (MSDS) before using the booster pump.
+  - text: "Water is recommended for the usage \n
+          \n Oil/corrossive material are not recommended as it will damage the internal part of the machine and shorten the life span of the machine
+          \n It is advisable to verify the Material Safety Data Sheet (MSDS) before using the booster pump."
   utter_chatbooster/booster_operating_procedures:
   - text: I can show you the operating procedures
 
