@@ -15,6 +15,11 @@ rules:
   - intent: chathydrojet
   - action: utter_chathydrojet
 
+- rule: Handle chatbooster
+  steps:
+  - intent: chatbooster
+  - action: utter_chatbooster
+
 - rule: Start incident form
   steps:
   - or:
