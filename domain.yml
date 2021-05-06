@@ -71,7 +71,7 @@ responses:
     image:
   utter_chathydrojet/hydrojet_max_pressure:
   - text: |
-      There are two different setting for hydrojet machine maximum operating pressure:
+      There are two different setting for hydrojet machine maximum operating pressure.
       1) 20 000 PSI or,
       2) 40 000 PSI
       As for 40 000 PSI you will required to install ultra high pressure kit.
@@ -91,53 +91,55 @@ responses:
 ## GENERAL
 
   utter_chatbooster/booster_intro:
-  - text: "Booster pump is to increase high flow low pressure water jetting.\n
-          
-          It provides the extra boost needed to bring fluid pressure to the desire level."
-          
-    image: "https://i.imgur.com/Y6xxsDB.jpg"
+  - text: |
+      Booster pump is to increase high flow low pressure water jetting
+
+      It provides the extra boost needed to bring fluid pressure to the desire level
+  image: https://i.imgur.com/Y6xxsDB.jpg
   utter_chatbooster/booster_types:
   - text: |
-      There are three types of booster pump pressure to achieve:
+      There are three types of booster pump pressure to achieve
       1) 10 Bar
       2) 15 Bar
       3) 20 Bar
   utter_chatbooster/deploy_booster_pump:
   - text: |
-            Booster pump is use for tank cleaning operations.
-            It is to connect to the gamma jet/sprinkle system that will be attached on the top of the tank.
-            Besides that, you may also use as a pump to transfer less hazardous products.
+      Booster pump is use for tank cleaning operations.
+
+      It is to connect to the gamma jet/sprinkle system that will be attached on the top of the tank.
+
+      Besides that, you may also use as a pump to transfer less hazardous products.
   utter_chatbooster/booster_operator:
-  - text: Booster pump is not a complicated machine to operate
-          \nThere are not many procedure to operate a booster pump.
-          \nThus, the booster pump operator is able to operate without any specific training program.
-          \nFor better understanding, Booster Pump operator must go through the introduction video.
-  utter_chatbooster/booster_material_usage:
   - text: |
-            "Water is recommended for the usage:
-            Oil/corrossive material are not recommended as it will damage the internal part of the machine and shorten the life span of the machine
-            It is advisable to verify the Material Safety Data Sheet (MSDS) before using the booster pump."
+      Booster pump is not a complicated machine to operate
+
+      There are not many procedure to operate a booster pump.
+
+      Thus, the booster pump operator is able to operate without any specific training program.
+
+      For better understanding, Booster Pump operator must go through the introduction video.
+  utter_chatbooster/booster_material_usage:
+  - text: Water is recommended for the usage
+          \nOil/corrossive material are not recommended as it will damage the internal part of the machine and shorten the life span of the machine
+          \nIt is advisable to verify the Material Safety Data Sheet (MSDS) before using the booster pump.
   utter_chatbooster/booster_operating_procedures:
   - text: I can show you the operating procedures
 
 ##  BOOSTER OPERATIONS
 
   utter_chatbooster/booster_in_out_connection:
-  - text: |
-            The inlet and outlet connection on the booster pump are 3" (inch) male adapter
-            You may refer to the attached image (Fig. 1.2)
+  - text: The inlet and outlet connection on the booster pump are 3" (inch) male adapter
+          \nYou may refer to the attached image (Fig. 1.2)
     image: https://imgur.com/Y6xxsDB
   utter_chatbooster/booster_hoses_connection:
-  - text: | 
-            The inlet and outlet of the hoses connection must be 3" (inch) female Camlock coupling
-            Please refer to attached image (Fig. 1.1)
+  - text: The inlet and outlet of the hoses connection must be 3" (inch) female Camlock coupling
+          \n Please refer to attached image (Fig. 1.1)
     image: https://imgur.com/XaILht5
   utter_chatbooster/booster_speed_lever:
-  - text: |
-            Speed lever is a means of controlling an engine's power by regulating the amount of fuel or air intake.
-            Booster pump operator can increase or decrease the power of the engine by adjusting the speed lever.
-            To maintain the booster pump pressure, the speed leverl is to slide to the desired pressure and lock it by tightening the but.
-            You may refer to the attached image (Fig. 1.6)
+  - text: Speed lever is a means of controlling an engine's power by regulating the amount of fuel or air intake.
+          \nBooster pump operator can increase or decrease the power of the engine by adjusting the speed lever.
+          \nTo maintain the booster pump pressure, the speed leverl is to slide to the desired pressure and lock it by tightening the but.
+          \nYou may refer to the attached image (Fig. 1.6)
     image: https://imgur.com/GxMQiG3
 
 ##                    END OF BOOSTER PUMP         ##
