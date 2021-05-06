@@ -462,6 +462,9 @@ nlu:
     - Do you have the photo/picture/image of the booster pump speed lever?
     - Can i maintain/adjust the pressure of the booster pump?
     - Is it possible to maintain/adjust the pressure of the booster pump?
+- intent: nlu_fallback
+  examples: |
+    - what are the types of inlet and outlet?
 - synonym: high
   examples: |
     - escalated
