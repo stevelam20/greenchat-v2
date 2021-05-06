@@ -1,74 +1,104 @@
-version: "2.0"
-
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
 intents:
-- greet
-- goodbye
-- password_reset
-- inform
-- thank
-- help
-- problem_email
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- password_reset:
+    use_entities: true
+- inform:
+    use_entities: true
+- thank:
+    use_entities: true
+- help:
+    use_entities: true
+- problem_email:
+    use_entities: true
 - open_incident:
     use_entities: []
-- incident_status
-- out_of_scope
-- restart
-- affirm
-- deny
-- chitchat
-- chathydrojet
-- chatbooster
-- hydrojet_machine_option
-- booster_pump_option
-- vacuum_truck_option
-
-
+- incident_status:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- restart:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- chitchat:
+    use_entities: true
+- chathydrojet:
+    use_entities: true
+- chatbooster:
+    use_entities: true
+- hydrojet_machine_option:
+    use_entities: true
+- booster_pump_option:
+    use_entities: true
+- vacuum_truck_option:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
 entities:
 - priority
 - number
 - email
-
 slots:
   confirm:
-    type: any
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
   incident_title:
-    type: any
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
   problem_description:
-    type: any
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
   username:
-    type: any
-    initial_value: "Rasa user"
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: Rasa user
+    auto_fill: true
+    influence_conversation: false
   number:
-    type: any
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
   email:
-    type: any
-
-
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
-
-  ## HYDROJET CHAT LIST ONLY
-
-  ## OPERATIONS
   utter_chathydrojet/positioning_hydrojet_machine:
   - text: It is recommended that the machine is to be place on a flat and even ground
   utter_chathydrojet/transfer_hydrojet_machine:
-  - text: A lorry crane is required to lift up/down the machine and transport it to the required destination
-    image:
+  - image: null
+    text: A lorry crane is required to lift up/down the machine and transport it to the required destination
   utter_chathydrojet/hydrojet_machine_checklist:
   - text: Check the battery polarity to ensure good connection and also battery indicator.
   utter_chathydrojet/hydrojet_diesel_checklist:
   - text: Ensure suffiecient Euro 4 and above diesel is used in the diesel tank by looking at the diesel gauge.
   utter_chathydrojet/hydrojet_water_tank_checklist:
-  - text: Ensure water is full in the water tank.
-    image:
-
-  ## TECHNICAL SPECIFICATIONS
+  - image: null
+    text: Ensure water is full in the water tank.
   utter_chathydrojet/hydrojet_weight:
-  - text: The hydrojetting machine weight up to 5000kg.
-    image:
+  - image: null
+    text: The hydrojetting machine weight up to 5000kg.
   utter_chathydrojet/hydrojet_dimension:
-  - text: Dimension of the Hydrojet machine (LengthxWidthxHeight) = 5m X 2.5m X 2m
-    image:
+  - image: null
+    text: Dimension of the Hydrojet machine (LengthxWidthxHeight) = 5m X 2.5m X 2m
   utter_chathydrojet/hydrojet_max_pressure:
   - text: |
       There are two different setting for hydrojet machine maximum operating pressure.
@@ -77,24 +107,17 @@ responses:
       As for 40 000 PSI you will required to install ultra high pressure kit.
       To know more on the installion for 40 000PSI please look for our supervisor.
   utter_chathydrojet/hydrojet_buildin_watertank:
-  - text: The water tank capacity can contain up to 379Liters which is (100 gallon) and it should contain fresh water or demin water only.
-    image:
+  - image: null
+    text: The water tank capacity can contain up to 379Liters which is (100 gallon) and it should contain fresh water or demin water only.
   utter_chathydrojet/hydrojet_diesel_tank_size:
   - text: Hydrojet machine diesel tank capacity can store up to 246 Liters which is 65 gallon of diesel
   utter_chathydrojet/hydrojet_splitter_use:
   - text: Splitter is use as a dual gun connection and a secondary pressure gauge is available to monitor the pressure.
-
-## END OF HYDROJET MACHINE ##
-
-## BOOSTER PUMP MACHINE ##
-
-## GENERAL
-
   utter_chatbooster/booster_intro:
-  - text: "Booster pump is to increase high flow low pressure water jetting.\n
-
-          It provides the extra boost needed to bring fluid pressure to the desire level."
-    image: "https://i.imgur.com/Y6xxsDB.jpg"
+  - image: https://i.imgur.com/8d0RZ51.jpg
+    text: |-
+      Booster pump is to increase high flow low pressure water jetting.
+      It provides the extra boost needed to bring fluid pressure to the desire level.
   utter_chatbooster/booster_types:
   - text: |
       There are three types of booster pump pressure to achieve
@@ -118,31 +141,18 @@ responses:
 
       For better understanding, Booster Pump operator must go through the introduction video.
   utter_chatbooster/booster_material_usage:
-  - text: Water is recommended for the usage
-          \nOil/corrossive material are not recommended as it will damage the internal part of the machine and shorten the life span of the machine
-          \nIt is advisable to verify the Material Safety Data Sheet (MSDS) before using the booster pump.
+  - text: Water is recommended for the usage \nOil/corrossive material are not recommended as it will damage the internal part of the machine and shorten the life span of the machine \nIt is advisable to verify the Material Safety Data Sheet (MSDS) before using the booster pump.
   utter_chatbooster/booster_operating_procedures:
   - text: I can show you the operating procedures
-
-##  BOOSTER OPERATIONS
-
   utter_chatbooster/booster_in_out_connection:
-  - text: The inlet and outlet connection on the booster pump are 3" (inch) male adapter
-          \nYou may refer to the attached image (Fig. 1.2)
-    image: https://imgur.com/Y6xxsDB
+  - image: https://imgur.com/Y6xxsDB
+    text: The inlet and outlet connection on the booster pump are 3" (inch) male adapter \nYou may refer to the attached image (Fig. 1.2)
   utter_chatbooster/booster_hoses_connection:
-  - text: The inlet and outlet of the hoses connection must be 3" (inch) female Camlock coupling
-          \n Please refer to attached image (Fig. 1.1)
-    image: https://imgur.com/XaILht5
+  - image: https://imgur.com/XaILht5
+    text: The inlet and outlet of the hoses connection must be 3" (inch) female Camlock coupling \n Please refer to attached image (Fig. 1.1)
   utter_chatbooster/booster_speed_lever:
-  - text: Speed lever is a means of controlling an engine's power by regulating the amount of fuel or air intake.
-          \nBooster pump operator can increase or decrease the power of the engine by adjusting the speed lever.
-          \nTo maintain the booster pump pressure, the speed leverl is to slide to the desired pressure and lock it by tightening the but.
-          \nYou may refer to the attached image (Fig. 1.6)
-    image: https://imgur.com/GxMQiG3
-
-##                    END OF BOOSTER PUMP         ##
-
+  - image: https://imgur.com/GxMQiG3
+    text: Speed lever is a means of controlling an engine's power by regulating the amount of fuel or air intake. \nBooster pump operator can increase or decrease the power of the engine by adjusting the speed lever. \nTo maintain the booster pump pressure, the speed leverl is to slide to the desired pressure and lock it by tightening the but. \nYou may refer to the attached image (Fig. 1.6)
   utter_out_of_scope:
   - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
   utter_greet:
@@ -155,123 +165,121 @@ responses:
   utter_ask_problem_description:
   - text: What is the problem description for the issue?
   utter_help:
-  - text: "I can help you open a service request ticket, or check the status of your open incidents.
-          \nYou can ask me things like:
-          \n- Open an incident
-          \n- Help me reset my password
-          \n- I'm having a issue with my email
-          \n- What's the status of the ticket I opened?"
-
+  - text: |-
+      I can help you open a service request ticket, or check the status of your open incidents. 
+      You can ask me things like: 
+      - Open an incident 
+      - Help me reset my password 
+      - I'm having a issue with my email 
+      - What's the status of the ticket I opened?
   utter_green_help:
-  - text: "I can asisst you with some training and learning of following operations
-          \nYou can choose the following learning options
-          \n- Operating of Hydrojet Machine
-          \n- Operating of Booster Pump
-          \n- Operating of Vacuum Truck"
-
+  - text: |-
+      I can asisst you with some training and learning of following operations 
+      You can choose the following learning options 
+      - Operating of Hydrojet Machine 
+      - Operating of Booster Pump 
+      - Operating of Vacuum Truck
   utter_green_option_hydrojet_machine:
-  - text: "Awesome, in here we will be covering the following chapters 20 000 psi hydrojet machine
-          \n1. Hydrojet Checklist/Inspection
-          \n2. Hoses Connection To Gun
-          \n3. Start of Engine
-          \n4. Check For Leakage
-          \n5. Monitoring
-          \n6. Stop of Engine
-          \n7. Housekeeping"
+  - text: |-
+      Awesome, in here we will be covering the following chapters 20 000 psi hydrojet machine 
+      1. Hydrojet Checklist/Inspection 
+      2. Hoses Connection To Gun 
+      3. Start of Engine 
+      4. Check For Leakage 
+      5. Monitoring 
+      6. Stop of Engine 
+      7. Housekeeping
   utter_green_option_booster_pump:
-  - text: "Great, in here we shall be covering the following chapters for 12 bar booster pump
-          \n1. Booster Pump Setup & Inspection
-          \n2. Booster Pump Hoses Connection
-          \n3. Booster Pump Start Engine
-          \n4. Booster Pump Speed Lever Adjustment
-          \n5. Booster Pump Monitor Pressure
-          \n6. Booster Pump Check For Leakage
-          \n7. Booster Pump Initiating To Power Down Procedures
-          \n8. Booster Pump Speed Lever Down Adjustment
-          \n9. Booster Pump Pull The Stop Lever
-          \n10. Booster Pump Pressure Discharge
-          \n11. Booster Pump Outlet Valve
-          \n12. Booster Pump Disconnection All Hoses"
+  - text: |-
+      Great, in here we shall be covering the following chapters for 12 bar booster pump 
+      1. Booster Pump Setup & Inspection 
+      2. Booster Pump Hoses Connection 
+      3. Booster Pump Start Engine 
+      4. Booster Pump Speed Lever Adjustment 
+      5. Booster Pump Monitor Pressure 
+      6. Booster Pump Check For Leakage 
+      7. Booster Pump Initiating To Power Down Procedures 
+      8. Booster Pump Speed Lever Down Adjustment 
+      9. Booster Pump Pull The Stop Lever 
+      10. Booster Pump Pressure Discharge 
+      11. Booster Pump Outlet Valve 
+      12. Booster Pump Disconnection All Hoses
   utter_green_option_vacuum_truck:
-  - text: "Perfect, in here we are covering the following chapters for Vacuum Truck
-          \n1. Vacuum Truck Pre-Work Setup
-          \n2. Vacuum Truck Engine Start
-          \n3. Vacuum Truck Hoses Connection
-          \n4. Vacuum Truck Configuration Onboard Control Panel
-          \n5. Vacuum Truck Commence Suction
-          \n6. Vacuum Truck End Suction
-          \n7. Vacuum Truck End Configuration Onboard Control Panel
-          \n8. Vacuum Truck Disconnection Transfer Hoses
-          \n9. Vacuum Truck Power-Down
-          \n10. Housekeeping"
+  - text: |-
+      Perfect, in here we are covering the following chapters for Vacuum Truck 
+      1. Vacuum Truck Pre-Work Setup 
+      2. Vacuum Truck Engine Start 
+      3. Vacuum Truck Hoses Connection 
+      4. Vacuum Truck Configuration Onboard Control Panel 
+      5. Vacuum Truck Commence Suction 
+      6. Vacuum Truck End Suction 
+      7. Vacuum Truck End Configuration Onboard Control Panel 
+      8. Vacuum Truck Disconnection Transfer Hoses 
+      9. Vacuum Truck Power-Down 
+      10. Housekeeping
   utter_welcome:
   - text: You're welcome!
   utter_default:
   - text: I didn't quite understand that. Could you rephrase?
   utter_ask_confirm:
-  - text: "Should I open an incident with the following details?
-          \n    Title: {incident_title}
-          \n    Description: {problem_description}"
-    buttons:
-    - title: Yes
-      payload: /affirm
-    - title: No, cancel the incident
-      payload: /deny
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No, cancel the incident
+    text: |-
+      Should I open an incident with the following details? 
+          Title: {incident_title} 
+          Description: {problem_description}
   utter_incident_creation_canceled:
   - text: Alright, I have cancelled the incident.
   utter_ask_whatelse:
-    - text: What else can I help you with?
-
+  - text: What else can I help you with?
   utter_chitchat/ask_weather:
-    - text: I am not a weather presenter but I hope it will be sunny outside.
+  - text: I am not a weather presenter but I hope it will be sunny outside.
   utter_chitchat/bot_challenge:
-    - text: Yes, indeed. I was created by a developer of Steve.
+  - text: Yes, indeed. I was created by a developer of Steve.
   utter_chitchat/not_human_challenge:
-    - text: No, I am not a human.
-    - text: You must have misunderstood me as a human.
-    - text: Don't take me as a human. I am created by smartest human in the world.
-    - text: If you think so, please ask my master Steve.
+  - text: No, I am not a human.
+  - text: You must have misunderstood me as a human.
+  - text: Don't take me as a human. I am created by smartest human in the world.
+  - text: If you think so, please ask my master Steve.
   utter_ask_number:
-    - text: What is your user id?
+  - text: What is your user id?
   utter_ask_email:
-    - text: What is your email?
-
+  - text: What is your email?
 actions:
 - action_incident_status
-
 forms:
   open_incident_form:
-    email:
-      - type: from_entity
-        entity: email
-    problem_description:
-      - type: from_text
-        not_intent:
-          - incident_status
-          - help
-          - affirm
-          - deny
-    incident_title:
-      - type: from_trigger_intent
-        intent: password_reset
-        value: "Problem with password"
-      - type: from_trigger_intent
-        intent: problem_email
-        value: "Problem with email"
-      - type: from_text
-        not_intent:
-          - incident_status
-          - help
-          - affirm
-          - deny
     confirm:
-      - type: from_intent
-        intent: affirm
-        value: true
-      - type: from_intent
-        intent: deny
-        value: false
-
-session_config:
-  session_expiration_time: 0.0
-  carry_over_slots_to_new_session: true
+    - intent: affirm
+      type: from_intent
+      value: true
+    - intent: deny
+      type: from_intent
+      value: false
+    email:
+    - entity: email
+      type: from_entity
+    incident_title:
+    - intent: password_reset
+      type: from_trigger_intent
+      value: Problem with password
+    - intent: problem_email
+      type: from_trigger_intent
+      value: Problem with email
+    - not_intent:
+      - incident_status
+      - help
+      - affirm
+      - deny
+      type: from_text
+    problem_description:
+    - not_intent:
+      - incident_status
+      - help
+      - affirm
+      - deny
+      type: from_text
+e2e_actions: []
