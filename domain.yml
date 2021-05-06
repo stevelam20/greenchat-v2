@@ -119,18 +119,16 @@ responses:
       Booster pump is to increase high flow low pressure water jetting.
       It provides the extra boost needed to bring fluid pressure to the desire level.
   utter_chatbooster/booster_types:
-  - text: |
-      There are three types of booster pump pressure to achieve
+  - text: |-
+      There are three types of booster pump pressure to achieve:
       1) 10 Bar
       2) 15 Bar
       3) 20 Bar
   utter_chatbooster/deploy_booster_pump:
-  - text: |
+  - text: |-
       Booster pump is use for tank cleaning operations.
-
       It is to connect to the gamma jet/sprinkle system that will be attached on the top of the tank.
-
-      Besides that, you may also use as a pump to transfer less hazardous products.
+      Besides that, you may also use as a pump to transfer  less hazardous products.
   utter_chatbooster/booster_operator:
   - text: |
       Booster pump is not a complicated machine to operate
@@ -145,14 +143,24 @@ responses:
   utter_chatbooster/booster_operating_procedures:
   - text: I can show you the operating procedures
   utter_chatbooster/booster_in_out_connection:
-  - image: https://imgur.com/Y6xxsDB
-    text: The inlet and outlet connection on the booster pump are 3" (inch) male adapter \nYou may refer to the attached image (Fig. 1.2)
+  - image: https://i.imgur.com/Y6xxsDB.jpg
+    text: |-
+      The inlet and outlet connection on the booster pump are 3" (inch) male adapter.
+      	You may refer to the attached image (Fig. 1.2)
   utter_chatbooster/booster_hoses_connection:
-  - image: https://imgur.com/XaILht5
-    text: The inlet and outlet of the hoses connection must be 3" (inch) female Camlock coupling \n Please refer to attached image (Fig. 1.1)
+  - image: https://i.imgur.com/XaILht5.jpg
+    text: |-
+      The inlet and outlet of the hoses connection must be 3" (inch) female Camlock coupling.
+      	Please refer to attached image (Fig. 1.1)
   utter_chatbooster/booster_speed_lever:
-  - image: https://imgur.com/GxMQiG3
-    text: Speed lever is a means of controlling an engine's power by regulating the amount of fuel or air intake. \nBooster pump operator can increase or decrease the power of the engine by adjusting the speed lever. \nTo maintain the booster pump pressure, the speed leverl is to slide to the desired pressure and lock it by tightening the but. \nYou may refer to the attached image (Fig. 1.6)
+  - image: https://i.imgur.com/GxMQiG3.jpg
+    text: |-
+      1. Speed lever is a means of controlling an engine's power by regulating the amount of fuel or air intake.
+      2. Booster pump operator can increase or decrease
+      the power of the engine by adjusting the speed lever.
+      3. To maintain the booster pump pressure, the speed leverl is to slide to the desired pressure and lock it by tightening the but.
+       **You may refer to the attached image (Fig.
+      1.6)**
   utter_out_of_scope:
   - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
   utter_greet:
