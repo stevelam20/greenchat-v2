@@ -92,9 +92,8 @@ responses:
 
   utter_chatbooster/booster_intro:
   - text: |
-      Booster pump is to increase high flow low pressure water jetting
-
-      It provides the extra boost needed to bring fluid pressure to the desire level
+      Booster pump is to increase high flow low pressure water jetting.
+      It provides the extra boost needed to bring fluid pressure to the desire level.
 
   - image: https://i.imgur.com/Y6xxsDB.jpg
   utter_chatbooster/booster_types:
