@@ -161,6 +161,92 @@ responses:
       3. To maintain the booster pump pressure, the speed leverl is to slide to the desired pressure and lock it by tightening the but.
        **You may refer to the attached image (Fig.
       1.6)**
+
+  utter_chatbooster/booster_pressure_gauge:
+  - image: https://i.imgur.com/gVmh2Sh.jpg
+    text: |-
+      1.  Instruments used to measure and display pressure in an integral unit are called pressure gauges.
+      2.  Pressure gauge helps the operator to monitor the pressure of the fluid that is deliverying to the tank.
+      3.  The operator is required to install the pressure gauge at the fluid outlet connection on the booster pump.
+      **You may refer to the attach image. (Fig. 1.7)**
+
+  utter_chatbooster/booster_start_button:
+  - image: https://i.imgur.com/iEkZnME.jpg
+    text: |-
+      To power up the booster pump engine, please press the start button.
+      **You may refer to the attached image Fig. 1.3**
+
+## BOOSTER PUMP TECHNICAL SPECIFICATIONS
+
+  utter_chatbooster/booster_pump_weight:
+  - text: |
+      The gross weight of the booster pump is approximately 2500kg
+
+  utter_chatbooster/fuel_consume_booster:
+  - image: https://i.imgur.com/paz0fXW.jpg
+    text: |-
+      1.  The fuel to be used on the booster pump is Diesel Euro 4/5 and above.
+      2.  You are required to fill the diesel from the filling point.
+      **You may refer to the attached image. (Fig. 1.15)**
+
+## BOOSTER PUMP SAFETY ASPECTS
+
+  utter_chatbooster/booster_diesel_gauge:
+  - image: https://i.imgur.com/gUlg2ji.jpg
+    text: |-
+      1. The diesel gauge is use to monitor the quantity fuel contain in the booster pump.
+      2. The diesel gauge is located next to the diesel filling point.
+      3. Please ensure that the diesel is sufficient before operating the booster pump.
+      **You may refer to the attached image. (Fig. 1.11)**
+
+  utter_chatbooster/booster_drip_tray:
+  - image: https://i.imgur.com/rcQXAn7.jpg
+    text: |-
+      1. Drip tray is design to catch oil drips from the engine compartment or diesel tank.
+      2. The drip tray is fitted on bottom of the booster pump.
+      3. There is lowest point to allow excess oil out of the drip tray.
+      4. Usually a valve is attached to the lowest point.
+      **You may refer to the attached image (Fig. 1.14)**
+
+  utter_chatbooster/booster_whip_arrestor:
+  - image: https://i.imgur.com/ktH0PJH.jpg
+    text: |-
+      1. Whip arrestor are designed to prevent injuries or accidents resulting from a hose or coupling failure by connecting pressurized lines across the coupling.
+      2. Applying whip arrestor will prevent the hoses from flying around should the connection inadvertently separate.
+      3. Whip arrestor is usually secure at the end of the hoses connection.
+      **You may refer to the attached image (Fig. 1.12)**
+
+  utter_chatbooster/handling_booster_pump:
+  - image: https://i.imgur.com/580Xa5m.jpg
+    text: |-
+      **There are 2 ways of lifting the booster pump.**
+      1. Forklift (more than 2.5 Tonnes) can be used to lift up the booster pump. There is a forklift pockets attached at the bottom of the booster pump.
+      2. Lorry crane can be used to lift up the booster pump. There is a lifting lug attached on the booster pump.
+      **You may refer to the attached image. (Fig. 1.19)**
+
+  utter_chatbooster/booster_earthing_point:
+  - image: https://i.imgur.com/T3Xek46.jpg
+    text: |-
+      - Earthing is to ensure that no static electricity is passing through our body and to prevent any static fire to ignite.
+      - Thus, the booster pump is required to be grounded by connecting to the nearest grounding point with the earthing cable.
+      **You may refer to the attached image. (Fig 1.13)**
+
+## BOOSTER PUMP MAINTENANCE & INSPECTION
+
+  utter_chatbooster/booster_maintenance:
+  - text: |-
+      - Maintenance is carried out to keep equipment and systems running efficiently during at least its usual life cycle.
+      - Maintenance of the Booster Pump is done every monthly by Greenchem Mechanic at Greenchem Facilities.
+      - Maintenance record is being update and documented through Booster Pump Monthly Checklist.
+
+  utter_chatbooster/booster_certification:
+  - text: |-
+      There is no regulation to inspect/certify low pressure high flow pump.
+      Thus the booster pump is not required to be certified.
+      Usually, the booster pump will be inspected internally before being deployed.
+
+## END OF BOOSTER PUMP
+
   utter_out_of_scope:
   - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
   utter_greet:
@@ -174,56 +260,56 @@ responses:
   - text: What is the problem description for the issue?
   utter_help:
   - text: |-
-      I can help you open a service request ticket, or check the status of your open incidents. 
-      You can ask me things like: 
-      - Open an incident 
-      - Help me reset my password 
-      - I'm having a issue with my email 
+      I can help you open a service request ticket, or check the status of your open incidents.
+      You can ask me things like:
+      - Open an incident
+      - Help me reset my password
+      - I'm having a issue with my email
       - What's the status of the ticket I opened?
   utter_green_help:
   - text: |-
-      I can asisst you with some training and learning of following operations 
-      You can choose the following learning options 
-      - Operating of Hydrojet Machine 
-      - Operating of Booster Pump 
+      I can asisst you with some training and learning of following operations
+      You can choose the following learning options
+      - Operating of Hydrojet Machine
+      - Operating of Booster Pump
       - Operating of Vacuum Truck
   utter_green_option_hydrojet_machine:
   - text: |-
-      Awesome, in here we will be covering the following chapters 20 000 psi hydrojet machine 
-      1. Hydrojet Checklist/Inspection 
-      2. Hoses Connection To Gun 
-      3. Start of Engine 
-      4. Check For Leakage 
-      5. Monitoring 
-      6. Stop of Engine 
+      Awesome, in here we will be covering the following chapters 20 000 psi hydrojet machine
+      1. Hydrojet Checklist/Inspection
+      2. Hoses Connection To Gun
+      3. Start of Engine
+      4. Check For Leakage
+      5. Monitoring
+      6. Stop of Engine
       7. Housekeeping
   utter_green_option_booster_pump:
   - text: |-
-      Great, in here we shall be covering the following chapters for 12 bar booster pump 
-      1. Booster Pump Setup & Inspection 
-      2. Booster Pump Hoses Connection 
-      3. Booster Pump Start Engine 
-      4. Booster Pump Speed Lever Adjustment 
-      5. Booster Pump Monitor Pressure 
-      6. Booster Pump Check For Leakage 
-      7. Booster Pump Initiating To Power Down Procedures 
-      8. Booster Pump Speed Lever Down Adjustment 
-      9. Booster Pump Pull The Stop Lever 
-      10. Booster Pump Pressure Discharge 
-      11. Booster Pump Outlet Valve 
+      Great, in here we shall be covering the following chapters for 12 bar booster pump
+      1. Booster Pump Setup & Inspection
+      2. Booster Pump Hoses Connection
+      3. Booster Pump Start Engine
+      4. Booster Pump Speed Lever Adjustment
+      5. Booster Pump Monitor Pressure
+      6. Booster Pump Check For Leakage
+      7. Booster Pump Initiating To Power Down Procedures
+      8. Booster Pump Speed Lever Down Adjustment
+      9. Booster Pump Pull The Stop Lever
+      10. Booster Pump Pressure Discharge
+      11. Booster Pump Outlet Valve
       12. Booster Pump Disconnection All Hoses
   utter_green_option_vacuum_truck:
   - text: |-
-      Perfect, in here we are covering the following chapters for Vacuum Truck 
-      1. Vacuum Truck Pre-Work Setup 
-      2. Vacuum Truck Engine Start 
-      3. Vacuum Truck Hoses Connection 
-      4. Vacuum Truck Configuration Onboard Control Panel 
-      5. Vacuum Truck Commence Suction 
-      6. Vacuum Truck End Suction 
-      7. Vacuum Truck End Configuration Onboard Control Panel 
-      8. Vacuum Truck Disconnection Transfer Hoses 
-      9. Vacuum Truck Power-Down 
+      Perfect, in here we are covering the following chapters for Vacuum Truck
+      1. Vacuum Truck Pre-Work Setup
+      2. Vacuum Truck Engine Start
+      3. Vacuum Truck Hoses Connection
+      4. Vacuum Truck Configuration Onboard Control Panel
+      5. Vacuum Truck Commence Suction
+      6. Vacuum Truck End Suction
+      7. Vacuum Truck End Configuration Onboard Control Panel
+      8. Vacuum Truck Disconnection Transfer Hoses
+      9. Vacuum Truck Power-Down
       10. Housekeeping
   utter_welcome:
   - text: You're welcome!
@@ -236,8 +322,8 @@ responses:
     - payload: /deny
       title: No, cancel the incident
     text: |-
-      Should I open an incident with the following details? 
-          Title: {incident_title} 
+      Should I open an incident with the following details?
+          Title: {incident_title}
           Description: {problem_description}
   utter_incident_creation_canceled:
   - text: Alright, I have cancelled the incident.
