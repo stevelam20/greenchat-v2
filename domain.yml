@@ -130,16 +130,16 @@ responses:
       It is to connect to the gamma jet/sprinkle system that will be attached on the top of the tank.
       Besides that, you may also use as a pump to transfer  less hazardous products.
   utter_chatbooster/booster_operator:
-  - text: |-
-      - Booster pump is not a complicated machine to operate.
-      - There are not many procedure to operate a booster pump.
-      - Thus, the booster pump operator is able to operate without any specific training program.
-      - For better understanding, Booster Pump operator must go through the introduction video.
+  - text: |
+      Booster pump is not a complicated machine to operate
+
+      There are not many procedure to operate a booster pump.
+
+      Thus, the booster pump operator is able to operate without any specific training program.
+
+      For better understanding, Booster Pump operator must go through the introduction video.
   utter_chatbooster/booster_material_usage:
-  - text: |-
-      - **Water** is recommended for the usage.
-      - **Oil/corrossive** material are **not recommended** as it will damage the internal part of the machine and shorten the life span of the machine.
-      - It is **advisable** to verify the **Material Safety Data Sheet (MSDS)** before using the booster pump.
+  - text: Water is recommended for the usage \nOil/corrossive material are not recommended as it will damage the internal part of the machine and shorten the life span of the machine \nIt is advisable to verify the Material Safety Data Sheet (MSDS) before using the booster pump.
   utter_chatbooster/booster_operating_procedures:
   - text: I can show you the operating procedures
   utter_chatbooster/booster_in_out_connection:
@@ -161,6 +161,7 @@ responses:
       3. To maintain the booster pump pressure, the speed leverl is to slide to the desired pressure and lock it by tightening the but.
        **You may refer to the attached image (Fig.
       1.6)**
+
   utter_chatbooster/booster_pressure_gauge:
   - image: https://i.imgur.com/gVmh2Sh.jpg
     text: |-
@@ -168,20 +169,28 @@ responses:
       2.  Pressure gauge helps the operator to monitor the pressure of the fluid that is deliverying to the tank.
       3.  The operator is required to install the pressure gauge at the fluid outlet connection on the booster pump.
       **You may refer to the attach image. (Fig. 1.7)**
+
   utter_chatbooster/booster_start_button:
   - image: https://i.imgur.com/iEkZnME.jpg
     text: |-
       To power up the booster pump engine, please press the start button.
       **You may refer to the attached image Fig. 1.3**
+
+## BOOSTER PUMP TECHNICAL SPECIFICATIONS
+
   utter_chatbooster/booster_pump_weight:
   - text: |
       The gross weight of the booster pump is approximately 2500kg
+
   utter_chatbooster/fuel_consume_booster:
   - image: https://i.imgur.com/paz0fXW.jpg
     text: |-
       1.  The fuel to be used on the booster pump is Diesel Euro 4/5 and above.
       2.  You are required to fill the diesel from the filling point.
       **You may refer to the attached image. (Fig. 1.15)**
+
+## BOOSTER PUMP SAFETY ASPECTS
+
   utter_chatbooster/booster_diesel_gauge:
   - image: https://i.imgur.com/gUlg2ji.jpg
     text: |-
@@ -189,6 +198,7 @@ responses:
       2. The diesel gauge is located next to the diesel filling point.
       3. Please ensure that the diesel is sufficient before operating the booster pump.
       **You may refer to the attached image. (Fig. 1.11)**
+
   utter_chatbooster/booster_drip_tray:
   - image: https://i.imgur.com/rcQXAn7.jpg
     text: |-
@@ -197,6 +207,7 @@ responses:
       3. There is lowest point to allow excess oil out of the drip tray.
       4. Usually a valve is attached to the lowest point.
       **You may refer to the attached image (Fig. 1.14)**
+
   utter_chatbooster/booster_whip_arrestor:
   - image: https://i.imgur.com/ktH0PJH.jpg
     text: |-
@@ -204,6 +215,7 @@ responses:
       2. Applying whip arrestor will prevent the hoses from flying around should the connection inadvertently separate.
       3. Whip arrestor is usually secure at the end of the hoses connection.
       **You may refer to the attached image (Fig. 1.12)**
+
   utter_chatbooster/handling_booster_pump:
   - image: https://i.imgur.com/580Xa5m.jpg
     text: |-
@@ -211,22 +223,30 @@ responses:
       1. Forklift (more than 2.5 Tonnes) can be used to lift up the booster pump. There is a forklift pockets attached at the bottom of the booster pump.
       2. Lorry crane can be used to lift up the booster pump. There is a lifting lug attached on the booster pump.
       **You may refer to the attached image. (Fig. 1.19)**
+
   utter_chatbooster/booster_earthing_point:
   - image: https://i.imgur.com/T3Xek46.jpg
     text: |-
       - Earthing is to ensure that no static electricity is passing through our body and to prevent any static fire to ignite.
       - Thus, the booster pump is required to be grounded by connecting to the nearest grounding point with the earthing cable.
       **You may refer to the attached image. (Fig 1.13)**
+
+## BOOSTER PUMP MAINTENANCE & INSPECTION
+
   utter_chatbooster/booster_maintenance:
   - text: |-
       - Maintenance is carried out to keep equipment and systems running efficiently during at least its usual life cycle.
       - Maintenance of the Booster Pump is done every monthly by Greenchem Mechanic at Greenchem Facilities.
       - Maintenance record is being update and documented through Booster Pump Monthly Checklist.
+
   utter_chatbooster/booster_certification:
   - text: |-
       There is no regulation to inspect/certify low pressure high flow pump.
       Thus the booster pump is not required to be certified.
       Usually, the booster pump will be inspected internally before being deployed.
+
+## END OF BOOSTER PUMP
+
   utter_out_of_scope:
   - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
   utter_greet:
@@ -313,6 +333,34 @@ responses:
   - text: I am not a weather presenter but I hope it will be sunny outside.
   utter_chitchat/bot_challenge:
   - text: Yes, indeed. I was created by a developer of Steve.
+
+  utter_chitchat/affirm_can:
+  - text: Yes, you can!
+  - text: Sure, you can!
+  - text: Of course, you can!
+  - text: Definitely you can!
+  - text: Don't worry you can.
+  utter_chitchat/affirm_yes:
+  - text: Yes.
+  - text: Of course!
+  - text: Definitely yes!
+  utter_chitchat/affirm_should:
+  - text: Yes, you should
+  - text: Of course, you should!
+  - text: You should do that!
+  - text: Sure, you should!
+  utter_chitchat/deny_no:
+  - text: No.
+  - text: No, you can't
+  - text: Nope!
+  utter_chitchat/deny_should_not:
+  - text: No, you shouldn't
+  - text: No, you should not
+  - text: Of course, no
+  utter_chitchat/ask_supervisor:
+  - text: You may refer to your supervisor for more information.
+  - text: Kindly approach to your supervisor for any further clarificaitons.
+
   utter_chitchat/not_human_challenge:
   - text: No, I am not a human.
   - text: You must have misunderstood me as a human.
