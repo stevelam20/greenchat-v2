@@ -206,14 +206,12 @@ nlu:
     - Can i maintain/adjust the pressure of the booster pump?
     - Can i monitor the pressure from the pressure gauge from the booster pump?
     - Can i use the start button to start the engine?
-    - Can i use diesel on the booster pump?
     - Can i use Euro 4/5/above Diesel grade on the booster pump?
     - Can the drip tray contain oil leakage from the engine and diesel tank on the booster pump?
     - Can i check the quantity level of the diesel on the booster pump?
     - By connecting to the earthing point, am i able to prevent static electricity passing through from the booster pump?
     - Can i do booster pump maintenance?
     - Can i stop the engine on the booster pump by sliding the stop lever?
-
 - intent: chitchat/affirm_yes
   examples: |
     - Is diesel the fuel consumption to the booster pump?
@@ -242,7 +240,8 @@ nlu:
     - Is there a booster pump maintenance record?
     - Is there a requirement to maintain the booster pump?
     - Do i stop the engine on the booster pump by sliding the stop lever?
-
+    - do i need to earth the booster pump
+    - is there any earthing point?
 - intent: chitchat/affirm_should
   examples: |
     - Should i use water on the booster pump?
@@ -256,13 +255,11 @@ nlu:
     - Should i deplete/drain the excess oil from the drip tray?
     - Should i monitor the pressure from the pressure gauge from the booster pump?
     - Should i use the start button to start the engine?
-    - Should i use diesel on the booster pump?
     - Should i use Euro 4/5/above Diesel grade on the booster pump?
     - Do i need to use whip arrestor?
     - Do i need to do earthing on the booster pump?
     - Do i need to do booster pump maintenance?
     - Should i stop the engine on the booster pump by sliding the stop lever?
-
 - intent: chitchat/deny_no
   examples: |
     - Is petrol the fuel consumption to the booster pump?
@@ -312,7 +309,16 @@ nlu:
     - Can i use the speed lever to stop the engine on the booster pump?
     - Can i use euro 2/3 diesel on the booster pump?
     - Can i use the drip tray to contain water flowing out from the hoses connection?
-
+    - can i use acid on water pump ?
+    - can i use alkaline on water pump ?
+    - can i use acid on water booster?
+    - is the booster pump operator required to go through training?
+    - is the booster pump operator required training?
+    - can i use acid on the booster pump ?
+    - can i use alkaline on high flow [low](priority) pressure pump ?
+    - can i use acid on booster pump ?
+    - can i use acid on high flow [low](priority) pressure pump ?
+    - can i use alkaline on booster pump?
 - intent: chitchat/deny_should_not
   examples: |
     - Should i use acid material on the booster pump?
@@ -325,14 +331,13 @@ nlu:
     - Should i use the speed lever to stop the engine on the booster pump?
     - Should i use euro 2/3 diesel on the booster pump?
     - Should i use the drip tray to contain water flowing out from the hoses connection?
-
+    - should i use acid on booster pump ?
 - intent: chitchat/ask_supervisor
   examples: |
     - Where can i get the booster pump maintenance procedures?
     - Where do i check for the booster pump maintenance record?
     - Where do i get the booster pump maintenance procedures?
     - Where can i get the booster pump maintenance record?
-
 - intent: chathydrojet/positioning_hydrojet_machine
   examples: |
     - What if the machine is placed on uneven ground?
@@ -459,13 +464,6 @@ nlu:
     - Can the splitter gauge for hydrojet machine be use?
     - Secondary pressure gauge for hydrojet machine gun?
     - Any secondary monitor gauge for hydrojet machine gun available?
-
-
-  ## THE END OF HYDROJET MACHINE
-
-                ## BOOSTER PUMP MACHINE
-## BOOSTER PUMP GENERAL
-
 - intent: chatbooster/booster_intro
   examples: |
     - What is a Booster Pump?
@@ -486,6 +484,12 @@ nlu:
     - Do you have a picture of booster pump?
     - Show me booster pump image
     - Show me booster pump picture
+    - booster pump
+    - why do i need booster pump
+    - is there any image of a booster pump?
+    - can you tell me why do i need a booster pump
+    - what can booster pump do
+    - what is the purpose of the booster pump
 - intent: chatbooster/booster_types
   examples: |
     - What is the maximum pressure for Booster pump?
@@ -500,6 +504,8 @@ nlu:
     - The pressure of the booster pump?
     - Pressure of the booster pump?
     - Booster pump pressure is?
+    - how to speed up the booster pump?
+    - booster pump pressure
 - intent: chatbooster/deploy_booster_pump
   examples: |
     - What is the application of booster pump?
@@ -511,6 +517,8 @@ nlu:
     - Where can i apply a booster pump to?
     - Beside tank cleaning, can i use for other purposes?
     - Can i use for other product transfer?
+    - can i use water on the booster pump
+    - where can i use a booster pump?
 - intent: chatbooster/booster_operator
   examples: |
     - What kind of training do booster pump operators need to go through/undergo?
@@ -519,7 +527,6 @@ nlu:
     - How does someone qualify to be a booster pump operator?
     - How do I train the booster pump operator?
     - How can i be a booster pump operator?
-
 - intent: chatbooster/booster_material_usage
   examples: |
     - What type of product is suitable to use for booster pump?
@@ -530,9 +537,6 @@ nlu:
     - Why can't we use oil/corrosive material on the booster pump?
     - Besides water, what other material can be used on the booster pump?
     - If oil/corrosive material is being used, what will happen to the booster pump?
-
-##              PROMPTING TO ASK FOR THE TRAINING LEARNING VIDEO
-##              MAY BE ABLE TO REMOVE FROM CHATBOOSTER FAQ
 - intent: chatbooster/booster_operating_procedures
   examples: |
     - What are the booster pump operating procedures?
@@ -542,17 +546,13 @@ nlu:
     - How to operate a booster pump?
     - Can you show me how to operate the booster pump?
     - Is there any booster pump operation procedures?
-
-##              CONSIDERED INTENT
-## BOOSTER PUMP OPERATIONS
-
+    - can i use petrol for the booster pump?
 - intent: chatbooster/booster_in_out_connection
   examples: |
     - What are the types of inlet and outlet connection on the booster pump?
     - What type of inlet and outlet connection are used on the booster pump?
     - What type of connector is used on the booster pump?
     - What are the sizes of the inlet and outlet connection on the booster pump?
-    - What type of inlet and outlet connection are used on the booster pump?
     - What does the inlet and outlet connection booster pump look like?
     - What are the inlet and outlet connection of the booster pump?
     - Where do i connect the hoses on the booster pump?
@@ -570,6 +570,10 @@ nlu:
     - Can I see the photo/picture/ image of the inlet and outlet connection on the booster pump?
     - Do you have photo/picture/image of the inlet and outlet connection on the booster pump?
     - Can i know what size are the inlet and outlet connection on the booster pump?
+    - can you show me the inlet and outlet connection of the booster pump
+    - tell me more about the inlet on the booster pump
+    - what are the connection on the booster pump?
+    - where is the inlet on the booster pump
 - intent: chatbooster/booster_hoses_connection
   examples: |
     - What type of inlet and outlet hoses connection to be connected on booster pump?
@@ -577,7 +581,6 @@ nlu:
     - What type of hose connectors to be used on the booster pump?
     - What are the sizes of the inlet and outlet hoses connection on the booster pump?
     - What does the booster pump hoses connection look like?
-    - What are the sizes of the inlet and outlet hoses connection on the booster pump?
     - What type of inlet and outlet should be used on the booster pump?
     - What are the hoses connection on the booster pump?
     - What do the booster pump inlet and outlet hoses connection look like?
@@ -591,6 +594,7 @@ nlu:
     - Can I see the photo/picture/ image of the booster pump inlet and outlet hose connection?
     - Do you have the photo/picture/image of the booster pump inlet and outlet hose connection?
     - Can i know what are sizes of the booster pump inlet and outlet hoses connection?
+    - how do i connect to the booster pump?
 - intent: chatbooster/booster_speed_lever
   examples: |
     - What is the booster pump speed lever?
@@ -606,6 +610,9 @@ nlu:
     - Can I see the photo/picture/ image of the booster pump speed lever?
     - Do you have the photo/picture/image of the booster pump speed lever?
     - Can i maintain/adjust the pressure of the booster pump?
+    - how can i speed up the engine on the booster pump
+    - where is the speed lever
+    - how do i increase the speed of the booster pump engine
 - intent: chatbooster/booster_pressure_gauge
   examples: |
     - What is a booster pump pressure gauge?
@@ -620,6 +627,9 @@ nlu:
     - Show me the photo/image/picture of the booster pump pressure gauge on the booster pump
     - Show me the booster pump pressure gauge?
     - Do you have the photo of the booster pump pressure gauge?
+    - what is pressure gauge
+    - image of pressure gauge
+    - how to monitor booster pump pressure
 - intent: chatbooster/booster_start_button
   examples: |
     - What is a start button?
@@ -629,9 +639,6 @@ nlu:
     - How does the booster pump start button looks like?
     - Can you show me the image/picture of the start button on the booster pump
     - Do you have the picture/image/photo of the booster pump's start button?
-
-## BOOSTER PUMP TECHNICAL SPECIFICATIONS
-
 - intent: chatbooster/booster_pump_weight
   examples: |
     - What is the weight/mass of the booster pump
@@ -648,9 +655,8 @@ nlu:
     - Where to fill up the booster pump with diesel?
     - How much quantity of Diesel to be added on the booster pump?
     - Show me the photo/image/picture of the diesel filling point
-
-## BOOSTER PUMP SAFETY ASPECTS
-
+    - how do i fill the diesel into the booster pump
+    - what euro to use on water pump
 - intent: chatbooster/booster_diesel_gauge
   examples: |
     - What is the purpose of booster pump diesel gauge?
@@ -686,6 +692,11 @@ nlu:
     - Can I see the photo/picture/ image of the booster pump drip tray
     - Show me the photo/picture/image of the lowest point in the drip tray on the booster pump
     - Do you have the  photo/picture/image of the drip tray on the booster pump?
+    - where can i find a drip tray
+    - is there any drip tray on the booster pump
+    - what is a drip tray
+    - what is the purpose of drip tray
+    - is there any drip tray on the booster pump?
 - intent: chatbooster/booster_whip_arrestor
   examples: |
     - What is the whip arrestor?
@@ -704,6 +715,10 @@ nlu:
     - Show me the photo/picture/image of the whip arrestor
     - Can I see the photo/picture/ image of the whip arrestor?
     - Do you have a photo of the whip arrestor?
+    - how can i secure the hoses
+    - what is a whip arrestor
+    - how to use a whip arrestor?
+    - do i need to use a whip arrestor
 - intent: chatbooster/handling_booster_pump
   examples: |
     - What can i use to lift the booster pump?
@@ -722,6 +737,11 @@ nlu:
     - Is there any lifiting points on the booster pump?
     - Can you show me the lifting points on the booster pump?
     - Can you show me the picture/photo/image of the lifting points on the booster pump?
+    - how can i lift the booster pump?
+    - how could i lift the booster pump
+    - how can i carry the booster pump
+    - can you show me the lifting lug
+    - where is the lifting lug
 - intent: chatbooster/booster_earthing_point
   examples: |
     - What is the purpose of connecting the booster pump earthing cable to the earthing point?
@@ -739,9 +759,13 @@ nlu:
     - Show me how to connect the earthing cable on the booster pump.
     - Do you have the photo/image/picture of the earthing cable connecting on the booster pump?
     - Can I see the photo/picture/ image of the earthing cable connecting on the booster pump?
-
-## BOOSTER PUMP MAINTENANCE & INSPECTION
-
+    - tell me more about earthing point
+    - tell me what is earthing point
+    - can u show me the earthing point
+    - do u have a earthing point?
+    - where is the earthing point
+    - how do i earth the booster pump
+    - where do i earth the booster pump
 - intent: chatbooster/booster_maintenance
   examples: |
     - What is the required to assist the mechanic to maintain the booster pump?
@@ -777,7 +801,12 @@ nlu:
     - How frequent do i need to certify the booster pump?
     - How long can the booster pump be used before the next inspection?
     - How can i certify the booster pump?
-
+- synonym: high
+  examples: |
+    - escalated
+    - escalate
+    - urgent
+    - really important
 - synonym: booster pump
   examples: |
     - water pump
@@ -785,12 +814,3 @@ nlu:
     - high flow low pressure pump
     - water booster pump
     - water booster
-
-## END OF BOOSTER PUMP
-
-- synonym: high
-  examples: |
-    - escalated
-    - escalate
-    - urgent
-    - really important
