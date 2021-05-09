@@ -372,6 +372,7 @@ responses:
   - text: What is your email?
 actions:
 - action_incident_status
+- action_hi
 forms:
   open_incident_form:
     confirm:
