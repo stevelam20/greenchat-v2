@@ -1,5 +1,5 @@
 # https://hub.docker.com/r/rasa/rasa-sdk/tags
-FROM rasa/rasa_sdk:2.2.0
+FROM rasa/rasa_sdk:2.6.0
 USER 1001
 
 COPY actions /app
