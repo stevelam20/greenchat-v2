@@ -1,11 +1,12 @@
 # https://hub.docker.com/r/rasa/rasa-sdk/tags
-FROM rasa/rasa-sdk:2.6.0
+FROM rasa/rasa_sdk:2.2.0
+USER 1001
 
-COPY actions /app/actions
+COPY actions /app
+COPY requirements.txt /app
+COPY workshop_data.csv /app
 
-USER root
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r /app/actions/requirements-actions.txt
+RUN pip install -r requirements.txt
+CMD ["start", "actions", "--actions", "--debug"]
 
 USER 1001
-CMD ["start", "--actions", "actions"]
