@@ -1,6 +1,6 @@
 # https://hub.docker.com/r/rasa/rasa-sdk/tags
 FROM rasa/rasa_sdk:2.6.0
-USER 1001
+USER root
 
 COPY actions /app
 COPY requirements.txt /app
