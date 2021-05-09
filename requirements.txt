@@ -1,5 +1,5 @@
-rasa~=2.5.1
-rasa-sdk~=2.5.0
+rasa~=2.6.0
+rasa-sdk~=2.6.0
 pytablewriter
 pandas
 numpy~=1.18.5
