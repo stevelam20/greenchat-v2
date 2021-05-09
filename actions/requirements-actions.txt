@@ -1,1 +1,4 @@
-
+rasa-sdk~=2.5.0
+pytablewriter
+pandas
+numpy~=1.18.5
