@@ -137,6 +137,7 @@ nlu:
     - Please teach me on booster pump
     - how to operate booster pump?
     - Show me how to operate booster pump
+    - operating water pump
 - intent: vacuum_truck_option
   examples: |
     - I would like to choose vacuum truck training
@@ -490,6 +491,9 @@ nlu:
     - can you tell me why do i need a booster pump
     - what can booster pump do
     - what is the purpose of the booster pump
+    - what is water pump
+    - what is booster pump ?
+    - boosterpump
 - intent: chatbooster/booster_types
   examples: |
     - What is the maximum pressure for Booster pump?
@@ -519,6 +523,7 @@ nlu:
     - Can i use for other product transfer?
     - can i use water on the booster pump
     - where can i use a booster pump?
+    - what do you do with water pump?
 - intent: chatbooster/booster_operator
   examples: |
     - What kind of training do booster pump operators need to go through/undergo?
@@ -547,6 +552,7 @@ nlu:
     - Can you show me how to operate the booster pump?
     - Is there any booster pump operation procedures?
     - can i use petrol for the booster pump?
+    - so how do you use booster pump?
 - intent: chatbooster/booster_in_out_connection
   examples: |
     - What are the types of inlet and outlet connection on the booster pump?
