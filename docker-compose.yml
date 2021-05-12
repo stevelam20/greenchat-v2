@@ -1,8 +1,9 @@
---- 
+version: "3.4"
 services: 
   greenchat-v2-action-server: 
-    build: "."
+    build: .
+    image: localhost:32000/greenchat-v2-action-server:0.0.1
     expose: 
       - "5055"
-    image: "localhost:32000/greenchat-v2-action-server:0.0.1"
-version: "3.4"
+    
+
