@@ -5,6 +5,8 @@ session_config:
   session_expiration_time: 0
   carry_over_slots_to_new_session: true
 intents:
+- chatvac:
+    use_entities: true
 - greet:
     use_entities: true
 - goodbye:
@@ -246,6 +248,56 @@ responses:
       Usually, the booster pump will be inspected internally before being deployed.
 
 ## END OF BOOSTER PUMP
+
+## VACUUM TRUCK
+## VACUUM TRUCK GENERAL
+
+  utter_chatvac/vacuum_purpose:
+  - text: |-
+      A vacuum truck is a tank truck that has a pump and a tank.
+      The pump is designed to pneumatically suck liquids, sludges, slurries, or the like from a location (often underground) into the tank of the truck.
+      The objective is to enable transport of the liquid material via road to another location.
+  utter_chatvac/vac_truck_driver_requirement:
+  - text: |-
+      As our vacuum truck will be used to transport hazardous materials, other than the Class 4 driving license, driver needs to attend a 1-day course to obtain a Hazardous Material Transport (HAZMAT) Driver Permit at training centres appointed by SCDF.
+      Please approach your supervisor to sign up and identify location and schedule of the training.
+  utter_chatvac/vac_product_label:
+  - image: https://i.imgur.com/IY8HPhl.jpg
+    text: |-
+      Driver is responsible to put on product label which specify the product to be transported accurately on the side of the vacuum truck and its associated risk.
+      This is part of hazard mitigation while on the road and hence, the product label has to be in place while performing transportation.
+
+## VACUUM TRUCK OPERATIONS
+
+  utter_chatvac/vac_truck_hose:
+  - text: |-
+      Greenchem's vacuum trucks uses 4" reinforced high pressure spring PVC tubing hoses as channel of flow.
+  utter_chatvac/vac_truck_pressure_gauge:
+  - text: |-
+      The vacuum truck pressure gauge is for monitoring of pressure during suction or discharging.
+      The value read from the gauge is an indicator if the vacuum truck is operating as intended.
+  utter_chatvac/vac_truck_pressure_gauge_image:
+  - image: https://i.imgur.com/kbAkPOQ.jpg
+    text: |-
+      Image of vacuum truck pressure gauge.
+  utter_chatvac/vac_valve_connection:
+  - text: |-
+      The vacuum truck is using a 4 inch aluminium camlock fitting on its suction and discharge valves.
+  utter_chatvac/vac_truck_tank_level_indicator:
+  - image: https://i.imgur.com/9e8wVtz.jpg
+    text: |-
+      The vacuum truck level indicator is located at the back of the vacuum tank to indicate the level of the liquid inside it.
+      It can be used to monitor progress of suction or discharge.
+  utter_chatvac/buddy_operate_vac_truck:
+  - text: |-
+      2 man is required to operate the vacuum truck;
+      ie. a vacuum truck operator and a helper who assist with the connection of hoses.
+  utter_chatvac/vac_truck_PTO_switch:
+  - image: https://i.imgur.com/XHt1KzC.jpg
+    text: |-
+      Power take-offs (PTOs) are mechanical gearboxes that attach to apertures provided on truck transmissions and are used to transfer the power of the vehicle engine to auxiliary components, for the vacuum truck would be a vacuum pump.
+      It is usually a pushbutton located on the driver dashboard.
+      The vacuum truck will not be able to perform suction or discharge if the PTO switch is not turned on.
 
   utter_out_of_scope:
   - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
