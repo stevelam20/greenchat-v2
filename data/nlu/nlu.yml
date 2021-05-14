@@ -325,6 +325,8 @@ nlu:
     - Should i use the speed lever to stop the engine on the booster pump?
     - Should i use euro 2/3 diesel on the booster pump?
     - Should i use the drip tray to contain water flowing out from the hoses connection?
+    - Can I use euro 3 standard diesel on the Greenchem's vacuum truck?
+    - Can I use euro 3 standard diesel on the our vacuum truck?
 
 - intent: chitchat/ask_supervisor
   examples: |
@@ -778,6 +780,16 @@ nlu:
     - How long can the booster pump be used before the next inspection?
     - How can i certify the booster pump?
 
+- synonym: booster pump
+  examples: |
+    - water pump
+    - diesel driven booster pump
+    - high flow low pressure pump
+    - water booster pump
+    - water booster
+
+## END OF BOOSTER PUMP
+
 ## VACUUM TRUCK
 
 ## VACUUM TRUCK GENERAL
@@ -949,15 +961,195 @@ nlu:
     - Can the vacuum truck operator operate the vacuum truck alone?
     - Should the vacuum truck operator operate the vacuum truck alone?
 
-- synonym: booster pump
-  examples: |
-    - water pump
-    - diesel driven booster pump
-    - high flow low pressure pump
-    - water booster pump
-    - water booster
+## VACUUM TRUCK SPECIFICATIONS
 
-## END OF BOOSTER PUMP
+- intent: chatvac/vac_discharge_pressure
+  examples: |
+    - What is the vacuum truck maximum pressure for discharging?
+    - What is the vacuum truck range of discharging pressure?
+    - What will be the pressure when vacuum truck is discharging?
+    - How much is the working pressure when vacuum truck is discharging?
+- intent: chatvac/vac_holding_capacity
+  examples: |
+    - What is the holding capacity of Greenchem vacuum trucks?
+    - What is the holding capacity of our vacuum trucks?
+    - What is the capacity of Greenchem vacuum trucks?
+    - What is the capacity of our vacuum trucks?
+    - What capacity of vacuum truck is available in Greenchem?
+    - How much can Greenchem vacuum truck take in?
+    - How much can our vacuum truck take in?
+    - How much can Greenchem vacuum truck suck?
+    - How much can our vacuum truck suck?
+- intent: chatvac/vac_fuel_type
+  examples: |
+    - What is the fuel used by Greenchem's vacuum truck?
+    - What is the fuel used by our vacuum truck?
+    - What grade of diesel is used by Greenchem's vacuum truck?
+    - What grade of diesel is used by our vacuum truck?
+    - What type of diesel is used by Greenchem's vacuum truck?
+    - What type of diesel is used by our vacuum truck?
+    - What type of fuel is used by Greenchem's vacuum truck?
+    - What type of fuel is used by our vacuum truck?
+- intent: chatvac/vac_material_type
+  examples: |
+    - What are the materials used to make Greenchem's vacuum trucks' vacuum tanks?
+    - What are Greenchem's vacuum trucks' vacuum tanks made of?
+    - What type of steel is used to make Greenchem's vacuum trucks' vacuum tanks?
+- intent: chatvac/vac_15k_suction_rate
+  examples: |
+    - What is the suction rate of Greenchem's 15,000 litres vacuum truck?
+    - What is the suction capacity of Greenchem's 15,000 litres vacuum truck?
+    - What is the suction flow rate of Greenchem's 15,000 litres vacuum truck?
+    - How fast can Greenchem's 15,000 litres vacuum truck suck?
+
+## VACUUM TRUCK SAFETY
+
+- intent: chatvac/vac_truck_ppe
+  examples: |
+    - What are the PPE required when operating the vacuum truck?
+    - What are the PPE needed when operating the vacuum truck?
+    - What are the type of PPE required when operating the vacuum truck?
+    - What are the type of PPE needed when operating the vacuum truck?
+    - What are the Personal Protective Equipment required when operating the vacuum truck?
+    - What are the Personal Protective Equipment needed when operating the vacuum truck?
+    - What are the type of Personal Protective Equipment required when operating the vacuum truck?
+    - What are the type of Personal Protective Equipment needed when operating the vacuum truck?
+    - What are the Personal Protective Gears required when operating the vacuum truck?
+    - What are the Personal Protective Gears needed when operating the vacuum truck?
+    - What are the type Personal Protective Gears required when operating the vacuum truck?
+    - What are the type Personal Protective Gears needed when operating the vacuum truck?
+    - Why PPE is required when operating the vacuum truck?
+    - Why PPE is needed when operating the vacuum truck?
+    - Why Personal Protective Equipment is required when operating the vacuum truck?
+    - Why Personal Protective Equipment is needed when operating the vacuum truck?
+    - Why Personal Protective Gears are required when operating the vacuum truck?
+    - Why Personal Protective Gears are needed when operating the vacuum truck?
+- intent: chatvac/vac_earthing
+  examples: |
+    - What is the purpose of connecting the earthing cable to the earthing point?
+    - What function does connecting the earthing cable to the earthing point have?
+    - What is the reason for connecting the earthing cable to the earth point?
+    - Why do i need to connect to the earthing point?
+    - Why does the earthing cable need to be connected to the earthing point?
+    - When do you connect the earthing point?
+    - How does the static electricity passes?
+- intent: chatvac/vac_lel_sensor
+  examples: |
+    - What happen when the area of work is hazaordous?
+    - What happen when the area has a high LEL reading?
+    - What indicator does it have when the LEL is high?
+    - Which areas can the vacuum truck operate in?
+    - Why is the alarm sensor sound off?
+    - When will the alarm be triggered?
+    - How do i measure LEL?
+    - How do i know if there is leak gas?
+    - Is it safe to operate the vacuum truck in a hazardous area?
+    - Can the vacuum truck operate in a hazardous area?
+    - Is the vacuum truck equipped with any safety features?
+    - Does the vacuum truck have any safety features?
+- intent: chatvac/vac_parking
+  examples: |
+    - Can the vacuum truck be parked on uneven ground?
+    - Can the vacuum truck be parked on a slope?
+    - Where should the vacuum truck be parked during operation?
+    - Can the vacuum truck be operated while parked on a slope?
+    - Does the vacuum truck need to be parked on flat ground?
+    - Can the vacuum truck operate efficiently on uneven ground?
+- intent: chatvac/vac_wheelchoke
+  examples: |
+    - What precautionary measure to take to ensure vacuum truck does not move during operation?
+    - What precautionary measure to take to ensure vacuum truck stays stationary during operation?
+    - What is wheel choke?
+    - Why wheel chokes need to be placed on all of vacuum truck wheels?
+    - How to ensure the vacuum truck does not move when in suction or discharge operation?
+    - How to ensure the vacuum truck stays stationary when in suction or discharge operation?
+    - How to prevent the vacuum truck from moving when in use?
+    - How does the wheel choke look like?
+    - Show me a photo/picture/image of the vacuum truck wheel choke.
+    - Show me a picture of the vacuum truck wheel choke.
+    - Show me an image of the v wheel choke.
+    - Can I see a photo of the wheel choke?
+    - Can I see a picture of the wheel choke for vacuum truck?
+    - Can I see a image of the vacuum truck wheel choke?
+    - Do you have a photo of the vacuum truck wheel choke?
+- intent: chatvac/vac_emergency_button
+  examples: |
+    - What should I do if there is an emergency while operating the vacuum truck?
+    - What if there is an emergency while operating the vacuum truck?
+    - Where is the emergency button of the vacuum truck?
+    - Where to locate the emergency button of the vacuum truck?
+    - Why is it important to push the emergency button of the vacuum truck during an emergency?
+    - When to press the vacuum truck emergency button?
+    - How does the vacuum truck emergency button look like?
+    - Is there any emergency button on the vacuum truck?
+    - Show me the vacuum truck emergency button.
+    - Show me a photo/picture/image of the vacuum truck emergency button.
+    - Show me a picture of the vacuum truck emergency button.
+    - Show me an image of the vacuum truck emergency button.
+    - Can I see a photo of the vacuum truck emergency button?
+    - Can I see a picture of the vacuum truck emergency button?
+    - Can I see an image of the vacuum truck emergency button?
+    - Do you have a photo of the vacuum truck emergency button?
+
+## VACUUM TRUCK MAINTENANCE
+
+- intent: chatvac/vac_maintenance
+  examples: |
+    - What is the vacuum truck maintenance schedule?
+    - Where is the inspection of vacuum truck carried out?
+    - Where is the location of vacuum truck inspection?
+    - When is inspection vacuum truck carried out?
+    - How long is the validity of the vacuum truck inspection?
+    - How often does the vacuum truck need to be certified?
+    - How often does the vacuum truck need to be inspected?
+    - Does vacuum truck need maintenance?
+    - Does vacuum truck require maintenance?
+    - Does vacuum truck need inspection?
+    - Does vacuum truck require inspection?
+- intent: chatvac/vac_hose_certification
+  examples: |
+    - What is the validity period of the vacuum truck hoses?
+    - Who is responsible to certified the vacuum truck hoses?
+    - How long can the vacuum truck hoses be used before they need to be changed?
+    - How to know if the vacuum truck hoses is in good condition?
+    - Do 4 inch vacuum truck hoses needs to be certified? If yes, how long is the validity?
+    - Do the vacuum truck hoses need maintenance?
+- intent: chatvac/vac_tank_cleaning
+  examples: |
+    - What if I want to clean the vacuum tank of the vacuum truck?
+    - What happen when the vacuum tank of the vacuum truck is dirty?
+    - What are the procedures to clean the vacuum tank of the vacuum truck?
+    - What are the steps to clean the vacuum tank of the vacuum truck?
+    - What is the vacuum truck's vacuum tank cleaning frequency?
+    - Where is the cleaning done for the vacuum truck's vacuum tank?
+    - Why does the vacuum truck's vacuum tank need cleaning?
+    - Why does the vacuum truck's vacuum tank require cleaning?
+    - When is the cleaning of vacuum truck's vacuum tank done?
+    - When is cleaning of vacuum truck's vacuum tank needed?
+    - When is cleaning of vacuum truck's vacuum tank required?
+    - Who can clean the vacuum truck's vacuum tank?
+    - Who is suppose to clean the vacuum truck's vacuum tank?
+    - Who is responsible for the cleaning of the vacuum truck's vacuum tank?
+    - How to clean the vacuum truck's vacuum tank?
+    - How frequent does the vacuum truck's vacuum tank require cleaning?
+    - Is it necessary to clean the vacuum truck's vacuum tank?
+    - Can the vacuum truck's vacuum tank be cleaned?
+    - Is the vacuum tank of the vacuum truck able to be cleaned?
+    - Does the vacuum truck's vacuum tank require cleaning?
+    - Must the vacuum truck's vacuum tank be cleaned?
+
+- synonym: vacuum truck
+  examples: |
+    - vacuum trucks
+    - vacuum tanker
+    - vacuum tankers
+    - super sucker
+    - high suction truck
+    - fast suction tankers
+    - fast suction trucks
+
+## END OF VACUUM TRUCK
+
 
 - synonym: high
   examples: |
