@@ -299,6 +299,86 @@ responses:
       It is usually a pushbutton located on the driver dashboard.
       The vacuum truck will not be able to perform suction or discharge if the PTO switch is not turned on.
 
+## VACUUM TRUCK TECHNICAL SPECIFICATIONS
+
+  utter_chatvac/vac_discharge_pressure:
+  - text: |-
+      The vacuum truck discharge pressure ranges from 10 - 20 PSI.
+  utter_chatvac/vac_holding_capacity:
+  - text: |-
+      Greenchem owns three vacuum trucks with tank holding capacity of 9,000 litres, 14,000 litres and 15,000 litres respectively.
+  utter_chatvac/vac_fuel_type:
+  - text: |-
+      Greenchem vacuum trucks uses diesel with Euro 4 or 5 standard.
+  utter_chatvac/vac_material_type:
+  - text: |-
+      All 3 vacuum trucks' vacuum tanks of Greenchem are made from different material.
+      - Specifically, the 9000 litres vacuum tank is of carbon steel,
+      - 14,000 litres vacuum tank is of 316L stainless steeland
+      - 15,000 litres vacuum tank is of mild steel.
+  utter_chatvac/vac_15k_suction_rate:
+  - text: |-
+      The suction rate of Greenchem's 15,000 litres vacuum truck is 4000 m3/hr.
+
+## VACUUM TRUCK SAFETY
+
+  utter_chatvac/vac_truck_ppe:
+  - text: |-
+      Vacuum truck operator is required to put on PPE or Personal Protective Equipment such as:
+        - Safety Helmet,
+        - Face Shield and
+        - Safety Goggles,
+        - Ear Plugs,
+        - Coverall Uniform,
+        - Chemical Gloves and
+        - Safety Boots.
+      These PPE help to mitigate the risks or hazards associated with operating the vacuum truck.
+  utter_chatvac/vac_earthing:
+  - image: https://i.imgur.com/gnumkGj.jpg
+    text: |-
+      - Grounding or earthing of the vacuum truck is achieve by connecting the on-board MGV earthing cable to a nearby earthing point.
+      - Vacuum trucks and bulk chemical road tankers transferring flammable products require static grounding protection to prevent the build-up of static electricity on the truck or equipment, like hoses, that are connected to the truck.
+      - If static electricity is allowed to build up on the truck the discharge of a static spark becomes an ignition hazard.
+  utter_chatvac/vac_lel_sensor:
+  - image: https://i.imgur.com/j4boMWz.jpg
+    text: |-
+      - The vacuum truck is fitted with a sensor to detect level of LEL(Lower Explosive Limit) around its immediate surrounding while in operation.
+      - The sensor will trigger an alarm when level of LEL exceed the programmed threshold.
+  utter_chatvac/vac_parking:
+  - text: |-
+      The vacuum truck should be parked on flat and even ground.
+      This will ensure the liquid inside the vacuum tank is evenly distributed and the reading on level indicator is accurate.
+      **Alternatively you can search how to ensure vacuum truck wheel choke to secure while at stationary or in operation**
+  utter_chatvac/vac_wheelchoke:
+  - image: https://i.imgur.com/Qdkz88e.jpg
+    text: |-
+      - Wheel chokes are to be placed on all of vacuum truck wheels to prevent accidental movement.
+      - Wheel chokes are a wedge of sturdy material, such as polyurethane or rubber, placed against a vehicle's wheels to prevent accidental movement.
+      - Chokes are placed for safety in addition to setting the brakes.
+      - The bottom surface is sometimes coated in rubber to enhance grip with the ground.
+  utter_chatvac/vac_emergency_button:
+  - image: https://i.imgur.com/yQpS0rG.jpg
+    text: |-
+      In the event of an emergency while operating the vacuum truck, press the emergency button located at the rear side of the vacuum truck to cut source of power transmission to bring all operations to a complete stop.
+  utter_chatvac/vac_maintenance:
+  - text: |-
+      - Maintenance of the Vacuum truck is done monthly by Greenchem Mechanic at Greenchem Facilities with the help of the checklist.
+      - Yearly inspection by STA is required in accordance to MOM regulation and LTA regulation.
+  utter_chatvac/vac_hose_certification:
+  - text: |-
+      Every length of vacuum truck hose requires yearly hydrostatic test, where it is tested on its strength and for leak.
+      Upon passing the test, the hose will be issued with a certificate.
+      **Consult Greenchem Admin Team on the vendor performing the hydrostatic test.**
+  utter_chatvac/vac_tank_cleaning:
+  - text: |-
+      Regular cleaning of the vacuum truck tank is necessary to prevent build-up of hardened sludge or when the tank was used to hold corrosive liquid.
+      - Frequency of cleaning depends on rate of use and last item stored in the tank.
+      - Cleaning can also be necessary to ensure tank is empty before deploying the vacuum truck for certain special job.
+      - Cleaning is done in Greenchem facility and should only be performed by trained personnel.
+
+##    END OF VACUUM TRUCK
+
+
   utter_out_of_scope:
   - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
   utter_greet:
