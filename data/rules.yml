@@ -20,6 +20,11 @@ rules:
   - intent: chatbooster
   - action: utter_chatbooster
 
+- rule: Handle chatvac
+  steps:
+  - intent: chatvac
+  - action: utter_chatvac
+
 - rule: Start incident form
   steps:
   - or:
