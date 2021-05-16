@@ -2,7 +2,7 @@ language: en
 pipeline:
 - name: WhitespaceTokenizer
   intent_tokenization_flag: true
-  intent_split_symbol: _
+  intent_split_symbol: "+"
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
