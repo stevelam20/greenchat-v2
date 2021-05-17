@@ -4,23 +4,35 @@ stories:
   steps:
   - intent: out_of_scope
   - action: utter_out_of_scope
+
+## THE GENERAL HELP THAT GIVES GENERAL SCOPES
 - story: help
   steps:
   - intent: help
-  - action: utter_green_help
+  - action: utter_help
+  - intent: thank
+  - intent: goodbye
+  - action: utter_welcome
+  - action: utter_goodbye
+
 - story: thank
   steps:
   - intent: thank
   - action: utter_welcome
-- story: happy path
+
+## TRAINING PATHS ON THREE EQUIPMENTS
+- story: train happy path
   steps:
-  - intent: greet
+  - intent: train_me
   - action: utter_greet
   - action: utter_green_help
+
 - story: say goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
+
+## FIRST OPETION FOR HYDROJET LEARNING
 - story: green hydrojet machine
   steps:
   - intent: greet
@@ -28,6 +40,8 @@ stories:
   - action: utter_green_help
   - intent: hydrojet_machine_option
   - action: utter_green_option_hydrojet_machine
+
+## FIRST OPTION FOR BOOSTER PUMP LEARNING
 - story: green booster pump
   steps:
   - intent: greet
@@ -35,6 +49,8 @@ stories:
   - action: utter_green_help
   - intent: booster_pump_option
   - action: utter_green_option_booster_pump
+
+## FIRST OPTION FOR VACUUM TRUCK LEARNING  
 - story: green vacuum truck
   steps:
   - intent: greet
