@@ -5,6 +5,7 @@ session_config:
   session_expiration_time: 0
   carry_over_slots_to_new_session: true
 intents:
+- train_me
 - chatvac:
     use_entities: true
 - greet:
@@ -51,6 +52,8 @@ entities:
 - priority
 - number
 - email
+- pump
+- truck
 slots:
   confirm:
     type: rasa.shared.core.slots.AnySlot
@@ -392,12 +395,14 @@ responses:
   - text: What is the problem description for the issue?
   utter_help:
   - text: |-
-      I can help you open a service request ticket, or check the status of your open incidents.
+      I can help you in many ways feel free to ask me anything.
       You can ask me things like:
-      - Open an incident
-      - Help me reset my password
-      - I'm having a issue with my email
-      - What's the status of the ticket I opened?
+      - Frequently ask question of (Booster Pump, Hydrojet Machine, Vacuum Truck)
+      - I can guide you on trainings:
+          - Booster Pump
+          - Hydrojet Machine
+          - Vacuum Truck
+      - **(Coming to release)**
   utter_green_help:
   - text: |-
       I can asisst you with some training and learning of following operations
@@ -445,6 +450,9 @@ responses:
       10. Housekeeping
   utter_welcome:
   - text: You're welcome!
+  - text: No worries!
+  - text: I am glad that i am about to help you with that.
+  - text: Sure, you most welcome! 
   utter_default:
   - text: I didn't quite understand that. Could you rephrase?
   utter_ask_confirm:
