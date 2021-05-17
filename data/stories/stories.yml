@@ -7,14 +7,18 @@ stories:
 - story: help
   steps:
   - intent: help
-  - action: utter_green_help
+  - action: utter_help
+  - intent: thank
+  - intent: goodbye
+  - action: utter_welcome
+  - action: utter_goodbye
 - story: thank
   steps:
   - intent: thank
   - action: utter_welcome
-- story: happy path
+- story: train happy path
   steps:
-  - intent: greet
+  - intent: train_me
   - action: utter_greet
   - action: utter_green_help
 - story: say goodbye
