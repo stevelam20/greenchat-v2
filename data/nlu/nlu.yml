@@ -10,6 +10,37 @@ nlu:
     - hey there
     - hi there
     - hello there
+    - yo
+    - good morning
+    - hi
+    - hey there
+    - hey
+    - good evening
+    - hello
+    - Hello?
+    - HEY
+    - hello are you still there
+    - hallo
+    - HI
+    - Hey
+    - Hi
+    - hi!
+    - hello there
+    - hi there
+    - Hello
+    - hello its ella
+    - Hola.
+    - welcome
+    - howdy
+    - good day
+    - what dup
+    - what's up!
+    - sup mate!
+    - hey yo!
+    - good day?
+    - g'day
+    - how you doing?
+    - bello!
 - intent: goodbye
   examples: |
     - bye
@@ -18,6 +49,42 @@ nlu:
     - see you later
     - see ya
     - buh bye
+    - see you later
+    - goodbye
+    - i'm done
+    - quit
+    - stop
+    - bye
+    - Adios
+    - BYEE
+    - GOODBYE
+    - Thanks a lot. See ya later
+    - have a good day. time to go, bye
+    - bye bye
+    - ok i gtg
+    - bye bye bot
+    - bye for now
+    - bye udo
+    - bye was nice talking to you
+    - bye!
+    - byee
+    - catch you later
+    - ciao
+    - cya
+    - farewell
+    - good bye
+    - good bye rasa bot!
+    - good night
+    - goodbye
+    - goodbye.
+    - goodnight
+    - gotta go
+    - ta ta!
+    - see ya later!
+    - talk to you later
+    - see you next time!
+    - see you next week
+    - see you again!
 - intent: thank
   examples: |
     - thanks!
@@ -26,6 +93,33 @@ nlu:
     - great thanks
     - appreciate it
     - cool thanks
+    - thank you goodbye
+    - okay thank you goodbye
+    - thank you bye
+    - um okay thank you good bye
+    - thank you
+    - and thats all thank you and good bye
+    - okay thank you
+    - thanks
+    - thanks goodbye
+    - thank you and good bye
+    - Thanks!
+    - Awesome, you are a good bot!
+    - great!
+    - I see, thanks
+    - Oh thats good!
+    - it's good :-)
+    - thnaks
+    - good job bot
+    - great
+    - thanks for the help
+    - thanks you
+    - thanks!
+    - thankyou
+    - thnks
+    - thx
+    - thanks for your information
+    - thanks f
 - intent: password_reset
   examples: |
     - need to reset my password
@@ -52,6 +146,16 @@ nlu:
     - I'm having a issue I need to open a incident for.
     - I have a issue I need to open a case for.
     - open an incident for aileen.mottern@example.com
+- intent: train_me
+  examples: |
+    - Can you guide me on trainings
+    - I would like to learn how to operate [hydrojet machine](pump)
+    - I would like to learn how to operate [booster pump](pump)
+    - I would like to learn how to operate [vacuum truck](truck)
+    - Teach me on please operating of [hydrojet machine](pump)
+    - Teach me on please operating of [vacuum truck](truck)
+    - So how to operate [booster pump](pump)
+    - So how to operate [vacuum truck](truck)
 - intent: help
   examples: |
     - I need help
@@ -61,6 +165,27 @@ nlu:
     - I need some help
     - help me
     - can you please help me
+    - help
+    - what can I ask you?
+    - what do you do?
+    - what can you help me with?
+    - help me
+    - help, what do you do
+    - how do I use this
+    - how can you help me
+    - What are the things that you can do?
+    - What else can you help me with?
+    - can you do anything else?
+    - can you help me?
+    - come back
+    - cool! can I do something else here?
+    - hello what can you do for me
+    - help
+    - help me
+    - help please
+    - help pls
+    - help?
+    - hep me
 - intent: problem_email
   examples: |
     - my outlook application won't open
@@ -148,21 +273,64 @@ nlu:
     - Show me how to operate vacuum truck
 - intent: affirm
   examples: |
-    - yes
-    - yes please
-    - yes I would
-    - please do
-    - yup
-    - yep
-    - that's right
     - indeed
-    - Yes, please
+    - correct
+    - that sounds good
+    - yes
+    - yess please
+    - of course
+    - yup
     - yeah
-    - sure
-    - yes thanks
+    - yes please
+    - yes plz
+    - Sure
+    - Ok
+    - sweet
+    - cool,
+    - yes...
+    - y
+    - ok
+    - ye
+    - okay
+    - That would be great
+    - YES
+    - YUP
+    - Yea
+    - Yeah
+    - Yeah sure
+    - Yep
+    - Yep that's fine
+    - Yep!
+    - Yepp
+    - Yes
+    - Yes I do
+    - Yes please
+    - Yes please!
+    - Yes, I accept
 - intent: deny
   examples: |
+    - not really
     - no
+    - I don't think so
+    - never
+    - no way
+    - nope
+    - no thanks
+    - I dunno
+    - Nothing!
+    - nevermind
+    - n
+    - i decline
+    - i don not like this
+    - i don't think so
+    - i don't want either of those
+    - i don't want to
+    - i don't want to give you my email
+    - i dont want to
+    - i dont want to accept :P lol
+    - i guess it means - no
+    - i'm afraid not
+    - i'm not sure- no
     - nope
     - no thanks
     - not that one
@@ -182,6 +350,10 @@ nlu:
     - Am i talking to a chatbot?
     - Are you a bot of a human?
     - I think you are a bot
+    - Are you robot?
+    - are you a ghost?
+    - Are you an Artiifical Intelligience?
+    - Are you an AI bot?
 - intent: chitchat/not_human_challenge
   examples: |
     - Are you a human?
