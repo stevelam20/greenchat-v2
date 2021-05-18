@@ -40,6 +40,9 @@ stories:
   - action: utter_green_help
   - intent: hydrojet_machine_option
   - action: utter_green_option_hydrojet_machine
+  - intent: next_page
+  - action: utter_green_option_hydrojet_machine_pg_2
+
 
 ## FIRST OPTION FOR BOOSTER PUMP LEARNING
 - story: green booster pump
@@ -50,7 +53,7 @@ stories:
   - intent: booster_pump_option
   - action: utter_green_option_booster_pump
 
-## FIRST OPTION FOR VACUUM TRUCK LEARNING  
+## FIRST OPTION FOR VACUUM TRUCK LEARNING
 - story: green vacuum truck
   steps:
   - intent: greet
