@@ -7,6 +7,7 @@ session_config:
 intents:
 - train_me
 - next_page
+- name_entry
 - chatvac:
     use_entities: true
 - greet:
@@ -55,7 +56,10 @@ entities:
 - email
 - pump
 - truck
+- name
 slots:
+  name:
+    type: any
   confirm:
     type: rasa.shared.core.slots.AnySlot
     initial_value: null
@@ -523,10 +527,19 @@ responses:
   - text: What is your user id?
   utter_ask_email:
   - text: What is your email?
+  utter_ask_name:
+  - text: What is your name please?
+  utter_greet_name:
+  - text: Hi, {name} how are you doing today?
 actions:
 - action_incident_status
 - action_hi
+- action_name_form
 forms:
+  # ask_name_form:
+  #   name:
+  #     - type: from_entity
+  #       entity: name
   open_incident_form:
     confirm:
     - intent: affirm
