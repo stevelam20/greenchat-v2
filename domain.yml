@@ -422,12 +422,9 @@ responses:
       3. Start of Engine
       4. Check For Leakage
     buttons:
-    - title: "Next Page"
-      payload: /next_page
-    custom:
-      input_type: "disable"
-      back_button: true
-      exit_button: false
+    - payload: /next_page
+      title: Next Page
+
 
   utter_green_option_hydrojet_machine_pg_2:
   - text: |-
