@@ -11,12 +11,6 @@ nlu:
     - hi there
     - hello there
     - yo
-    - good morning
-    - hi
-    - hey there
-    - hey
-    - good evening
-    - hello
     - Hello?
     - HEY
     - hello are you still there
@@ -25,8 +19,6 @@ nlu:
     - Hey
     - Hi
     - hi!
-    - hello there
-    - hi there
     - Hello
     - hello its ella
     - Hola.
@@ -49,12 +41,9 @@ nlu:
     - see you later
     - see ya
     - buh bye
-    - see you later
-    - goodbye
     - i'm done
     - quit
     - stop
-    - bye
     - Adios
     - BYEE
     - GOODBYE
@@ -75,7 +64,6 @@ nlu:
     - good bye
     - good bye rasa bot!
     - good night
-    - goodbye
     - goodbye.
     - goodnight
     - gotta go
@@ -97,7 +85,6 @@ nlu:
     - okay thank you goodbye
     - thank you bye
     - um okay thank you good bye
-    - thank you
     - and thats all thank you and good bye
     - okay thank you
     - thanks
@@ -114,7 +101,6 @@ nlu:
     - great
     - thanks for the help
     - thanks you
-    - thanks!
     - thankyou
     - thnks
     - thx
@@ -169,7 +155,6 @@ nlu:
     - what can I ask you?
     - what do you do?
     - what can you help me with?
-    - help me
     - help, what do you do
     - how do I use this
     - how can you help me
@@ -180,8 +165,6 @@ nlu:
     - come back
     - cool! can I do something else here?
     - hello what can you do for me
-    - help
-    - help me
     - help please
     - help pls
     - help?
@@ -253,6 +236,7 @@ nlu:
     - Show me how to operate hydrojet machine
     - operating hydrojet machine
     - operating of hydrojet machine
+    - [hydrojet machine](pump) learning
 - intent: booster_pump_option
   examples: |
     - I would like to choose booster pump training
@@ -331,8 +315,6 @@ nlu:
     - i guess it means - no
     - i'm afraid not
     - i'm not sure- no
-    - nope
-    - no thanks
     - not that one
     - don't use that
     - please no
@@ -378,14 +360,12 @@ nlu:
     - Can i maintain/adjust the pressure of the booster pump?
     - Can i monitor the pressure from the pressure gauge from the booster pump?
     - Can i use the start button to start the engine?
-    - Can i use diesel on the booster pump?
     - Can i use Euro 4/5/above Diesel grade on the booster pump?
     - Can the drip tray contain oil leakage from the engine and diesel tank on the booster pump?
     - Can i check the quantity level of the diesel on the booster pump?
     - By connecting to the earthing point, am i able to prevent static electricity passing through from the booster pump?
     - Can i do booster pump maintenance?
     - Can i stop the engine on the booster pump by sliding the stop lever?
-
 - intent: chitchat/affirm_yes
   examples: |
     - Is diesel the fuel consumption to the booster pump?
@@ -414,7 +394,6 @@ nlu:
     - Is there a booster pump maintenance record?
     - Is there a requirement to maintain the booster pump?
     - Do i stop the engine on the booster pump by sliding the stop lever?
-
 - intent: chitchat/affirm_should
   examples: |
     - Should i use water on the booster pump?
@@ -428,13 +407,11 @@ nlu:
     - Should i deplete/drain the excess oil from the drip tray?
     - Should i monitor the pressure from the pressure gauge from the booster pump?
     - Should i use the start button to start the engine?
-    - Should i use diesel on the booster pump?
     - Should i use Euro 4/5/above Diesel grade on the booster pump?
     - Do i need to use whip arrestor?
     - Do i need to do earthing on the booster pump?
     - Do i need to do booster pump maintenance?
     - Should i stop the engine on the booster pump by sliding the stop lever?
-
 - intent: chitchat/deny_no
   examples: |
     - Is petrol the fuel consumption to the booster pump?
@@ -484,7 +461,6 @@ nlu:
     - Can i use the speed lever to stop the engine on the booster pump?
     - Can i use euro 2/3 diesel on the booster pump?
     - Can i use the drip tray to contain water flowing out from the hoses connection?
-
 - intent: chitchat/deny_should_not
   examples: |
     - Should i use acid material on the booster pump?
@@ -499,14 +475,12 @@ nlu:
     - Should i use the drip tray to contain water flowing out from the hoses connection?
     - Can I use euro 3 standard diesel on the Greenchem's vacuum truck?
     - Can I use euro 3 standard diesel on the our vacuum truck?
-
 - intent: chitchat/ask_supervisor
   examples: |
     - Where can i get the booster pump maintenance procedures?
     - Where do i check for the booster pump maintenance record?
     - Where do i get the booster pump maintenance procedures?
     - Where can i get the booster pump maintenance record?
-
 - intent: chathydrojet/positioning_hydrojet_machine
   examples: |
     - What if the machine is placed on uneven ground?
@@ -633,13 +607,6 @@ nlu:
     - Can the splitter gauge for hydrojet machine be use?
     - Secondary pressure gauge for hydrojet machine gun?
     - Any secondary monitor gauge for hydrojet machine gun available?
-
-
-  ## THE END OF HYDROJET MACHINE
-
-                ## BOOSTER PUMP MACHINE
-## BOOSTER PUMP GENERAL
-
 - intent: chatbooster/booster_intro
   examples: |
     - What is a Booster Pump?
@@ -693,7 +660,6 @@ nlu:
     - How does someone qualify to be a booster pump operator?
     - How do I train the booster pump operator?
     - How can i be a booster pump operator?
-
 - intent: chatbooster/booster_material_usage
   examples: |
     - What type of product is suitable to use for booster pump?
@@ -704,9 +670,6 @@ nlu:
     - Why can't we use oil/corrosive material on the booster pump?
     - Besides water, what other material can be used on the booster pump?
     - If oil/corrosive material is being used, what will happen to the booster pump?
-
-##              PROMPTING TO ASK FOR THE TRAINING LEARNING VIDEO
-##              MAY BE ABLE TO REMOVE FROM CHATBOOSTER FAQ
 - intent: chatbooster/booster_operating_procedures
   examples: |
     - What are the booster pump operating procedures?
@@ -716,17 +679,12 @@ nlu:
     - How to operate a booster pump?
     - Can you show me how to operate the booster pump?
     - Is there any booster pump operation procedures?
-
-##              CONSIDERED INTENT
-## BOOSTER PUMP OPERATIONS
-
 - intent: chatbooster/booster_in_out_connection
   examples: |
     - What are the types of inlet and outlet connection on the booster pump?
     - What type of inlet and outlet connection are used on the booster pump?
     - What type of connector is used on the booster pump?
     - What are the sizes of the inlet and outlet connection on the booster pump?
-    - What type of inlet and outlet connection are used on the booster pump?
     - What does the inlet and outlet connection booster pump look like?
     - What are the inlet and outlet connection of the booster pump?
     - Where do i connect the hoses on the booster pump?
@@ -751,7 +709,6 @@ nlu:
     - What type of hose connectors to be used on the booster pump?
     - What are the sizes of the inlet and outlet hoses connection on the booster pump?
     - What does the booster pump hoses connection look like?
-    - What are the sizes of the inlet and outlet hoses connection on the booster pump?
     - What type of inlet and outlet should be used on the booster pump?
     - What are the hoses connection on the booster pump?
     - What do the booster pump inlet and outlet hoses connection look like?
@@ -803,9 +760,6 @@ nlu:
     - How does the booster pump start button looks like?
     - Can you show me the image/picture of the start button on the booster pump
     - Do you have the picture/image/photo of the booster pump's start button?
-
-## BOOSTER PUMP TECHNICAL SPECIFICATIONS
-
 - intent: chatbooster/booster_pump_weight
   examples: |
     - What is the weight/mass of the booster pump
@@ -822,9 +776,6 @@ nlu:
     - Where to fill up the booster pump with diesel?
     - How much quantity of Diesel to be added on the booster pump?
     - Show me the photo/image/picture of the diesel filling point
-
-## BOOSTER PUMP SAFETY ASPECTS
-
 - intent: chatbooster/booster_diesel_gauge
   examples: |
     - What is the purpose of booster pump diesel gauge?
@@ -913,9 +864,6 @@ nlu:
     - Show me how to connect the earthing cable on the booster pump.
     - Do you have the photo/image/picture of the earthing cable connecting on the booster pump?
     - Can I see the photo/picture/ image of the earthing cable connecting on the booster pump?
-
-## BOOSTER PUMP MAINTENANCE & INSPECTION
-
 - intent: chatbooster/booster_maintenance
   examples: |
     - What is the required to assist the mechanic to maintain the booster pump?
@@ -951,21 +899,6 @@ nlu:
     - How frequent do i need to certify the booster pump?
     - How long can the booster pump be used before the next inspection?
     - How can i certify the booster pump?
-
-- synonym: booster pump
-  examples: |
-    - water pump
-    - diesel driven booster pump
-    - high flow low pressure pump
-    - water booster pump
-    - water booster
-
-## END OF BOOSTER PUMP
-
-## VACUUM TRUCK
-
-## VACUUM TRUCK GENERAL
-
 - intent: chatvac/vacuum_purpose
   examples: |
     - What is vacuum truck?
@@ -1036,9 +969,6 @@ nlu:
     - Can I see an image of the product label?
     - Do you have a photo of the product label?
     - Do you have an image of the product label?
-
-## VACUUM TRUCK OPERATIONS
-
 - intent: chatvac/vac_truck_hose
   examples: |
     - What hose is used on the vacuum truck?
@@ -1123,7 +1053,6 @@ nlu:
     - Do you have an image of vacuum truck PTO switch?
     - Do you have a picture of vacuum truck PTO switch?
     - Do you have a photo of vacuum truck PTO switch?
-
 - intent: chatvac/buddy_operate_vac_truck
   examples: |
     - What is the minimum number of people needed to operate the vacuum truck?
@@ -1132,9 +1061,6 @@ nlu:
     - How many helper is required to operate the vacuum truck?
     - Can the vacuum truck operator operate the vacuum truck alone?
     - Should the vacuum truck operator operate the vacuum truck alone?
-
-## VACUUM TRUCK SPECIFICATIONS
-
 - intent: chatvac/vac_discharge_pressure
   examples: |
     - What is the vacuum truck maximum pressure for discharging?
@@ -1173,9 +1099,6 @@ nlu:
     - What is the suction capacity of Greenchem's 15,000 litres vacuum truck?
     - What is the suction flow rate of Greenchem's 15,000 litres vacuum truck?
     - How fast can Greenchem's 15,000 litres vacuum truck suck?
-
-## VACUUM TRUCK SAFETY
-
 - intent: chatvac/vac_truck_ppe
   examples: |
     - What are the PPE required when operating the vacuum truck?
@@ -1262,9 +1185,6 @@ nlu:
     - Can I see a picture of the vacuum truck emergency button?
     - Can I see an image of the vacuum truck emergency button?
     - Do you have a photo of the vacuum truck emergency button?
-
-## VACUUM TRUCK MAINTENANCE
-
 - intent: chatvac/vac_maintenance
   examples: |
     - What is the vacuum truck maintenance schedule?
@@ -1309,7 +1229,19 @@ nlu:
     - Is the vacuum tank of the vacuum truck able to be cleaned?
     - Does the vacuum truck's vacuum tank require cleaning?
     - Must the vacuum truck's vacuum tank be cleaned?
-
+- synonym: high
+  examples: |
+    - escalated
+    - escalate
+    - urgent
+    - really important
+- synonym: booster pump
+  examples: |
+    - water pump
+    - diesel driven booster pump
+    - high flow low pressure pump
+    - water booster pump
+    - water booster
 - synonym: vacuum truck
   examples: |
     - vacuum trucks
@@ -1319,13 +1251,3 @@ nlu:
     - high suction truck
     - fast suction tankers
     - fast suction trucks
-
-## END OF VACUUM TRUCK
-
-
-- synonym: high
-  examples: |
-    - escalated
-    - escalate
-    - urgent
-    - really important
