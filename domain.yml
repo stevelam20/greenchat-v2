@@ -423,7 +423,11 @@ responses:
       4. Check For Leakage
     buttons:
     - title: "Next Page"
-      payload: "/next_page"
+      payload: /next_page
+    custom:
+      input_type: "disable"
+      back_button: true
+      exit_button: false
 
   utter_green_option_hydrojet_machine_pg_2:
   - text: |-
@@ -464,7 +468,7 @@ responses:
   - text: You're welcome!
   - text: No worries!
   - text: I am glad that i am about to help you with that.
-  - text: Sure, you most welcome!
+  - text: Sure, you are most welcome!
   utter_default:
   - text: I didn't quite understand that. Could you rephrase?
   utter_ask_confirm:
