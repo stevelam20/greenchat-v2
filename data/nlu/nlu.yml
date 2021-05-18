@@ -124,6 +124,20 @@ nlu:
   examples: |
     - next page
     - next
+- intent: name_entry
+  examples: |
+    - my name is [David](name)
+    - my name is [Ali] (name)
+    - my name is [Greg](name)
+    - my name is [Sarah](name)
+    - myself is [Jacob](name)
+    - I am [Adrian](name)
+    - I name myself as [Tristant](name)
+    - His name is [Mitchell](name)
+    - Her name is [Jennifer](name)
+    - You can call me [Lam](name)
+    - You should name me [Zul](name)
+    - You should call me as [Idham](name)
 - intent: password_reset
   examples: |
     - need to reset my password
