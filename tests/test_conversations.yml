@@ -1,5 +1,22 @@
 version: "2.0"
+
 stories:
+## STEP 1: GREETING
+## WE SET GREETING TO BE IN GENERAL CHITCHAT BOT
+## THE INTRO PAGE SHOULD HAVE GREETINGS AND TELL THE USERS WHAT THIS BOT CAN DO
+
+# - story: greeting path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_ask_name
+#   - intent: name_entry
+#     entities:
+#     - name: "David"
+#   - action: action_name_form
+#   - active_loop: null
+
+
+
 - story: out of scope path
   steps:
   - intent: out_of_scope
@@ -52,6 +69,10 @@ stories:
   - action: utter_green_help
   - intent: booster_pump_option
   - action: utter_green_option_booster_pump
+  - intent: next_page
+  - action: utter_green_option_booster_pump_pg_2
+  - intent: next_page
+  - action: utter_green_option_booster_pump_pg_3
 
 ## FIRST OPTION FOR VACUUM TRUCK LEARNING
 - story: green vacuum truck
@@ -61,3 +82,7 @@ stories:
   - action: utter_green_help
   - intent: vacuum_truck_option
   - action: utter_green_option_vacuum_truck
+  - intent: next_page
+  - action: utter_green_option_vacuum_truck_pg_2
+  - intent: next_page
+  - action: utter_green_option_vacuum_truck_pg_3
