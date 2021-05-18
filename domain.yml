@@ -444,14 +444,31 @@ responses:
       2. Booster Pump Hoses Connection
       3. Booster Pump Start Engine
       4. Booster Pump Speed Lever Adjustment
+    buttons:
+    - payload: /next_page
+      title: Next Page
+
+  utter_green_option_booster_pump_pg_2:
+  - text: |-
+      **PAGE 2**
+
       5. Booster Pump Monitor Pressure
       6. Booster Pump Check For Leakage
       7. Booster Pump Initiating To Power Down Procedures
       8. Booster Pump Speed Lever Down Adjustment
+    buttons:
+    - payload: /next_page
+      title: Next Page
+
+  utter_green_option_booster_pump_pg_3:
+  - text: |-
+      **PAGE 3**
+
       9. Booster Pump Pull The Stop Lever
       10. Booster Pump Pressure Discharge
       11. Booster Pump Outlet Valve
       12. Booster Pump Disconnection All Hoses
+
   utter_green_option_vacuum_truck:
   - text: |-
       Perfect, in here we are covering the following chapters for Vacuum Truck
@@ -459,12 +476,31 @@ responses:
       2. Vacuum Truck Engine Start
       3. Vacuum Truck Hoses Connection
       4. Vacuum Truck Configuration Onboard Control Panel
+    buttons:
+    - payload: /next_page
+      title: Next Page
+
+  utter_green_option_vacuum_truck_pg_2:
+  - text: |-
+
+      **PAGE 2**
+
       5. Vacuum Truck Commence Suction
       6. Vacuum Truck End Suction
       7. Vacuum Truck End Configuration Onboard Control Panel
       8. Vacuum Truck Disconnection Transfer Hoses
+    buttons:
+    - payload: /next_page
+      title: Next Page
+
+  utter_green_option_vacuum_truck_pg_3:
+  - text: |-
+
+      **PAGE 3**
+
       9. Vacuum Truck Power-Down
       10. Housekeeping
+
   utter_welcome:
   - text: You're welcome!
   - text: No worries!
