@@ -69,6 +69,10 @@ stories:
   - action: utter_green_help
   - intent: booster_pump_option
   - action: utter_green_option_booster_pump
+  - intent: next_page
+  - action: utter_green_option_booster_pump_pg_2
+  - intent: next_page
+  - action: utter_green_option_booster_pump_pg_3
 
 ## FIRST OPTION FOR VACUUM TRUCK LEARNING
 - story: green vacuum truck
@@ -78,3 +82,7 @@ stories:
   - action: utter_green_help
   - intent: vacuum_truck_option
   - action: utter_green_option_vacuum_truck
+  - intent: next_page
+  - action: utter_green_option_vacuum_truck_pg_2
+  - intent: next_page
+  - action: utter_green_option_vacuum_truck_pg_3
