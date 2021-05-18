@@ -56,3 +56,20 @@ class IncidentStatus(Action):
         dispatcher.utter_message("The status of your ticket is : {}".format(status))
 
         return [SlotSet("email",email)]
+    
+    
+# class ActionAskName(Action):
+#     """The action that says hi
+#
+#     It expects it's name go be defined in the environment variable: MY_NAME"""
+#
+#     def name(self):
+#         return 'action_name_form'
+#
+#     def run(self, dispatcher, tracker, domain):
+#
+#         name = tracker.get_slot('name')
+#         dispatcher.utter_message("Hi, {} how are you doing?".format(name))
+#         dispatcher.utter_message("How may i help you today?")
+#
+#         return[SlotSet("name",name)]
