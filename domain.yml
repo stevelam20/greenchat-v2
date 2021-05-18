@@ -6,6 +6,7 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - train_me
+- next_page
 - chatvac:
     use_entities: true
 - greet:
@@ -389,6 +390,9 @@ responses:
   - text: Hi, I am an IT Helpdesk Assistant. Ready to help you out.
   utter_goodbye:
   - text: Goodbye!
+  - text: See ya later!
+  - text: You may text me anytime!
+  - text: Bye!
   utter_ask_incident_title:
   - text: What should we use for the title of this incident?
   utter_ask_problem_description:
@@ -417,9 +421,17 @@ responses:
       2. Hoses Connection To Gun
       3. Start of Engine
       4. Check For Leakage
+    buttons:
+    - title: "Next Page"
+      payload: "/next_page"
+
+  utter_green_option_hydrojet_machine_pg_2:
+  - text: |-
+      **PAGE 2**
       5. Monitoring
       6. Stop of Engine
       7. Housekeeping
+
   utter_green_option_booster_pump:
   - text: |-
       Great, in here we shall be covering the following chapters for 12 bar booster pump
@@ -452,7 +464,7 @@ responses:
   - text: You're welcome!
   - text: No worries!
   - text: I am glad that i am about to help you with that.
-  - text: Sure, you most welcome! 
+  - text: Sure, you most welcome!
   utter_default:
   - text: I didn't quite understand that. Could you rephrase?
   utter_ask_confirm:
