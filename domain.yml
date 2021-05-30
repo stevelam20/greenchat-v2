@@ -91,15 +91,82 @@ slots:
     auto_fill: true
     influence_conversation: false
 responses:
+
+  ## HYDROJET MACHINE
+
+  # HYDROJET MACHINE GENERAL
+  utter_chathydrojet/hydrojet_machine:
+  - image: https://www.klenco-asia.com/wp-content/uploads/2020/05/NLB_1-01.jpg
+    text: Hydrojetting is a method of cleaning that involve pumping high pressure water to clean the surface.
+  - image: https://www.klenco-asia.com/wp-content/uploads/2020/05/NLB_1-01.jpg
+    text: A hydrojeting machine is use or aid in cleaning espicially in case where intensive cleaning is required. It is commonly used in shipyard, cleaning the hull of the ship.
+  - image: https://www.klenco-asia.com/wp-content/uploads/2020/05/NLB_1-01.jpg
+    text: Hydrojet machine is a diesel operated machine operating on a high pressure ranging from 20 000 - 40 000 PSI.
+
+  utter_chathydrojet/where_deploy_hydrojet_machine:
+  - image: https://www.klenco-asia.com/wp-content/uploads/2020/05/NLB_1-01.jpg
+    text: |-
+      In petrochemical or refinery industries, hydrojet machine is mainly used in cleaning the internal storage tank.
+
+  utter_chathydrojet/transfer_hydrojet_machine:
+  - image: https://i.imgur.com/PZbyWKl.jpg
+    text: |-
+      A lorry crane is required to lift up or down the machine and transport it to the required destination.
+
   utter_chathydrojet/positioning_hydrojet_machine:
   - text: It is recommended that the machine is to be place on a flat and even ground
-  utter_chathydrojet/transfer_hydrojet_machine:
-  - image: null
-    text: A lorry crane is required to lift up/down the machine and transport it to the required destination
-  utter_chathydrojet/hydrojet_machine_checklist:
-  - text: Check the battery polarity to ensure good connection and also battery indicator.
+
+## END OF HYDROJET MACHINE GENERAL
+
+## HYDROJET MACHINE OPERATION
+
   utter_chathydrojet/hydrojet_diesel_checklist:
   - text: Ensure suffiecient Euro 4 and above diesel is used in the diesel tank by looking at the diesel gauge.
+
+  utter_chathydrojet/hydrojet_machine_connection:
+  - image: https://i.imgur.com/wB1EoNd.jpg
+    text: |-
+      - 1 length of a high pressure hoses is 10m, all connection between machine and hoses are using 3/4 inch NPT connection with whip arrestor attached to prevent whipping effect.
+      - Depending on the work requirement, there are  2 setup system for Hydrojetting machine: single connection and dual connection.
+
+  utter_chathydrojet/2_setup_hydrojet_connection:
+  - image: https://i.imgur.com/wB1EoNd.jpg
+    text: |-
+      Depending on the work requirement, there are  2 setup system for Hydrojetting machine: single connection and dual connection.
+
+  utter_chathydrojet/hydrojet_engine_transmission:
+  - image: https://i.imgur.com/1Y5zI5s.jpg
+    text: |-
+      1) Firstly Engage the engine level transmission
+      2) To increase the pressure turn RPM Controller clockwise to its desire Pressure.
+      3) To decrease the pressure turn RPM Controller anti clockwise direction to its desire pressure.
+
+  utter_chathydrojet/hydrojet_machine_control_panel:
+  - image: https://i.imgur.com/lZCtyl3.jpg
+    text: |-
+      - The control panel on the hydrojet machine controls the speed of the engine, the rabbit picture means revving up the engine speed,
+      - The turtle picture means decreasing the engine speed of the hydrojet machine.
+      - The battery indicator and the engine rpm speed can also be found on the control panel display.
+
+    utter_chathydrojet/hydrojet_splitter_use:
+    - image: https://i.imgur.com/YDDvgWu.jpeg
+      text: Splitter is use as a dual gun connection and a secondary pressure gauge is available to monitor the pressure.
+
+    utter_chathydrojet/hydrojet_gun:
+    - image: https://i.imgur.com/WpplpS0.jpg
+      text: |-
+        - The purpose of the hydrojet gun is to cleaning the surface of the area.
+        - Squeezing of the gun trigger will start the cleaning process.
+    utter_chathydrojet/hydrojet_gun_training:
+    - text: |-
+         - Training is required in order for a person to operate the gun.
+         - He must be deemed competent in handling the gun.
+
+# END OF HYDROJET MACHINE OPERATION
+
+  utter_chathydrojet/hydrojet_machine_checklist:
+  - text: Check the battery polarity to ensure good connection and also battery indicator.
+
   utter_chathydrojet/hydrojet_water_tank_checklist:
   - image: null
     text: Ensure water is full in the water tank.
@@ -121,8 +188,7 @@ responses:
     text: The water tank capacity can contain up to 379Liters which is (100 gallon) and it should contain fresh water or demin water only.
   utter_chathydrojet/hydrojet_diesel_tank_size:
   - text: Hydrojet machine diesel tank capacity can store up to 246 Liters which is 65 gallon of diesel
-  utter_chathydrojet/hydrojet_splitter_use:
-  - text: Splitter is use as a dual gun connection and a secondary pressure gauge is available to monitor the pressure.
+
   utter_chatbooster/booster_intro:
   - image: https://i.imgur.com/8d0RZ51.jpg
     text: |-
