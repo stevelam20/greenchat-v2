@@ -776,6 +776,79 @@ nlu:
 
 # END OF HYDROJET MACHINE TECHNICAL SPECIFICATIONS
 
+## HYDROJET MACHINE MAINTENANCE & INSEPCTION
+
+- intent: chathydrojet/certification_hydrojet_machine
+  examples: |
+    - What is MOM standard regulation in regards to hydrojet machine inspection and maintenance?
+    - What is needed to be inspected on the hydrojet machine?
+    - Who is responsible to ensure that the hydrojet machine be maintain yearly?
+    - How often does the hydrojet machine being service?
+
+- intent: chathydrojet/inspection_lifting_crane
+  examples: |
+    - Why is lifting equipment be inspected?
+    - why need to inspect the hydrojet machine?
+    - When is inspection carried out?
+    - How long does the lifting inspection done?
+    - How long is the validity of the lifting inspection?
+    - Lifting inspection how long?
+
+- intent: chathydrojet/inspection_hydrojet_machine
+  examples: |
+    - What are the criteria for hydrojet machine inspection?
+    - What if the hydrojet machine is past the inspection dateline?
+    - What are the validity of hydrojet machine?
+    - What is the expiry of hydrojet machine?
+    - What is the maintenance schedule for hydrojet machine?
+    - Why do i need to insepct hydrojet machine?
+    - When do i need to do inspection for hydrojet machine?
+    - When will hydrojet machine required to be send for inspection?
+    - How often does the hydrojet machine need to be inspected/certified?
+    - how often does the hydrojet machine need to be inspected?
+    - How often does the hydrojet machine need to be inspected/certified?
+    - How often do i need to send hydrojet machine for inspection?
+    - How long do we need to send hydrojet machine for inspection?
+    - How long does the inspection of hydrojet machine last?
+    - How often do i need to maintain hydrojet machine?
+    - Does the hydrojet machine need to be certified/inspected?
+    - Does the hydrojet machine need to be inspected?
+    - Is there any inspection for hydrojet machine?
+    - Any inspection for hydrojet machine?
+    - Any requirement for hydrojet machine?
+    - Are there any inspection for hydrojet machine?
+    - Need to inspect hydrojet machine?
+    - Must we/I inspect hydrojet machine?
+    - Is there any inspection required for hydrojet machine?
+    - Shall I/we send hydrojet machine for inspection?
+    - Do I/we need to send hydrojet machine for inspection?
+    - Do the hydrojet machine need to be maintained?
+    - Does the hydrojet machine need to be maintain?
+    - Do i need to maintain the hydrojet machine?
+    - Does hydrojet machine need to be inspected?
+
+- intent: chathydrojet/hydrojet_hoses_certification
+  examples: |
+    - What is the validity period of the hydrojet hoses?
+    - What is the duration of hydrojet hoses certificate?
+    - What is the hydrojet hose requirement?
+    - Why we need to inspect/certify the hydrojet hoses?
+    - Why do we need to certify hydrojet hoses?
+    - When do i need to certify the hydrojet hoses?
+    - When do we need to recertify the hydrojet hoses?
+    - When to do certificate of hydrojet hoses?
+    - How long can the hydrojet hoses be used before they need to be changed?
+    - How long is the validity of the hydrojet hoses?
+    - How to justify the integrity of the hydrojet hoses?
+    - How to know if the any expiry on hydrojet hoses?
+    - Do all hydrojet hoses need to be certified? if yes, how long is the validity?
+    - Do the hydrojet hoses need maintenance?
+    - Do i need to certify the hydrojet hoses?
+    - Any certificate for hydrojet hoses?
+    - Requirements for hydrojet hoses?
+    - Expiry of hydrojet hoses?
+    - Is there any expiry on hydrojet hoses?
+
 - intent: chathydrojet/hydrojet_machine_checklist
   examples: |
     - What is needed to power on the hydrojet machine?
@@ -788,6 +861,67 @@ nlu:
     - where to fill up the water of hydrojet machine?
     - When do you fill up the water of hydrojet machine?
     - How much to fill up the water tank of hydrojet machine?
+
+# END OF MAINTENANCE & INSPECTION
+
+## HYDROJET MACHINE SAFETY
+
+- intent: chathydrojet/hydrojet_safety_ppe
+  examples: |
+    - What kind of additional PPE is required when operating the machine?
+    - What kind of PPE is required?
+    - What are the PPE required?
+    - What PPE to use?
+    - What does the PPE look like?
+    - How does the PPE look like?
+    - Is additional PPE needed when operating the machine?
+    - Is any extra equipment needed to operate the machine?
+    - Must i use any PPE?
+    - Show me the PPE
+    - Show me a photo/picture/image of the PPE
+    - Can i see a photo/picture/image of the PPE?
+    - Do you have a photo of the PPE?
+
+- intent: chathydrojet/hydrojet_machine_operating_hour
+  examples: |
+    - What is the maximum amount of hour the hydrojet machine can run?
+    - What is the hydrojet machine max operating hours?
+    - When do i need to let the hydrojet machine rest?
+    - How long can the hydrojet machine run for?
+    - How long can the hydrojet machine operate?
+    - How long can i operate the hydrojet machine?
+    - Can the hydrojet machine be running continuously for 4 hours straight?
+    - Does the hydrojet machine need to be stopped occasionally?
+
+- intent: chathydrojet/hydrojet_hoses_check
+  examples: |
+    - How do i check for any leakage in the hydrojet hoses connection?
+    - How do i know if the hydrojet hoses are connected properly?
+    - How do i ensure that the hydrojet hoses are connected properly?
+    - is there a way to check if the hydrojet hoses are connected properly?
+
+- intent: chathydrojet/competency_operating_hydrojet_machine
+  examples: |
+    - What are the training for hydrojet machine?
+    - What are the requirement to operate hydrojet machine?
+    - Who can be operate the hydrojet machine?
+    - Do workers need to be competent when operating hydrojet machine?
+    - Must workers go through training to operate hydrojet machine?
+    - What is the requirement/criteria to meet before workers can operate hydrojet machine?
+    - Do workers need to undergo/go through training before they can operate hydrojet machine?
+    - Can anyone operate hydrojet machine?
+    - Does the operator of the hyrojet machine needed to be certified?
+    - Must I trained before using hydrojet machine ?
+    - Any training needed to use or operate hydrojet machine?
+    - Anyone can use the hydrojet machine?
+
+# END OF SAFETY HYDROJET MACHINE
+
+- synonym: hydrojet machine
+  examples: |
+    - high pressure jet
+    - low flow high pressure
+    - high pressure pump machine
 
   ## THE END OF HYDROJET MACHINE
 
