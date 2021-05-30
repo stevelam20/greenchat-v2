@@ -148,7 +148,7 @@ responses:
       - The turtle picture means decreasing the engine speed of the hydrojet machine.
       - The battery indicator and the engine rpm speed can also be found on the control panel display.
 
-    utter_chathydrojet/hydrojet_splitter_use:
+    utter_chathydrojet/hydrojet_splitter:
     - image: https://i.imgur.com/YDDvgWu.jpeg
       text: Splitter is use as a dual gun connection and a secondary pressure gauge is available to monitor the pressure.
 
@@ -157,6 +157,7 @@ responses:
       text: |-
         - The purpose of the hydrojet gun is to cleaning the surface of the area.
         - Squeezing of the gun trigger will start the cleaning process.
+        
     utter_chathydrojet/hydrojet_gun_training:
     - text: |-
          - Training is required in order for a person to operate the gun.
@@ -189,6 +190,7 @@ responses:
   utter_chathydrojet/hydrojet_diesel_tank_size:
   - text: Hydrojet machine diesel tank capacity can store up to 246 Liters which is 65 gallon of diesel
 
+##  BOOSTER PUMP
   utter_chatbooster/booster_intro:
   - image: https://i.imgur.com/8d0RZ51.jpg
     text: |-
