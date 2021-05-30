@@ -1,1486 +1,694 @@
-version: "2.0"
-nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - good morning
-    - good evening
-    - hey there
-    - hi there
-    - hello there
-    - yo
-    - good morning
-    - hi
-    - hey there
-    - hey
-    - good evening
-    - hello
-    - Hello?
-    - HEY
-    - hello are you still there
-    - hallo
-    - HI
-    - Hey
-    - Hi
-    - hi!
-    - hello there
-    - hi there
-    - Hello
-    - hello its ella
-    - Hola.
-    - welcome
-    - howdy
-    - good day
-    - what dup
-    - what's up!
-    - sup mate!
-    - hey yo!
-    - good day?
-    - g'day
-    - how you doing?
-    - bello!
-- intent: goodbye
-  examples: |
-    - bye
-    - goodbye
-    - see you around
-    - see you later
-    - see ya
-    - buh bye
-    - see you later
-    - goodbye
-    - i'm done
-    - quit
-    - stop
-    - bye
-    - Adios
-    - BYEE
-    - GOODBYE
-    - Thanks a lot. See ya later
-    - have a good day. time to go, bye
-    - bye bye
-    - ok i gtg
-    - bye bye bot
-    - bye for now
-    - bye udo
-    - bye was nice talking to you
-    - bye!
-    - byee
-    - catch you later
-    - ciao
-    - cya
-    - farewell
-    - good bye
-    - good bye rasa bot!
-    - good night
-    - goodbye
-    - goodbye.
-    - goodnight
-    - gotta go
-    - ta ta!
-    - see ya later!
-    - talk to you later
-    - see you next time!
-    - see you next week
-    - see you again!
-- intent: thank
-  examples: |
-    - thanks!
-    - thank you
-    - thanks a lot
-    - great thanks
-    - appreciate it
-    - cool thanks
-    - thank you goodbye
-    - okay thank you goodbye
-    - thank you bye
-    - um okay thank you good bye
-    - thank you
-    - and thats all thank you and good bye
-    - okay thank you
-    - thanks
-    - thanks goodbye
-    - thank you and good bye
-    - Thanks!
-    - Awesome, you are a good bot!
-    - great!
-    - I see, thanks
-    - Oh thats good!
-    - it's good :-)
-    - thnaks
-    - good job bot
-    - great
-    - thanks for the help
-    - thanks you
-    - thanks!
-    - thankyou
-    - thnks
-    - thx
-    - thanks for your information
-    - thanks f
-- intent: next_page
-  examples: |
-    - next page
-    - next
-- intent: name_entry
-  examples: |
-    - my name is [David](name)
-    - my name is [Ali] (name)
-    - my name is [Greg](name)
-    - my name is [Sarah](name)
-    - myself is [Jacob](name)
-    - I am [Adrian](name)
-    - I name myself as [Tristant](name)
-    - His name is [Mitchell](name)
-    - Her name is [Jennifer](name)
-    - You can call me [Lam](name)
-    - You should name me [Zul](name)
-    - You should call me as [Idham](name)
-- intent: password_reset
-  examples: |
-    - need to reset my password
-    - need help resetting my password
-    - I can't reset my password
-    - need help with my password
-    - having issues resetting my password
-    - freaking password won't work
-    - reset my password
-    - password reset
-    - forgot my password and can't reset it
-- intent: open_incident
-  examples: |
-    - I need to open an incident
-    - Can you open a case for me
-    - I have an issue I need to open a incident for
-    - open incident
-    - Open a ticket
-    - can you help me open a incident please
-    - I want to open a new incident
-    - I want to open a incident
-    - I'm having a weird issue.
-    - I'm having a problem
-    - I'm having a issue I need to open a incident for.
-    - I have a issue I need to open a case for.
-    - open an incident for aileen.mottern@example.com
-- intent: train_me
-  examples: |
-    - Can you guide me on trainings
-    - I would like to learn how to operate [hydrojet machine](pump)
-    - I would like to learn how to operate [booster pump](pump)
-    - I would like to learn how to operate [vacuum truck](truck)
-    - Teach me on please operating of [hydrojet machine](pump)
-    - Teach me on please operating of [vacuum truck](truck)
-    - So how to operate [booster pump](pump)
-    - So how to operate [vacuum truck](truck)
-- intent: help
-  examples: |
-    - I need help
-    - what can you help me with
-    - can you help me
-    - what can you do
-    - I need some help
-    - help me
-    - can you please help me
-    - help
-    - what can I ask you?
-    - what do you do?
-    - what can you help me with?
-    - help me
-    - help, what do you do
-    - how do I use this
-    - how can you help me
-    - What are the things that you can do?
-    - What else can you help me with?
-    - can you do anything else?
-    - can you help me?
-    - come back
-    - cool! can I do something else here?
-    - hello what can you do for me
-    - help
-    - help me
-    - help please
-    - help pls
-    - help?
-    - hep me
-- intent: problem_email
-  examples: |
-    - my outlook application won't open
-    - I'm having issues with outlook.
-    - issues with outlook
-    - outlook application will not open
-    - there's a problem with my email
-    - something is broken with outlook
-    - I can't log in to my email
-    - can't log in to outlook
-    - my email won't let me log in
-    - i have a problem with my email
-- intent: inform
-  examples: |
-    - [low](priority)
-    - [medium](priority)
-    - [high](priority)
-    - it should be a [low](priority) priority
-    - it should be [medium](priority)
-    - [escalated]{"entity": "priority", "value": "high"}
-    - [escalate]{"entity": "priority", "value": "high"}
-    - [super high](priority)
-    - [12345](number)
-    - [54231](number)
-    - it' [345512](number)
-    - [j@email.com] (email)
-    - [c@email.com](email)
-    - it's [d@email.com](email)
-- intent: out_of_scope
-  examples: |
-    - what is the square root of 5
-    - I want to know the weather
-    - what is the meaning of life.
-    - Fridge Isn't Running
-    - my tv isn't working
-    - I want a pizza
-    - my washing machine isn't working
-    - what year is it
-    - order a pizza
-    - I want to order a pizza
-    - what is the weather today
-    - what is the weather
-- intent: incident_status
-  examples: |
-    - I want to check if my ticket has been closed
-    - what's the status of my incident?
-    - Has the incident been closed yet?
-    - Is my ticket in progress?
-    - What has happened with my open ticket?
-    - what's going on with the incident I opened?
-    - Do I have any open incidents at the moment?
-    - Can I check the status of my open tickets?
-    - Can I see the status of the ticket I opened?
-    - Check ticket status
-    - check incident status
-    - look up ticket status
-- intent: hydrojet_machine_option
-  examples: |
-    - I would like to choose hydrojet machine training
-    - I would like to learn about hydrojet machine
-    - Please guide me on hydrojet machine
-    - Please train me on hydrojet machine
-    - Please teach me on hydrojet machine
-    - how to operate hydrojet machine?
-    - Show me how to operate hydrojet machine
-    - operating hydrojet machine
-    - operating of hydrojet machine
-- intent: booster_pump_option
-  examples: |
-    - I would like to choose booster pump training
-    - I would like to learn about booster pump
-    - Please guide me on booster pump
-    - Please train me on booster pump
-    - Please teach me on booster pump
-    - how to operate booster pump?
-    - Show me how to operate booster pump
-- intent: vacuum_truck_option
-  examples: |
-    - I would like to choose vacuum truck training
-    - I would like to learn about vacuum truck
-    - Please guide me on vacuum truck
-    - Please train me on vacuum truck
-    - Please teach me on vacuum truck
-    - how to operate vacuum truck?
-    - Show me how to operate vacuum truck
-- intent: affirm
-  examples: |
-    - indeed
-    - correct
-    - that sounds good
-    - yes
-    - yess please
-    - of course
-    - yup
-    - yeah
-    - yes please
-    - yes plz
-    - Sure
-    - Ok
-    - sweet
-    - cool,
-    - yes...
-    - y
-    - ok
-    - ye
-    - okay
-    - That would be great
-    - YES
-    - YUP
-    - Yea
-    - Yeah
-    - Yeah sure
-    - Yep
-    - Yep that's fine
-    - Yep!
-    - Yepp
-    - Yes
-    - Yes I do
-    - Yes please
-    - Yes please!
-    - Yes, I accept
-- intent: deny
-  examples: |
-    - not really
-    - no
-    - I don't think so
-    - never
-    - no way
-    - nope
-    - no thanks
-    - I dunno
-    - Nothing!
-    - nevermind
-    - n
-    - i decline
-    - i don not like this
-    - i don't think so
-    - i don't want either of those
-    - i don't want to
-    - i don't want to give you my email
-    - i dont want to
-    - i dont want to accept :P lol
-    - i guess it means - no
-    - i'm afraid not
-    - i'm not sure- no
-    - nope
-    - no thanks
-    - not that one
-    - don't use that
-    - please no
-    - no don't do that
-    - no, use abraham.lincoln@example.com
-- intent: chitchat/ask_weather
-  examples: |
-    - What's the weather outside?
-    - Can you tell me the weather
-    - I would like to know what the weather will be tomorrow?
-    - Tell me the weather
-- intent: chitchat/bot_challenge
-  examples: |
-    - Are you a bot?
-    - Am i talking to a chatbot?
-    - Are you a bot of a human?
-    - I think you are a bot
-    - Are you robot?
-    - are you a ghost?
-    - Are you an Artiifical Intelligience?
-    - Are you an AI bot?
-- intent: chitchat/not_human_challenge
-  examples: |
-    - Are you a human?
-    - you human?
-    - are you a dude?
-    - human you?
-    - Am i talkiing to a human?
-    - Are you born to be human?
-- intent: chitchat/affirm_can
-  examples: |
-    - Can i use water on the booster pump?
-    - Can i use diesel on the booster pump?
-    - Can i use forklift to lift the booster pump?
-    - Can i use lorry crane to lift the booster pump?
-    - Can i use mobile crane to lift the booster pump?
-    - Can i use booster pump for tank cleaning?
-    - Can i use 3" inch Female camlock coupling on the inlet and outlet connection on the booster pump?
-    - Can i use the whip arrestor to secure the hoses?
-    - Can i deplete/drain the excess oil from the drip tray?
-    - Can i slow down the speed by using the speed lever on the pump?
-    - Can anyone be a booster pump operator?
-    - Can i maintain/adjust the pressure of the booster pump?
-    - Can i monitor the pressure from the pressure gauge from the booster pump?
-    - Can i use the start button to start the engine?
-    - Can i use diesel on the booster pump?
-    - Can i use Euro 4/5/above Diesel grade on the booster pump?
-    - Can the drip tray contain oil leakage from the engine and diesel tank on the booster pump?
-    - Can i check the quantity level of the diesel on the booster pump?
-    - By connecting to the earthing point, am i able to prevent static electricity passing through from the booster pump?
-    - Can i do booster pump maintenance?
-    - Can i stop the engine on the booster pump by sliding the stop lever?
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
+intents:
+- train_me
+- next_page
+- name_entry
+- chatvac:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- password_reset:
+    use_entities: true
+- inform:
+    use_entities: true
+- thank:
+    use_entities: true
+- help:
+    use_entities: true
+- problem_email:
+    use_entities: true
+- open_incident:
+    use_entities: []
+- incident_status:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- restart:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- chitchat:
+    use_entities: true
+- chathydrojet:
+    use_entities: true
+- chatbooster:
+    use_entities: true
+- hydrojet_machine_option:
+    use_entities: true
+- booster_pump_option:
+    use_entities: true
+- vacuum_truck_option:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+entities:
+- priority
+- number
+- email
+- pump
+- truck
+- name
+slots:
+  name:
+    type: any
+  confirm:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  incident_title:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  problem_description:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  username:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: Rasa user
+    auto_fill: true
+    influence_conversation: false
+  number:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  email:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
 
-- intent: chitchat/affirm_yes
-  examples: |
-    - Is diesel the fuel consumption to the booster pump?
-    - Is water suitable to be used on booster pump?
-    - Are the inlet and outlet connection on the booster pump a 3" inch male adapter?
-    - Is whip arrestor important to use on the hoses connection?
-    - Is booster pump use for tank cleaning?
-    - Is there any specific product to be used on booster pump?
-    - Is there any specific material to be used on booster pump?
-    - Is there any booster pump operation procedures?
-    - Are the inlet and outlet connection male adapter?
-    - Is it possible to maintain/adjust the pressure of the booster pump?
-    - Does the booster pump has any pressure gauge?
-    - Is there any pressure gauge on the booster pump?
-    - Is the start button use to start the engine on the booster pump?
-    - Is there any diesel filling point attached on the booster pump?
-    - Is the diesel grade to be used on the booster pump Euro 4/5/above?
-    - Is there any drip tray on the booster pump?
-    - Is there a drip tray to contain oil leakages on the booster pump?
-    - Does the booster pump has drip tray?
-    - Can the Booster pump be transported?
-    - Can the booster pump be lifted?
-    - Is there any lifiting points on the booster pump?
-    - Is there any earthing point on the booster pump?
-    - Is there a booster pump maintenance procedures?
-    - Is there a booster pump maintenance record?
-    - Is there a requirement to maintain the booster pump?
-    - Do i stop the engine on the booster pump by sliding the stop lever?
+  ## HYDROJET MACHINE
 
-- intent: chitchat/affirm_should
-  examples: |
-    - Should i use water on the booster pump?
-    - Should i use diesel on the booster pump?
-    - Should i use forklift to lift the booster pump?
-    - Should i use lorry crane to lift the booster pump?
-    - Should i use mobile crane to lift the booster pump?
-    - Should i use booster pump for tank cleaning?
-    - Should i use 3" inch Female camlock coupling on the inlet and outlet connection on the booster pump?
-    - Should i use the whip arrestor to secure the hoses?
-    - Should i deplete/drain the excess oil from the drip tray?
-    - Should i monitor the pressure from the pressure gauge from the booster pump?
-    - Should i use the start button to start the engine?
-    - Should i use diesel on the booster pump?
-    - Should i use Euro 4/5/above Diesel grade on the booster pump?
-    - Do i need to use whip arrestor?
-    - Do i need to do earthing on the booster pump?
-    - Do i need to do booster pump maintenance?
-    - Should i stop the engine on the booster pump by sliding the stop lever?
+  # HYDROJET MACHINE GENERAL
+  utter_chathydrojet/hydrojet_machine:
+  - image: https://www.klenco-asia.com/wp-content/uploads/2020/05/NLB_1-01.jpg
+    text: Hydrojetting is a method of cleaning that involve pumping high pressure water to clean the surface.
+  - image: https://www.klenco-asia.com/wp-content/uploads/2020/05/NLB_1-01.jpg
+    text: A hydrojeting machine is use or aid in cleaning espicially in case where intensive cleaning is required. It is commonly used in shipyard, cleaning the hull of the ship.
+  - image: https://www.klenco-asia.com/wp-content/uploads/2020/05/NLB_1-01.jpg
+    text: Hydrojet machine is a diesel operated machine operating on a high pressure ranging from 20 000 - 40 000 PSI.
 
-- intent: chitchat/deny_no
-  examples: |
-    - Is petrol the fuel consumption to the booster pump?
-    - Are acid materials suitable to be used on the booster pump?
-    - Are alkaline materials suitable to be used on the booster pump?
-    - Are corrosive materials suitable to be used on the booster pump?
-    - Are explosive materials suitable to be used on the bbooster pump?
-    - Is acid material suitable to be used on the booster pump?
-    - Is alkaline material suitable to be used on the booster pump?
-    - Is corrosive material suitable to be used on the booster pump?
-    - Is explosive material suitable to be used on the booster pump?
-    - Are the inlet and outlet connection on the booster pump a 1"/2"/4"/5"/6" inch male adapter?
-    - Are the inlet and outlet connection on the booster pump female adapter?
-    - Is the booster pump pressure 30bar/40bar/50bar/100bar?
-    - Can the booster pump pressure achieve higher/more than 20 bar?
-    - Can the booster pump pressure achieve higher than 30 bar/40bar/50bar/100bar?
-    - Does a person need to be competent to operate the booster pump?
-    - Do you need to be trained to operate Booster Pump?
-    - Must booster pump operators go through training before starting work?
-    - Can we use the booster pump to transfer oil/corrosive materials?
-    - Can we use corrosive material on the booster pump?
-    - Will the booster pump be damaged if oil/corrosive material is being used?
-    - Is the start button use to stop the engine on the booster pump?
-    - Is the speed lever use to stop the engine on the booster pump?
-    - Is Euro 2/3 to be used on the booster pump?
-    - Is the drip tray use to contain water flowing out from the hoses?
-    - Does the booster pump need to be certified?
-    - Does booster pump need to be inspected?
-    - Do i need to certified the booster pump?
-    - Do the booster pump need to be certified?
-    - Can i certify the booster pump?
-    - Can i inspect the booster pump?
-    - Can i use the booster pump without inspection?
-    - Is it against the regulation for not certifying the booster pump?
-    - Do i need to look for certification body to certify the booster pump?
-    - Do i need to send booster pump for certification?
-    - Is there a requirement/regulation to certify the booster pump?
-    - Is there a requirement to inspect the booster pump?
-    - Can i use acid material on the booster pump?
-    - Can i use alkaline material on the booster pump?
-    - Can i use corrosive material on the booster pump?
-    - Can i use explosive material on the booster pump?
-    - Can i use 2.5 tonnes of forklift to lift the booster pump?
-    - Can i use 1"/2"/4"/5"/6" inch female camlock coupling on the booster pump?
-    - Is the booster pump operator required to attend any training/license?
-    - Can i use the start button to stop the engine on the booster pump?
-    - Can i use the speed lever to stop the engine on the booster pump?
-    - Can i use euro 2/3 diesel on the booster pump?
-    - Can i use the drip tray to contain water flowing out from the hoses connection?
+  utter_chathydrojet/where_deploy_hydrojet_machine:
+  - image: https://www.klenco-asia.com/wp-content/uploads/2020/05/NLB_1-01.jpg
+    text: |-
+      In petrochemical or refinery industries, hydrojet machine is mainly used in cleaning the internal storage tank.
 
-- intent: chitchat/deny_should_not
-  examples: |
-    - Should i use acid material on the booster pump?
-    - Should i use alkaline material on the booster pump?
-    - Should i use corrosive material on the booster pump?
-    - Should i use explosive material on the booster pump?
-    - Should i use 2.5 tonnes of forklift to lift the booster pump?
-    - Should i use 1"/2"/4"/5"/6" inch female camlock coupling on the booster pump?
-    - Should i use the start button to stop the engine on the booster pump?
-    - Should i use the speed lever to stop the engine on the booster pump?
-    - Should i use euro 2/3 diesel on the booster pump?
-    - Should i use the drip tray to contain water flowing out from the hoses connection?
-    - Can I use euro 3 standard diesel on the Greenchem's vacuum truck?
-    - Can I use euro 3 standard diesel on the our vacuum truck?
+  utter_chathydrojet/transfer_hydrojet_machine:
+  - image: https://i.imgur.com/PZbyWKl.jpg
+    text: |-
+      A lorry crane is required to lift up or down the machine and transport it to the required destination.
 
-- intent: chitchat/ask_supervisor
-  examples: |
-    - Where can i get the booster pump maintenance procedures?
-    - Where do i check for the booster pump maintenance record?
-    - Where do i get the booster pump maintenance procedures?
-    - Where can i get the booster pump maintenance record?
-## HYDROJET MACHINE
-
-# HYDROJET MACHINE GENERAL
-- intent: chathydrojet/hydrojet_machine
-  examples: |
-    - what is a hydrojet machine?
-    - What is the use of a hydrojet machine?
-    - What type of cleaning does a hydrojet machine does?
-    - what can a hydrojet machine do?
-    - what is the purposes of a hydrojet machine?
-    - what industries uses hydrojet machine?
-    - what is the function of a hydrojet machine?
-    - what kind of cleaning does a hydrojet machine does?
-    - what is hydrojet machine use for?
-    - when is the hydrojet machine been use?
-    - how does a hydrojet machine work?
-    - How does a hydrojet machine looks like?
-    - picture of a hydrojet machine?
-    - Is the hydrojet machine a diesel operated machine?
-    - pic of hydrojet machine?
-    - hydrojet machine picture?
-    - hydrojet machine picture?
-    - hydrojet machine
-    - hydrojet machine image
-    - show picture of hydrojet machine?
-
-- intent: chathydrojet/where_deploy_hydrojet_machine
-  examples: |
-    - which industries is hydrojet machine use for?
-    - where do you deploy hydrojet machine?
-    - where is hydrojet machine usually used?
-    - what is hydrojet machine use for?
-
-- intent: chathydrojet/transfer_hydrojet_machine
-  examples: |
-    - What is the means of transport for the crane?
-    - What can i shift the machine?
-    - What is the lorry crane? (Show Picture)
-    - What does the lorry crane look like? (Show Picture)
-    - What is crane?
-    - How to transport/move the Hydrojetting machine from point to point?
-    - How can the machine be transported?
-    - How to lift the hydrojet machine?
-    - How to move the hydrojet machine?
-    - How to switch the hydrojet machine?
-    - How to transfer the hydrojet machine?
-    - How can i shift the hydrojet machine?
-    - How can i bring the hydrojet machine?
-    - How does the lorry crane look like? (Show Picture)
-    - Can the hydojet machine be transported?
-    - Can the hydrojet machine be move?
-    - Can you help me on lifting the hydrojet machine?
-    - Show me the lorry crane (Show Picture)
-    - Show me a photo/picture/image of the lorry crane (Show Picture)
-    - Can i see a photo/picture/image of the lorry crane? (Show Picture)
-    - Do you have a photo/picture/image of the lorry crane? (Show Picture)
-
-- intent: chathydrojet/positioning_hydrojet_machine
-  examples: |
-    - What if the hydrojet machine is placed on uneven ground?
-    - What about putting the hydrojet machine on slope?
-    - What floor/surface can the hydrojet machine be place on?
-    - Where can i put the hydrojet machine?
-    - How can i put the hydrojet machine?
-    - How shall we place the hydrojet machine?
-    - Does the hydrojet machine need to be placed on flat ground?
-    - Can the hydrojet machine operate efficiently on uneven ground?
-    - Can we place the hydrojet machine on anywhere?
-    - Will the hydrojet machine be possible to put on anywhere?
-    - Must the hydrojet machine be place on even ground?
-    - Is it possible to place the hydrojet machine on any ground?
-    - If hydrojet machine is place on uneven ground/surface?
-    - Can the hydrojet machine be place any surfaces/ground?
+  utter_chathydrojet/positioning_hydrojet_machine:
+  - text: It is recommended that the machine is to be place on a flat and even ground
 
 ## END OF HYDROJET MACHINE GENERAL
 
 ## HYDROJET MACHINE OPERATION
 
-- intent: chathydrojet/hydrojet_diesel_checklist
-  examples: |
-    - what is the hydrojet machine diesel level?
-    - where to check for hydrojet machine diesel level?
-    - where is the hydrojet machine diesel indicator?
-    - when do i check for hydrojet machine diesel level?
-    - how do you check the hydrojet machine diesel level?
-    - how to know if there is enough diesel in hydrojet machine?
+  utter_chathydrojet/hydrojet_diesel_checklist:
+  - text: Ensure suffiecient Euro 4 and above diesel is used in the diesel tank by looking at the diesel gauge.
 
-- intent: chathydrojet/hydrojet_machine_connection
-  examples: |
-    - what connection are required to connect the hoses and the hydrojet machine?
-    - What is the length of a high pressure hose for hydrojet machine?
-    - What kind of connection is the hydrojet machine hoses connected?
-    - how are the hoses connected to hydrojet machine?
-    - what kind of connection is use for hydrojet machine?
-    - What are the connection set up for hydrojet machine?
-    - what kind of connection system is available for hydrojet machine?
-    - What kind of whip arrestor to used?
-    - Where do i connect the whip arrestor for hydrojet machine hoses?
-    - Where to install the whip arrestor for hydrojet machine hoses
-    - Where should the whip arrestor install for hydrojet machine?
-    - When should you attached the Whip arrestor for hydrojet machine?
-    - how is the hoses connected to hydrojet machine?
-    - How do i connect the hoses to hydrojet machine?
-    - How is the hoses and hydrojet machine connected together?
-    - how many type of connection are there for hydrojet machine?
-    - how many type of connection is available for hydrojet machine?
-    - How many set up system are there for hydrojet machihe?
+  utter_chathydrojet/hydrojet_machine_connection:
+  - image: https://i.imgur.com/wB1EoNd.jpg
+    text: |-
+      - 1 length of a high pressure hoses is 10m, all connection between machine and hoses are using 3/4 inch NPT connection with whip arrestor attached to prevent whipping effect.
+      - Depending on the work requirement, there are  2 setup system for Hydrojetting machine: single connection and dual connection.
 
-- intent: chathydrojet/2_setup_hydrojet_connection
-  examples: |
-    - Why is there 2 setup system for hydrojet machine connection?
-    - When should you use single setup system for hydrojet machine?
-    - When should you use dual setup system for hydrojet machine?
+  utter_chathydrojet/2_setup_hydrojet_connection:
+  - image: https://i.imgur.com/wB1EoNd.jpg
+    text: |-
+      Depending on the work requirement, there are  2 setup system for Hydrojetting machine: single connection and dual connection.
 
-- intent: chathydrojet/hydrojet_engine_transmission
-  examples: |
-    - what is the pressure limit to the machine in pressure?
-    - What is a hydrojet machine RPM controller?
-    - how to increase the hydrojet machine pressure?
-    - How to decrease the hydrojet machine pressure?
-    - How does a hydrojet machine RPM controller looks like?
-    - How do you connect the hydrojet machine transmission?
-    - How do you engage the transmission of the hydrojet machine engine?
+  utter_chathydrojet/hydrojet_engine_transmission:
+  - image: https://i.imgur.com/1Y5zI5s.jpg
+    text: |-
+      1) Firstly Engage the engine level transmission
+      2) To increase the pressure turn RPM Controller clockwise to its desire Pressure.
+      3) To decrease the pressure turn RPM Controller anti clockwise direction to its desire pressure.
 
-- intent: chathydrojet/hydrojet_machine_control_panel
-  examples: |
-    - What is a hydrojet machine control panel?
-    - what is the function of a hydrojet machine control panel?
-    - what is the use of the hydrojet machine control panel?
-    - What is the purpose of a hydrojet machine control panel?
-    - what buttons are available at the hydrojet machine control panel?
-    - what are the function of a hydrojet machine control panel?
-    - what does the hydrojet machine control panel shows?
-    - What is the function of a rabbit?
-    - what is the function of a turtle?
-    - what other function are available at the hydrojet machine control panel?
-    - where can i find the hydrojet machine control panel?
-    - How does the hydrojet machine control panel looks like?
-    - how to operate the hydrojet machine button?
-    - How to increase the speed of the hydrojet machine engine?
-    - How to decrease the speed of the hydrojet machine engine?
-    - How to operate the hydrojet machine control panel?
+  utter_chathydrojet/hydrojet_machine_control_panel:
+  - image: https://i.imgur.com/lZCtyl3.jpg
+    text: |-
+      - The control panel on the hydrojet machine controls the speed of the engine, the rabbit picture means revving up the engine speed,
+      - The turtle picture means decreasing the engine speed of the hydrojet machine.
+      - The battery indicator and the engine rpm speed can also be found on the control panel display.
 
-- intent: chathydrojet/hydroket_splitter
-  examples: |
-    - What is a hydrojet machine splitter?
-    - What is the function of the hydrojet machine splitter?
-    - What equipment is required when i need to use 2 hydrojet guns?
-    - Where can i monitor the hydrojet machine pressure?
-    - Where is the monitor gauge for hydrojet machine?
-    - Where is the secondary pressure gauge for hydrojet machine gun?
-    - Why do i need a spliter for hydrojet machine?
-    - When will i need a hydrojet machine splitter?
-    - How can the dual hydrojet machine gun connection be connected?
-    - Can the splitter gauge for hydrojet machine be use?
-    - Secondary pressure gauge for hydrojet machine gun?
-    - Any secondary monitor gauge for hydrojet machine gun available?
+  utter_chathydrojet/hydrojet_splitter:
+  - image: https://i.imgur.com/YDDvgWu.jpeg
+    text: Splitter is use as a dual gun connection and a secondary pressure gauge is available to monitor the pressure.
 
-- intent: chathydrojet/hydrojet_gun
-  examples: |
-    - What is the purpose of a hydrojet gun?
-    - What does a hydrojet gun do?
-    - what is the function of a hydrojet gun?
-    - What does a hydrojet gun looks like?
-    - what is the hydrojet gun set up?
-    - How do you operate the hydrojet gun?
-    - How to clean the surface of the tank using a gun?
-    - how does the hydrojet gun operate?
+  utter_chathydrojet/hydrojet_gun:
+  - image: https://i.imgur.com/WpplpS0.jpg
+    text: |-
+      - The purpose of the hydrojet gun is to cleaning the surface of the area.
+      - Squeezing of the gun trigger will start the cleaning process.
 
-- intent: chathydrojet/hydrojet_gun_training
-  examples: |
-    - Who can operate the hydrojet gun?
-    - Is training required before operating the hydrojet gun?
-    - Should we undergo training before operate hydrojet gun?
+  utter_chathydrojet/hydrojet_gun_training:
+  - text: |-
+      - Training is required in order for a person to operate the gun.
+      - He must be deemed competent in handling the gun.
 
 # END OF HYDROJET MACHINE OPERATION
 
 ## HYDROJET MACHINE TECHNICAL SPECIFICATIONS
 
-- intent: chathydrojet/hydrojet_machine_battery
-  examples: |
-    - what is needed to power on the hydrojet machine?
-    - what happen to my hydrojet machine battery, its unable to start?
-    - What happen when there is only 1 set of battery	for hydrojet machine?
-    - where to check the hydojet machine polarity of battery?
-    - where to check the hydrojet machine battery indicator?
-    - how do you check the hydrojet machine battery indicator?
-    - how to know if the hydrojet machine is able to power up?
-    - How to connect the hydrojet machine polarity of the battery?
+  utter_chathydrojet/hydrojet_machine_battery:
+  - image: https://i.imgur.com/qqYbHs3.jpg
+    text: |-
+      - There are 2 set of battery required to power up the hydrojet machine.
+      - Check the battery polarity to ensure good connection and also battery indicator at the control panel.
 
-- intent: chathydrojet/hydrojet_weight
-  examples: |
-    - What is the weight of the hydrojet Machine?
-    - What is the weight limit of hydrojet machine?
-    - How much does hydrojet machine weight
-    - How heavy is the Hydrojet machine?
-    - The Weight of hydrojet machine?
+  utter_chathydrojet/hydrojet_weight:
+  - image: null
+    text: The hydrojetting machine weight up to 5000kg.
 
-- intent: chathydrojet/hydrojet_dimension
-  examples: |
-    - What is the measurement for hydrojet machine?
-    - What is the size of the hydrojet machine?
-    - What is the size limit of the hydrojet machine?
-    - Where can i know the dimension of the hydrojet machine?
-    - How much size is the hydrojet machine?
-    - How big is the hydrojet machine?
-    - How do you measure the hydrojet machine?
+  utter_chathydrojet/hydrojet_dimension:
+  - image: null
+    text: Dimension of the Hydrojet machine (LengthxWidthxHeight) = 5m X 2.5m X 2m
 
-- intent: chathydrojet/hydrojet_max_pressure
-  examples: |
-    - What is the maximum pressure of the hydrojet machine?
-    - What is the pressure limit of the hydrojet machine?
-    - What is the max hydrojet machine pressure?
-    - What is the maximum working pressure for hydrojet machine?
-    - What is the highest operating pressue of the hydrojet machine?
-    - What is the working pressure maximum for the hydrojet machine?
-    - What is the maximum working pressire for hydrojet machine?
-    - How much is the maximum pressure for the hydrojet machine?
-    - How do you know the maximum pressure of hydrojet machine?
-    - How much must the maximum pressure reach for cleaning using hydrojet machine?
-    - hydrojet machine maximum pressure is?
-    - Hydrojet machine highest pressure?
+  utter_chathydrojet/hydrojet_max_pressure:
+  - text: |
+      There are two different setting for hydrojet machine maximum operating pressure.
+      1) 20 000 PSI or,
+      2) 40 000 PSI
+      As for 40 000 PSI you will required to install ultra high pressure kit.
+      To know more on the installion for 40 000PSI please look for our supervisor.
 
-- intent: chathydrojet/hydrojet_buildin_watertank
-  examples: |
-    - What is the capacity of the water tank for hydrojet machine?
-    - What is the size of the hydrojet machine water tank?
-    - What is the use of the hydrojet machine water tank?
-    - How many litres does the hydrojet machine water hold?
-    - How many gallon does the hydrojet machine water hold?
-    - How much water is in the hydrojet machine tank?
-    - How much water can the hydrojet machine internal water tank hold?
-    - How big is the hydrojet machine water tank
-    - hydrojet machine water tank how big?
-    - hydrojet machine water tank size?
+  utter_chathydrojet/hydrojet_buildin_watertank:
+  - image: https://i.imgur.com/8CKLibN.jpg
+    text: The water tank capacity can contain up to 379Liters which is (100 gallon) and it should contain fresh water or demin water only.
 
-- intent: chathydrojet/hydrojet_diesel_tank_size
-  examples: |
-    - What is the capacity of the hydrojet machine diesel tank?
-    - What is the size of the hydrojet machine diesel tank?
-    - What is the use of the hydrojet machine diesel tank?
-    - How many litres does the hydrojet machine diesel tank hold?
-    - How many gallon does the hydrojet machine diesel tank hold?
-    - How much diesel is in the hydrojet machine diesel tank?
-    - How much diesel can the hydrojet machine diesel tank hold?
-    - How big is the hydrojet machine diesel tank?
-    - Diesel tank of hydrojet machine how big?
-    - Size of hydrojet machine diesel tank?
-
+  utter_chathydrojet/hydrojet_diesel_tank_size:
+  - image: https://i.imgur.com/oYzMr0w.jpg
+    text: Hydrojet machine diesel tank capacity can store up to 246 Liters which is 65 gallon of diesel.
 
 # END OF HYDROJET MACHINE TECHNICAL SPECIFICATIONS
 
-- intent: chathydrojet/hydrojet_machine_checklist
-  examples: |
-    - What is needed to power on the hydrojet machine?
-    - When to check for hydrojet machine battery connection?
-    - How do you check the battery indicator?
-    - how to know if the hydrojet is able to power up?
+  utter_chathydrojet/hydrojet_machine_checklist:
+  - text: Check the battery polarity to ensure good connection and also battery indicator.
 
-- intent: chathydrojet/hydrojet_water_tank_checklist
-  examples: |
-    - where to fill up the water of hydrojet machine?
-    - When do you fill up the water of hydrojet machine?
-    - How much to fill up the water tank of hydrojet machine?
+  utter_chathydrojet/hydrojet_water_tank_checklist:
+  - image: null
+    text: Ensure water is full in the water tank.
 
-  ## THE END OF HYDROJET MACHINE
+##  BOOSTER PUMP
+  utter_chatbooster/booster_intro:
+  - image: https://i.imgur.com/8d0RZ51.jpg
+    text: |-
+      Booster pump is to increase high flow low pressure water jetting.
+      It provides the extra boost needed to bring fluid pressure to the desire level.
+  utter_chatbooster/booster_types:
+  - text: |-
+      There are three types of booster pump pressure to achieve:
+      1) 10 Bar
+      2) 15 Bar
+      3) 20 Bar
+  utter_chatbooster/deploy_booster_pump:
+  - text: |-
+      Booster pump is use for tank cleaning operations.
+      It is to connect to the gamma jet/sprinkle system that will be attached on the top of the tank.
+      Besides that, you may also use as a pump to transfer  less hazardous products.
+  utter_chatbooster/booster_operator:
+  - text: |
+      Booster pump is not a complicated machine to operate
 
-                ## BOOSTER PUMP MACHINE
+      There are not many procedure to operate a booster pump.
 
-## BOOSTER PUMP GENERAL
+      Thus, the booster pump operator is able to operate without any specific training program.
 
-- intent: chatbooster/booster_intro
-  examples: |
-    - What is a Booster Pump?
-    - What is the Booster pump?
-    - What can a booster pump do?
-    - What is the booster pump used for?
-    - What is the booster pump for?
-    - What is the purpose of the booster pump?
-    - What is the function of the booster pump?
-    - What is Booster Pump?
-    - Why do i need a booster pump?
-    - How does a booster pump work?
-    - How does the booster pump look like?
-    - How the booster pump looks like?
-    - Can you tell me more about booster pump?
-    - Can you show me how a booster pump looks like?
-    - Can you show me the booster pump?
-    - Do you have a picture of booster pump?
-    - Show me booster pump image
-    - Show me booster pump picture
-- intent: chatbooster/booster_types
-  examples: |
-    - What is the maximum pressure for Booster pump?
-    - What the booster pump pressure is?
-    - What is the pressure limit of a booster pump?
-    - What is the highest pressure allowable on the booster pump?
-    - What is the most pressure the booster pump can produce?
-    - What is the operating pressure of the booster pump?
-    - What's the pressure of the booster pump?
-    - What is the safe operating pressure of the booster pump?
-    - How much pressure can the booster pump produces?
-    - The pressure of the booster pump?
-    - Pressure of the booster pump?
-    - Booster pump pressure is?
-- intent: chatbooster/deploy_booster_pump
-  examples: |
-    - What is the application of booster pump?
-    - What else can i use the booster pump for?
-    - Where can i deploy a booster pump?
-    - Where do i implement a booster pump?
-    - Where can i implement a booster pump?
-    - Where do i deploy a booster pump?
-    - Where can i apply a booster pump to?
-    - Beside tank cleaning, can i use for other purposes?
-    - Can i use for other product transfer?
-- intent: chatbooster/booster_operator
-  examples: |
-    - What kind of training do booster pump operators need to go through/undergo?
-    - What is the requirement/criteria for booster pump operators to be qualified?
-    - What are the training requirement needed for a booster pump operator?
-    - How does someone qualify to be a booster pump operator?
-    - How do I train the booster pump operator?
-    - How can i be a booster pump operator?
+      For better understanding, Booster Pump operator must go through the introduction video.
+  utter_chatbooster/booster_material_usage:
+  - text: Water is recommended for the usage \nOil/corrossive material are not recommended as it will damage the internal part of the machine and shorten the life span of the machine \nIt is advisable to verify the Material Safety Data Sheet (MSDS) before using the booster pump.
+  utter_chatbooster/booster_operating_procedures:
+  - text: I can show you the operating procedures
+  utter_chatbooster/booster_in_out_connection:
+  - image: https://i.imgur.com/Y6xxsDB.jpg
+    text: |-
+      The inlet and outlet connection on the booster pump are 3" (inch) male adapter.
+      	You may refer to the attached image (Fig. 1.2)
+  utter_chatbooster/booster_hoses_connection:
+  - image: https://i.imgur.com/XaILht5.jpg
+    text: |-
+      The inlet and outlet of the hoses connection must be 3" (inch) female Camlock coupling.
+      	Please refer to attached image (Fig. 1.1)
+  utter_chatbooster/booster_speed_lever:
+  - image: https://i.imgur.com/GxMQiG3.jpg
+    text: |-
+      1. Speed lever is a means of controlling an engine's power by regulating the amount of fuel or air intake.
+      2. Booster pump operator can increase or decrease
+      the power of the engine by adjusting the speed lever.
+      3. To maintain the booster pump pressure, the speed leverl is to slide to the desired pressure and lock it by tightening the but.
+       **You may refer to the attached image (Fig.
+      1.6)**
 
-- intent: chatbooster/booster_material_usage
-  examples: |
-    - What type of product is suitable to use for booster pump?
-    - What is the suitable/recommended substance/liquid for the booster pump?
-    - What should the booster pump be filled with?
-    - What type of material is suitable to use on booster pump?
-    - What will happen to the booster pump, if oil/corrosive material is being used?
-    - Why can't we use oil/corrosive material on the booster pump?
-    - Besides water, what other material can be used on the booster pump?
-    - If oil/corrosive material is being used, what will happen to the booster pump?
+  utter_chatbooster/booster_pressure_gauge:
+  - image: https://i.imgur.com/gVmh2Sh.jpg
+    text: |-
+      1.  Instruments used to measure and display pressure in an integral unit are called pressure gauges.
+      2.  Pressure gauge helps the operator to monitor the pressure of the fluid that is deliverying to the tank.
+      3.  The operator is required to install the pressure gauge at the fluid outlet connection on the booster pump.
+      **You may refer to the attach image. (Fig. 1.7)**
 
-##              PROMPTING TO ASK FOR THE TRAINING LEARNING VIDEO
-##              MAY BE ABLE TO REMOVE FROM CHATBOOSTER FAQ
-- intent: chatbooster/booster_operating_procedures
-  examples: |
-    - What are the booster pump operating procedures?
-    - How to use a booster pump?
-    - How does the booster pump function?
-    - How do i operate a booster pump?
-    - How to operate a booster pump?
-    - Can you show me how to operate the booster pump?
-    - Is there any booster pump operation procedures?
-
-##              CONSIDERED INTENT
-## BOOSTER PUMP OPERATIONS
-
-- intent: chatbooster/booster_in_out_connection
-  examples: |
-    - What are the types of inlet and outlet connection on the booster pump?
-    - What type of inlet and outlet connection are used on the booster pump?
-    - What type of connector is used on the booster pump?
-    - What are the sizes of the inlet and outlet connection on the booster pump?
-    - What type of inlet and outlet connection are used on the booster pump?
-    - What does the inlet and outlet connection booster pump look like?
-    - What are the inlet and outlet connection of the booster pump?
-    - Where do i connect the hoses on the booster pump?
-    - Where can i find the inlet and outlet connection on the booster pump?
-    - Where can i find the inlet and outlet on the booster pump?
-    - Where can i connect the hoses to the inlet and outlet connection on the booster pump?
-    - Where do i connect the hose to the inlet and outlet connection on the booster pump?
-    - How big is the inlet and outlet connection on the booster pump?
-    - How does the inlet and outlet connection on the booster pump look like?
-    - How do i connect the booster pump?
-    - How can i connect the hoses to the inlet and outlet connection on the booster pump?
-    - How do i connect the hoses to the inlet and outlet connection on the booster pump?
-    - Show me the inlet and outlet connection on the booster pump?
-    - Show me the photo/picture/image of the inlet and outlet connection on the booster pump?
-    - Can I see the photo/picture/ image of the inlet and outlet connection on the booster pump?
-    - Do you have photo/picture/image of the inlet and outlet connection on the booster pump?
-    - Can i know what size are the inlet and outlet connection on the booster pump?
-- intent: chatbooster/booster_hoses_connection
-  examples: |
-    - What type of inlet and outlet hoses connection to be connected on booster pump?
-    - What type of hoses connection to be used on the booster pump?
-    - What type of hose connectors to be used on the booster pump?
-    - What are the sizes of the inlet and outlet hoses connection on the booster pump?
-    - What does the booster pump hoses connection look like?
-    - What are the sizes of the inlet and outlet hoses connection on the booster pump?
-    - What type of inlet and outlet should be used on the booster pump?
-    - What are the hoses connection on the booster pump?
-    - What do the booster pump inlet and outlet hoses connection look like?
-    - What type of connection to use to connect to the inlet and outlet connection on the booster pump?
-    - How big are the booster pump inlet and outlet hoses connection?
-    - How does the inlet and outlet hoses connection look like?
-    - How do i connect to the booster pump?
-    - How do i connect to the inlet and outlet on the booster pump?
-    - Show me the booster pump hose connection
-    - Show me the photo/picture/image of the booster pump inlet and outlet hoses connection
-    - Can I see the photo/picture/ image of the booster pump inlet and outlet hose connection?
-    - Do you have the photo/picture/image of the booster pump inlet and outlet hose connection?
-    - Can i know what are sizes of the booster pump inlet and outlet hoses connection?
-- intent: chatbooster/booster_speed_lever
-  examples: |
-    - What is the booster pump speed lever?
-    - What does the booster pump speed lever look like?
-    - Where is the booster pump speed lever?
-    - Where do I maintain/adjust the pressure of the booster pump
-    - Why do i need to lock the booster pump speed lever?
-    - How does the booster pump speed lever look like?
-    - How can i maintain/adjust the pressure of the booster pump?
-    - How to maintain/adjust the pressure of the booster pump?
-    - Show me the booster pump speed lever
-    - Show me the photo/picture/image of the booster pump speed lever
-    - Can I see the photo/picture/ image of the booster pump speed lever?
-    - Do you have the photo/picture/image of the booster pump speed lever?
-    - Can i maintain/adjust the pressure of the booster pump?
-- intent: chatbooster/booster_pressure_gauge
-  examples: |
-    - What is a booster pump pressure gauge?
-    - What is the function of the pressure gauge on the booster pump?
-    - What is the purpose of the pressure gauge on the booster pump?
-    - Where to check for pressure on the booster pump?
-    - Where do I look for pressure on the booster pump?
-    - Where is the gauge to monitor the pressure on the booster pump?
-    - How to check the pressure on the booster pump?
-    - How to monitor the pressure on the booster pump?
-    - Can I see the photo/picture/ image of the booster pump pressure gauge
-    - Show me the photo/image/picture of the booster pump pressure gauge on the booster pump
-    - Show me the booster pump pressure gauge?
-    - Do you have the photo of the booster pump pressure gauge?
-- intent: chatbooster/booster_start_button
-  examples: |
-    - What is a start button?
-    - What is a start button looks like?
-    - Where is the booster pump start button located?
-    - Where can i find the booster pump start button on the booster pump?
-    - How does the booster pump start button looks like?
-    - Can you show me the image/picture of the start button on the booster pump
-    - Do you have the picture/image/photo of the booster pump's start button?
+  utter_chatbooster/booster_start_button:
+  - image: https://i.imgur.com/iEkZnME.jpg
+    text: |-
+      To power up the booster pump engine, please press the start button.
+      **You may refer to the attached image Fig. 1.3**
 
 ## BOOSTER PUMP TECHNICAL SPECIFICATIONS
 
-- intent: chatbooster/booster_pump_weight
-  examples: |
-    - What is the weight/mass of the booster pump
-    - What's the weight of the booster pump?
-    - How heavy is the booster pump?
-    - How many kg is the booster pump?
-    - The Weight of the booster pump is?
-    - Do you know what is the weight of the booster pump?
-- intent: chatbooster/fuel_consume_booster
-  examples: |
-    - What is the fuel to be used on the booster pump?
-    - What grade of diesel is to be used for booster pump?
-    - What type of diesel is to be fill up for booster pump?
-    - Where to fill up the booster pump with diesel?
-    - How much quantity of Diesel to be added on the booster pump?
-    - Show me the photo/image/picture of the diesel filling point
+  utter_chatbooster/booster_pump_weight:
+  - text: |
+      The gross weight of the booster pump is approximately 2500kg
+
+  utter_chatbooster/fuel_consume_booster:
+  - image: https://i.imgur.com/paz0fXW.jpg
+    text: |-
+      1.  The fuel to be used on the booster pump is Diesel Euro 4/5 and above.
+      2.  You are required to fill the diesel from the filling point.
+      **You may refer to the attached image. (Fig. 1.15)**
 
 ## BOOSTER PUMP SAFETY ASPECTS
 
-- intent: chatbooster/booster_diesel_gauge
-  examples: |
-    - What is the purpose of booster pump diesel gauge?
-    - What is a booster pump diesel gauge?
-    - Where can i check the booster pump diesel quantity?
-    - Where is the booster pump diesel gauge?
-    - Where do i check the booster pump diesel quantity?
-    - How can i check the quantity level of diesel in the booster pump?
-    - How do i check the diesel quantity level in the booster pump?
-    - Can you show me the Diesel gauge on the booster pump?
-    - Do you have a picture of the booster pump diesel gauge?
-    - Can you show me where is the diesel gauge located on the booster pump?
-    - Show me diesel gauge image on the booster pump
-    - Show me diesel gauge picture on the booster pump
-    - Do you know what is the purpose of the diesel gauge on the booster pump?
-- intent: chatbooster/booster_drip_tray
-  examples: |
-    - What is a drip tray on the booster pump?
-    - What is the usage of drip tray on the booster pump?
-    - What is the purpose of a drip tray on the booster pump?
-    - What is use to contain the oil leakage from the booster pump?
-    - Where to contain the oil leakage on the booster pump?
-    - Where can i find the drip tray if there were oil leakages on booster pump?
-    - Where do oil leakages contained on the booster pump?
-    - Where is the lowest point of the drip tray on the booster pump?
-    - Where is the drip tray on the booster pump?
-    - Why does the booster pump needs drip tray?
-    - How do i drain off the oil leakage from the booster pump?
-    - How to contain the oil leakage on the booster pump?
-    - How does the booster pump drip tray looks like?
-    - Show me the drip tray on the booster pump
-    - Show me the photo/picture/image of the booster pump drip tray
-    - Can I see the photo/picture/ image of the booster pump drip tray
-    - Show me the photo/picture/image of the lowest point in the drip tray on the booster pump
-    - Do you have the  photo/picture/image of the drip tray on the booster pump?
-- intent: chatbooster/booster_whip_arrestor
-  examples: |
-    - What is the whip arrestor?
-    - What does the whip arrestor look like?
-    - What to be used to secure the hose on the booster pump?
-    - What is the purpose of using whip arrestor on the booster pump?
-    - What do you use to secure the hose connection on the booster pump?
-    - Where do i secure the whip arrestor?
-    - Where do i use the whip arrestor?
-    - Why do i need to use whip arrestor?
-    - How do you ensure that the hoses secured on the booster pump are secured?
-    - How do I know if the hose is secure?
-    - How does the whip arrestor look like?
-    - How can I make sure that the hoses on the booster pump are secured?
-    - Show me the whip arrestor
-    - Show me the photo/picture/image of the whip arrestor
-    - Can I see the photo/picture/ image of the whip arrestor?
-    - Do you have a photo of the whip arrestor?
-- intent: chatbooster/handling_booster_pump
-  examples: |
-    - What can i use to lift the booster pump?
-    - What are the booster pump lifting points?
-    - What can i use to transport the booster pump?
-    - What are the methods to transport the booster pump?
-    - What are the methods to handle the booster pump?
-    - Where can i lift up the booster pump?
-    - Where can i find the booster pump lifting points?
-    - How to transport the Booster pump from point to point?
-    - How should the Booster pump be transported?
-    - How can the Booster pump be transported?
-    - How can i lift the booster pump?
-    - How can i transport the booster pump?
-    - How should the Booster pump be lifted?
-    - Is there any lifiting points on the booster pump?
-    - Can you show me the lifting points on the booster pump?
-    - Can you show me the picture/photo/image of the lifting points on the booster pump?
-- intent: chatbooster/booster_earthing_point
-  examples: |
-    - What is the purpose of connecting the booster pump earthing cable to the earthing point?
-    - What function does connecting the booster pump earthing cable to the earthing point have?
-    - What is the reason for connecting the booster pump earthing cable to the earth point?
-    - What is earthing point on the booster pump?
-    - Where do i connect the earthing cable on the booster pump?
-    - Where can i connect the earthing cable on the booster pump?
-    - Why do i need to connect the booster pump to the earthing point?
-    - Why does the booster pump needs to be connected to the earthing point?
-    - How to stop static electricity passing through human body from the booster pump?
-    - How do i prevent static electricity from passing through from the booster pump?
-    - How can i prevent static electricity from booster pump?
-    - Show me the photo/image/picture of the earthing cable on the booster pump
-    - Show me how to connect the earthing cable on the booster pump.
-    - Do you have the photo/image/picture of the earthing cable connecting on the booster pump?
-    - Can I see the photo/picture/ image of the earthing cable connecting on the booster pump?
+  utter_chatbooster/booster_diesel_gauge:
+  - image: https://i.imgur.com/gUlg2ji.jpg
+    text: |-
+      1. The diesel gauge is use to monitor the quantity fuel contain in the booster pump.
+      2. The diesel gauge is located next to the diesel filling point.
+      3. Please ensure that the diesel is sufficient before operating the booster pump.
+      **You may refer to the attached image. (Fig. 1.11)**
+
+  utter_chatbooster/booster_drip_tray:
+  - image: https://i.imgur.com/rcQXAn7.jpg
+    text: |-
+      1. Drip tray is design to catch oil drips from the engine compartment or diesel tank.
+      2. The drip tray is fitted on bottom of the booster pump.
+      3. There is lowest point to allow excess oil out of the drip tray.
+      4. Usually a valve is attached to the lowest point.
+      **You may refer to the attached image (Fig. 1.14)**
+
+  utter_chatbooster/booster_whip_arrestor:
+  - image: https://i.imgur.com/ktH0PJH.jpg
+    text: |-
+      1. Whip arrestor are designed to prevent injuries or accidents resulting from a hose or coupling failure by connecting pressurized lines across the coupling.
+      2. Applying whip arrestor will prevent the hoses from flying around should the connection inadvertently separate.
+      3. Whip arrestor is usually secure at the end of the hoses connection.
+      **You may refer to the attached image (Fig. 1.12)**
+
+  utter_chatbooster/handling_booster_pump:
+  - image: https://i.imgur.com/580Xa5m.jpg
+    text: |-
+      **There are 2 ways of lifting the booster pump.**
+      1. Forklift (more than 2.5 Tonnes) can be used to lift up the booster pump. There is a forklift pockets attached at the bottom of the booster pump.
+      2. Lorry crane can be used to lift up the booster pump. There is a lifting lug attached on the booster pump.
+      **You may refer to the attached image. (Fig. 1.19)**
+
+  utter_chatbooster/booster_earthing_point:
+  - image: https://i.imgur.com/T3Xek46.jpg
+    text: |-
+      - Earthing is to ensure that no static electricity is passing through our body and to prevent any static fire to ignite.
+      - Thus, the booster pump is required to be grounded by connecting to the nearest grounding point with the earthing cable.
+      **You may refer to the attached image. (Fig 1.13)**
 
 ## BOOSTER PUMP MAINTENANCE & INSPECTION
 
-- intent: chatbooster/booster_maintenance
-  examples: |
-    - What is the required to assist the mechanic to maintain the booster pump?
-    - What is the purpose of booter pump maintenance?
-    - What do i need to do to maintain the booster pump?
-    - What is the maintenance schedule for booster pump?
-    - What are the requirement/regulation to maintain the booster pump?
-    - Where is the booster pump maintenance held?
-    - Where do i send the booster pump for maintenance?
-    - Why do we need to do maintenance for booster pump?
-    - When is booster pump maintenance carried out?
-    - When do i need to do the maintenance for the booster pump?
-    - Who is responsible to ensure that the Booster pump be maintain Monthly?
-    - Who do i send the booster pump for maintenance?
-    - Who will maintain the booster pump?
-    - How often does the Booster pump being maintain?
-    - How do i do the booster pump maintenance?
-    - How often do i need to maintain the booster pump?
-    - How frequent do i need to maintain the booster pump?
-- intent: chatbooster/booster_certification
-  examples: |
-    - What are the certifications needed for the booster pump?
-    - What are the requirement/regulation to certify the booster pump?
-    - What are the requirement/regulation to inspect the booster pump?
-    - Where do i certify the booster pump?
-    - Where do i send the booster pump to certify?
-    - Where do i inspect the booster pump?
-    - Where can i certify the booster pump?
-    - Who will inspect the booster pump?
-    - Who will certified the booster pump?
-    - Who is the certification body to certify the booster pump?
-    - How often do i need to certify the booster pump?
-    - How frequent do i need to certify the booster pump?
-    - How long can the booster pump be used before the next inspection?
-    - How can i certify the booster pump?
+  utter_chatbooster/booster_maintenance:
+  - text: |-
+      - Maintenance is carried out to keep equipment and systems running efficiently during at least its usual life cycle.
+      - Maintenance of the Booster Pump is done every monthly by Greenchem Mechanic at Greenchem Facilities.
+      - Maintenance record is being update and documented through Booster Pump Monthly Checklist.
 
-- synonym: booster pump
-  examples: |
-    - water pump
-    - diesel driven booster pump
-    - high flow low pressure pump
-    - water booster pump
-    - water booster
+  utter_chatbooster/booster_certification:
+  - text: |-
+      There is no regulation to inspect/certify low pressure high flow pump.
+      Thus the booster pump is not required to be certified.
+      Usually, the booster pump will be inspected internally before being deployed.
 
 ## END OF BOOSTER PUMP
 
 ## VACUUM TRUCK
-
 ## VACUUM TRUCK GENERAL
 
-- intent: chatvac/vacuum_purpose
-  examples: |
-    - What is vacuum truck?
-    - What can vacuum truck do?
-    - What is the purpose of vacuum truck?
-    - What can be used to suck liquids, sludges or slurries?
-    - When to use vacuum truck?
-    - How to remove liquids, sludges or slurries?
-- intent: chatvac/vac_truck_driver_requirement
-  examples: |
-    - What kind of training do drivers need to go through prior to operate vacuum truck?
-    - What kind of training do drivers need to undergo prior to operate vacuum truck?
-    - What is the requirement for drivers to be qualified as vacuum truck operator?
-    - What is the criteria for drivers to be qualified as vacuum truck operator?
-    - What is the reason to obtain the Hazardous Material Transport Driver Permit to operate vacuum truck?
-    - What is the reason to get the Hazardous Material Transport Driver Permit to operate vacuum truck?
-    - What is the duration of the Hazardous Material Transport (HAZMAT) Driver Permit course?
-    - What is the duration of the Hazardous Material Transport (HAZMAT) Driver Permit training?
-    - What is the requirement to be a vacuum truck driver and operator?
-    - What is the qualification to be a vacuum truck driver and operator?
-    - What is needed to be a vacuum truck driver and operator?
-    - Where can I obtain the Hazardous Material Transport (HAZMAT) Driver Permit to operate vacuum truck?
-    - Where can I get the Hazardous Material Transport (HAZMAT) Driver Permit to operate vacuum truck?
-    - Where to obtain Hazardous Material Transport (HAZMAT) Driver Permit to operate vacuum truck?
-    - Where to get Hazardous Material Transport (HAZMAT) Driver Permit to operate vacuum truck?
-    - Where are locations of training centres to receive the Hazardous Material Transport (HAZMAT) Driver training?
-    - Why is it necessary to obtain the Hazardous Material Transport (HAZMAT) Driver Permit to operate vacuum truck?
-    - Why is it needed to obtain the Hazardous Material Transport (HAZMAT) Driver Permit to operate vacuum truck?
-    - When can I obtain the Hazardous Material Transport (HAZMAT) Driver Permit to operate vacuum truck?
-    - When can I get the Hazardous Material Transport (HAZMAT) Driver Permit to operate vacuum truck?
-    - When is the earliest date to obtain the Hazardous Material Transport (HAZMAT) Driver Permit to operate vacuum truck?
-    - Who conducts the Hazardous Material Transport (HAZMAT) Driver Permit course?
-    - Who gives the Hazardous Material Transport (HAZMAT) Driver Permit course?
-    - Who conducts the Hazardous Material Transport (HAZMAT) Driver Permit training?
-    - Who gives the Hazardous Material Transport (HAZMAT) Driver Permit training?
-    - How to qualify to be a vacuum truck operator?
-    - How to be a qualified Hazardous Material Transport (HAZMAT) Driver?
-    - How long is the Hazardous Material Transport (HAZMAT) Driver Permit course?
-    - How long is the Hazardous Material Transport (HAZMAT) Driver Permit training?
-    - Is the driver required to attend any training before operating the vacuum truck?
-    - Is the driver required to obtain any license before operating the vacuum truck?
-    - Is the driver required to obtain any permit before operating the vacuum truck?
-    - Must vacuum truck driver go through training before starting work?
-    - Can anyone be a vacuum truck driver and operator?
-- intent: chatvac/vac_product_label
-  examples: |
-    - What is vacuum truck product label?
-    - What is the reason to display the product label?
-    - What information is available on the product label?
-    - Where to display the product label on the vacuum truck?
-    - Why is there a need to display the product label?
-    - Why need to display the product label?
-    - Why displaying the product label is necessary?
-    - Why displaying the product label is needed?
-    - Why displaying the product label is required?
-    - When to put on the product label on the vacuum truck?
-    - When to display on the product label on the vacuum truck?
-    - Who is responsible to display the product label on the vacuum truck?
-    - How to inform other road users of the content in the vacuum truck while on the road?
-    - How to inform others of the content in the vacuum truck while on the road?
-    - How does the product label look like?
-    - Show me the product label.
-    - Show me a photo of the product label.
-    - Show me a picture of the product label.
-    - Show me an image of the product label.
-    - Can I see a photo of the product label?
-    - Can I see a picture of the product label?
-    - Can I see an image of the product label?
-    - Do you have a photo of the product label?
-    - Do you have an image of the product label?
+  utter_chatvac/vacuum_purpose:
+  - text: |-
+      A vacuum truck is a tank truck that has a pump and a tank.
+      The pump is designed to pneumatically suck liquids, sludges, slurries, or the like from a location (often underground) into the tank of the truck.
+      The objective is to enable transport of the liquid material via road to another location.
+  utter_chatvac/vac_truck_driver_requirement:
+  - text: |-
+      As our vacuum truck will be used to transport hazardous materials, other than the Class 4 driving license, driver needs to attend a 1-day course to obtain a Hazardous Material Transport (HAZMAT) Driver Permit at training centres appointed by SCDF.
+      Please approach your supervisor to sign up and identify location and schedule of the training.
+  utter_chatvac/vac_product_label:
+  - image: https://i.imgur.com/IY8HPhl.jpg
+    text: |-
+      Driver is responsible to put on product label which specify the product to be transported accurately on the side of the vacuum truck and its associated risk.
+      This is part of hazard mitigation while on the road and hence, the product label has to be in place while performing transportation.
 
 ## VACUUM TRUCK OPERATIONS
 
-- intent: chatvac/vac_truck_hose
-  examples: |
-    - What hose is used on the vacuum truck?
-    - What hose can be used on the vacuum truck?
-    - What hose should be used on the vacuum truck?
-    - What size of hose to be used on the vacuum truck?
-    - What type of hose can be used with the vacuum truck?
-    - How to achieve flow of liquid into and out of vacuum truck?
-- intent: chatvac/vac_truck_pressure_gauge
-  examples: |
-    - What is a vacuum truck pressure gauge?
-    - Where to check for the vacuum truck suction pressure?
-    - Where do I look for the vacuum truck suction pressure?
-    - Where is the gauge to monitor the vacuum truck suction pressure?
-    - Where to check for the vacuum truck discharging pressure?
-    - Where do I look for the vacuum truck discharging pressure?
-    - Where is the gauge to monitor the vacuum truck discharging pressure?
-    - Why is it important to monitor the vacuum truck pressure gauge?
-    - How to check for suction pressure?
-    - How much is the suction pressure?
-    - How to check for discharging pressure?
-    - How much is the discharging pressure?
-- intent: chatvac/vac_truck_pressure_gauge_image
-  examples: |
-    - What is a vacuum truck pressure gauge?
-    - What is pressure gauge?
-    - How does a vacuum truck pressure gauge look like?
-    - Show me a photo of the vacuum truck pressure gauge?
-    - Show me a picture of the vacuum truck pressure gauge?
-    - Show me an image of the vacuum truck pressure gauge?
-    - Show me a photo of the vacuum tank pressure gauge?
-    - Show me a picture of the vacuum tank pressure gauge?
-    - Show me an image of the vacuum tank pressure gauge?
-    - Can i see a photo of the vacuum truck pressure gauge?
-    - Can i see a picture of the vacuum truck pressure gauge?
-    - Can i see an image of the vacuum truck pressure gauge?
-    - Can i see a photo of the vacuum tank pressure gauge?
-    - Can i see a picture of the vacuum tank pressure gauge?
-    - Can i see an image of the vacuum tank pressure gauge?
-- intent: chatvac/vac_valve_connection
-  examples: |
-    - What is the size of the fitting connection for vacuum truck suction valve?
-    - What are the dimensions of the vacuum truck fitting connection on the suction valve?
-    - What type of fitting connection should be used on the vacuum truck suction valve?
-    - What kind of connection is used on the vacuum truck suction valve?
-    - How big is the fitting connection for the vacuum truck suction valve?
-    - How big is the size of the connection for the vacuum truck suction valve?
-    - Is camlock connection used on the vacuum truck discharge valve?
-    - Is flange connection used on the vacuum truck suction valve?
-- intent: chatvac/vac_truck_tank_level_indicator
-  examples: |
-    - Is there any indicator of how much liquid is inside the vacuum truck?
-    - Is there any indicator of how much liquid is inside the vacuum tank?
-    - Is there any way to know how much liquid is inside the vacuum truck?
-    - Is there any way to know how much liquid is inside the vacuum tank?
-    - Is it possible to check the amount of liquid inside the vacuum truck?
-    - Is it possible to check the amount of liquid inside the vacuum tank?
-    - Is there a level indicator on the vacuum truck?
-    - Is there a level indicator on the vacuum tank?
-    - Show me a photo of the vacuum truck level indicator?
-    - Show me a picture of the vacuum truck level indicator?
-    - Show me an image of the vacuum truck level indicator?
-    - Show me a photo of the vacuum tank level indicator?
-    - Show me a picture of the vacuum tank level indicator?
-    - Show me an image of the vacuum tank level indicator?
-    - Can i see a photo of the vacuum truck level indicator?
-    - Can i see a picture of the vacuum truck level indicator?
-    - Can i see an image of the vacuum truck level indicator?
-    - Can i see a photo of the vacuum tank level indicator?
-    - Can i see a picture of the vacuum tank level indicator?
-    - Can i see an image of the vacuum tank level indicator?
-- intent: chatvac/vac_truck_PTO_switch
-  examples: |
-    - What if the vacuum truck PTO switch is not turned on?
-    - What happens if the vacuum truck PTO switch is not turned on?
-    - Where is the vacuum truck PTO switch?
-    - Where can i find the vacuum truck PTO switch?
-    - How does the vacuum truck PTO switch looks like?
-    - Can the vacuum truck be operated without switching ON the PTO switch?
-    - Must the vacuum truck PTO switch be turned on?
-    - Do I need to turn on the vacuum truck PTO switch?
-    - Do you have an image of vacuum truck PTO switch?
-    - Do you have a picture of vacuum truck PTO switch?
-    - Do you have a photo of vacuum truck PTO switch?
+  utter_chatvac/vac_truck_hose:
+  - text: |-
+      Greenchem's vacuum trucks uses 4" reinforced high pressure spring PVC tubing hoses as channel of flow.
+  utter_chatvac/vac_truck_pressure_gauge:
+  - text: |-
+      The vacuum truck pressure gauge is for monitoring of pressure during suction or discharging.
+      The value read from the gauge is an indicator if the vacuum truck is operating as intended.
+  utter_chatvac/vac_truck_pressure_gauge_image:
+  - image: https://i.imgur.com/kbAkPOQ.jpg
+    text: |-
+      Image of vacuum truck pressure gauge.
+  utter_chatvac/vac_valve_connection:
+  - text: |-
+      The vacuum truck is using a 4 inch aluminium camlock fitting on its suction and discharge valves.
+  utter_chatvac/vac_truck_tank_level_indicator:
+  - image: https://i.imgur.com/9e8wVtz.jpg
+    text: |-
+      The vacuum truck level indicator is located at the back of the vacuum tank to indicate the level of the liquid inside it.
+      It can be used to monitor progress of suction or discharge.
+  utter_chatvac/buddy_operate_vac_truck:
+  - text: |-
+      2 man is required to operate the vacuum truck;
+      ie. a vacuum truck operator and a helper who assist with the connection of hoses.
+  utter_chatvac/vac_truck_PTO_switch:
+  - image: https://i.imgur.com/XHt1KzC.jpg
+    text: |-
+      Power take-offs (PTOs) are mechanical gearboxes that attach to apertures provided on truck transmissions and are used to transfer the power of the vehicle engine to auxiliary components, for the vacuum truck would be a vacuum pump.
+      It is usually a pushbutton located on the driver dashboard.
+      The vacuum truck will not be able to perform suction or discharge if the PTO switch is not turned on.
 
-- intent: chatvac/buddy_operate_vac_truck
-  examples: |
-    - What is the minimum number of people needed to operate the vacuum truck?
-    - How many people are required to operate the vacuum truck?
-    - How many people should be operating the vacuum truck?
-    - How many helper is required to operate the vacuum truck?
-    - Can the vacuum truck operator operate the vacuum truck alone?
-    - Should the vacuum truck operator operate the vacuum truck alone?
+## VACUUM TRUCK TECHNICAL SPECIFICATIONS
 
-## VACUUM TRUCK SPECIFICATIONS
-
-- intent: chatvac/vac_discharge_pressure
-  examples: |
-    - What is the vacuum truck maximum pressure for discharging?
-    - What is the vacuum truck range of discharging pressure?
-    - What will be the pressure when vacuum truck is discharging?
-    - How much is the working pressure when vacuum truck is discharging?
-- intent: chatvac/vac_holding_capacity
-  examples: |
-    - What is the holding capacity of Greenchem vacuum trucks?
-    - What is the holding capacity of our vacuum trucks?
-    - What is the capacity of Greenchem vacuum trucks?
-    - What is the capacity of our vacuum trucks?
-    - What capacity of vacuum truck is available in Greenchem?
-    - How much can Greenchem vacuum truck take in?
-    - How much can our vacuum truck take in?
-    - How much can Greenchem vacuum truck suck?
-    - How much can our vacuum truck suck?
-- intent: chatvac/vac_fuel_type
-  examples: |
-    - What is the fuel used by Greenchem's vacuum truck?
-    - What is the fuel used by our vacuum truck?
-    - What grade of diesel is used by Greenchem's vacuum truck?
-    - What grade of diesel is used by our vacuum truck?
-    - What type of diesel is used by Greenchem's vacuum truck?
-    - What type of diesel is used by our vacuum truck?
-    - What type of fuel is used by Greenchem's vacuum truck?
-    - What type of fuel is used by our vacuum truck?
-- intent: chatvac/vac_material_type
-  examples: |
-    - What are the materials used to make Greenchem's vacuum trucks' vacuum tanks?
-    - What are Greenchem's vacuum trucks' vacuum tanks made of?
-    - What type of steel is used to make Greenchem's vacuum trucks' vacuum tanks?
-- intent: chatvac/vac_15k_suction_rate
-  examples: |
-    - What is the suction rate of Greenchem's 15,000 litres vacuum truck?
-    - What is the suction capacity of Greenchem's 15,000 litres vacuum truck?
-    - What is the suction flow rate of Greenchem's 15,000 litres vacuum truck?
-    - How fast can Greenchem's 15,000 litres vacuum truck suck?
+  utter_chatvac/vac_discharge_pressure:
+  - text: |-
+      The vacuum truck discharge pressure ranges from 10 - 20 PSI.
+  utter_chatvac/vac_holding_capacity:
+  - text: |-
+      Greenchem owns three vacuum trucks with tank holding capacity of 9,000 litres, 14,000 litres and 15,000 litres respectively.
+  utter_chatvac/vac_fuel_type:
+  - text: |-
+      Greenchem vacuum trucks uses diesel with Euro 4 or 5 standard.
+  utter_chatvac/vac_material_type:
+  - text: |-
+      All 3 vacuum trucks' vacuum tanks of Greenchem are made from different material.
+      - Specifically, the 9000 litres vacuum tank is of carbon steel,
+      - 14,000 litres vacuum tank is of 316L stainless steeland
+      - 15,000 litres vacuum tank is of mild steel.
+  utter_chatvac/vac_15k_suction_rate:
+  - text: |-
+      The suction rate of Greenchem's 15,000 litres vacuum truck is 4000 m3/hr.
 
 ## VACUUM TRUCK SAFETY
 
-- intent: chatvac/vac_truck_ppe
-  examples: |
-    - What are the PPE required when operating the vacuum truck?
-    - What are the PPE needed when operating the vacuum truck?
-    - What are the type of PPE required when operating the vacuum truck?
-    - What are the type of PPE needed when operating the vacuum truck?
-    - What are the Personal Protective Equipment required when operating the vacuum truck?
-    - What are the Personal Protective Equipment needed when operating the vacuum truck?
-    - What are the type of Personal Protective Equipment required when operating the vacuum truck?
-    - What are the type of Personal Protective Equipment needed when operating the vacuum truck?
-    - What are the Personal Protective Gears required when operating the vacuum truck?
-    - What are the Personal Protective Gears needed when operating the vacuum truck?
-    - What are the type Personal Protective Gears required when operating the vacuum truck?
-    - What are the type Personal Protective Gears needed when operating the vacuum truck?
-    - Why PPE is required when operating the vacuum truck?
-    - Why PPE is needed when operating the vacuum truck?
-    - Why Personal Protective Equipment is required when operating the vacuum truck?
-    - Why Personal Protective Equipment is needed when operating the vacuum truck?
-    - Why Personal Protective Gears are required when operating the vacuum truck?
-    - Why Personal Protective Gears are needed when operating the vacuum truck?
-- intent: chatvac/vac_earthing
-  examples: |
-    - What is the purpose of connecting the earthing cable to the earthing point?
-    - What function does connecting the earthing cable to the earthing point have?
-    - What is the reason for connecting the earthing cable to the earth point?
-    - Why do i need to connect to the earthing point?
-    - Why does the earthing cable need to be connected to the earthing point?
-    - When do you connect the earthing point?
-    - How does the static electricity passes?
-- intent: chatvac/vac_lel_sensor
-  examples: |
-    - What happen when the area of work is hazaordous?
-    - What happen when the area has a high LEL reading?
-    - What indicator does it have when the LEL is high?
-    - Which areas can the vacuum truck operate in?
-    - Why is the alarm sensor sound off?
-    - When will the alarm be triggered?
-    - How do i measure LEL?
-    - How do i know if there is leak gas?
-    - Is it safe to operate the vacuum truck in a hazardous area?
-    - Can the vacuum truck operate in a hazardous area?
-    - Is the vacuum truck equipped with any safety features?
-    - Does the vacuum truck have any safety features?
-- intent: chatvac/vac_parking
-  examples: |
-    - Can the vacuum truck be parked on uneven ground?
-    - Can the vacuum truck be parked on a slope?
-    - Where should the vacuum truck be parked during operation?
-    - Can the vacuum truck be operated while parked on a slope?
-    - Does the vacuum truck need to be parked on flat ground?
-    - Can the vacuum truck operate efficiently on uneven ground?
-- intent: chatvac/vac_wheelchoke
-  examples: |
-    - What precautionary measure to take to ensure vacuum truck does not move during operation?
-    - What precautionary measure to take to ensure vacuum truck stays stationary during operation?
-    - What is wheel choke?
-    - Why wheel chokes need to be placed on all of vacuum truck wheels?
-    - How to ensure the vacuum truck does not move when in suction or discharge operation?
-    - How to ensure the vacuum truck stays stationary when in suction or discharge operation?
-    - How to prevent the vacuum truck from moving when in use?
-    - How does the wheel choke look like?
-    - Show me a photo/picture/image of the vacuum truck wheel choke.
-    - Show me a picture of the vacuum truck wheel choke.
-    - Show me an image of the v wheel choke.
-    - Can I see a photo of the wheel choke?
-    - Can I see a picture of the wheel choke for vacuum truck?
-    - Can I see a image of the vacuum truck wheel choke?
-    - Do you have a photo of the vacuum truck wheel choke?
-- intent: chatvac/vac_emergency_button
-  examples: |
-    - What should I do if there is an emergency while operating the vacuum truck?
-    - What if there is an emergency while operating the vacuum truck?
-    - Where is the emergency button of the vacuum truck?
-    - Where to locate the emergency button of the vacuum truck?
-    - Why is it important to push the emergency button of the vacuum truck during an emergency?
-    - When to press the vacuum truck emergency button?
-    - How does the vacuum truck emergency button look like?
-    - Is there any emergency button on the vacuum truck?
-    - Show me the vacuum truck emergency button.
-    - Show me a photo/picture/image of the vacuum truck emergency button.
-    - Show me a picture of the vacuum truck emergency button.
-    - Show me an image of the vacuum truck emergency button.
-    - Can I see a photo of the vacuum truck emergency button?
-    - Can I see a picture of the vacuum truck emergency button?
-    - Can I see an image of the vacuum truck emergency button?
-    - Do you have a photo of the vacuum truck emergency button?
+  utter_chatvac/vac_truck_ppe:
+  - text: |-
+      Vacuum truck operator is required to put on PPE or Personal Protective Equipment such as:
+        - Safety Helmet,
+        - Face Shield and
+        - Safety Goggles,
+        - Ear Plugs,
+        - Coverall Uniform,
+        - Chemical Gloves and
+        - Safety Boots.
+      These PPE help to mitigate the risks or hazards associated with operating the vacuum truck.
+  utter_chatvac/vac_earthing:
+  - image: https://i.imgur.com/gnumkGj.jpg
+    text: |-
+      - Grounding or earthing of the vacuum truck is achieve by connecting the on-board MGV earthing cable to a nearby earthing point.
+      - Vacuum trucks and bulk chemical road tankers transferring flammable products require static grounding protection to prevent the build-up of static electricity on the truck or equipment, like hoses, that are connected to the truck.
+      - If static electricity is allowed to build up on the truck the discharge of a static spark becomes an ignition hazard.
+  utter_chatvac/vac_lel_sensor:
+  - image: https://i.imgur.com/j4boMWz.jpg
+    text: |-
+      - The vacuum truck is fitted with a sensor to detect level of LEL(Lower Explosive Limit) around its immediate surrounding while in operation.
+      - The sensor will trigger an alarm when level of LEL exceed the programmed threshold.
+  utter_chatvac/vac_parking:
+  - text: |-
+      The vacuum truck should be parked on flat and even ground.
+      This will ensure the liquid inside the vacuum tank is evenly distributed and the reading on level indicator is accurate.
+      **Alternatively you can search how to ensure vacuum truck wheel choke to secure while at stationary or in operation**
+  utter_chatvac/vac_wheelchoke:
+  - image: https://i.imgur.com/Qdkz88e.jpg
+    text: |-
+      - Wheel chokes are to be placed on all of vacuum truck wheels to prevent accidental movement.
+      - Wheel chokes are a wedge of sturdy material, such as polyurethane or rubber, placed against a vehicle's wheels to prevent accidental movement.
+      - Chokes are placed for safety in addition to setting the brakes.
+      - The bottom surface is sometimes coated in rubber to enhance grip with the ground.
+  utter_chatvac/vac_emergency_button:
+  - image: https://i.imgur.com/yQpS0rG.jpg
+    text: |-
+      In the event of an emergency while operating the vacuum truck, press the emergency button located at the rear side of the vacuum truck to cut source of power transmission to bring all operations to a complete stop.
+  utter_chatvac/vac_maintenance:
+  - text: |-
+      - Maintenance of the Vacuum truck is done monthly by Greenchem Mechanic at Greenchem Facilities with the help of the checklist.
+      - Yearly inspection by STA is required in accordance to MOM regulation and LTA regulation.
+  utter_chatvac/vac_hose_certification:
+  - text: |-
+      Every length of vacuum truck hose requires yearly hydrostatic test, where it is tested on its strength and for leak.
+      Upon passing the test, the hose will be issued with a certificate.
+      **Consult Greenchem Admin Team on the vendor performing the hydrostatic test.**
+  utter_chatvac/vac_tank_cleaning:
+  - text: |-
+      Regular cleaning of the vacuum truck tank is necessary to prevent build-up of hardened sludge or when the tank was used to hold corrosive liquid.
+      - Frequency of cleaning depends on rate of use and last item stored in the tank.
+      - Cleaning can also be necessary to ensure tank is empty before deploying the vacuum truck for certain special job.
+      - Cleaning is done in Greenchem facility and should only be performed by trained personnel.
 
-## VACUUM TRUCK MAINTENANCE
-
-- intent: chatvac/vac_maintenance
-  examples: |
-    - What is the vacuum truck maintenance schedule?
-    - Where is the inspection of vacuum truck carried out?
-    - Where is the location of vacuum truck inspection?
-    - When is inspection vacuum truck carried out?
-    - How long is the validity of the vacuum truck inspection?
-    - How often does the vacuum truck need to be certified?
-    - How often does the vacuum truck need to be inspected?
-    - Does vacuum truck need maintenance?
-    - Does vacuum truck require maintenance?
-    - Does vacuum truck need inspection?
-    - Does vacuum truck require inspection?
-- intent: chatvac/vac_hose_certification
-  examples: |
-    - What is the validity period of the vacuum truck hoses?
-    - Who is responsible to certified the vacuum truck hoses?
-    - How long can the vacuum truck hoses be used before they need to be changed?
-    - How to know if the vacuum truck hoses is in good condition?
-    - Do 4 inch vacuum truck hoses needs to be certified? If yes, how long is the validity?
-    - Do the vacuum truck hoses need maintenance?
-- intent: chatvac/vac_tank_cleaning
-  examples: |
-    - What if I want to clean the vacuum tank of the vacuum truck?
-    - What happen when the vacuum tank of the vacuum truck is dirty?
-    - What are the procedures to clean the vacuum tank of the vacuum truck?
-    - What are the steps to clean the vacuum tank of the vacuum truck?
-    - What is the vacuum truck's vacuum tank cleaning frequency?
-    - Where is the cleaning done for the vacuum truck's vacuum tank?
-    - Why does the vacuum truck's vacuum tank need cleaning?
-    - Why does the vacuum truck's vacuum tank require cleaning?
-    - When is the cleaning of vacuum truck's vacuum tank done?
-    - When is cleaning of vacuum truck's vacuum tank needed?
-    - When is cleaning of vacuum truck's vacuum tank required?
-    - Who can clean the vacuum truck's vacuum tank?
-    - Who is suppose to clean the vacuum truck's vacuum tank?
-    - Who is responsible for the cleaning of the vacuum truck's vacuum tank?
-    - How to clean the vacuum truck's vacuum tank?
-    - How frequent does the vacuum truck's vacuum tank require cleaning?
-    - Is it necessary to clean the vacuum truck's vacuum tank?
-    - Can the vacuum truck's vacuum tank be cleaned?
-    - Is the vacuum tank of the vacuum truck able to be cleaned?
-    - Does the vacuum truck's vacuum tank require cleaning?
-    - Must the vacuum truck's vacuum tank be cleaned?
-
-- synonym: vacuum truck
-  examples: |
-    - vacuum trucks
-    - vacuum tanker
-    - vacuum tankers
-    - super sucker
-    - high suction truck
-    - fast suction tankers
-    - fast suction trucks
-
-## END OF VACUUM TRUCK
+##    END OF VACUUM TRUCK
 
 
-- synonym: high
-  examples: |
-    - escalated
-    - escalate
-    - urgent
-    - really important
+  utter_out_of_scope:
+  - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
+  utter_greet:
+  - text: Hello, {username}! I'm your IT Helpdesk Assistant.
+  - text: Hi, I am an IT Helpdesk Assistant. Ready to help you out.
+  utter_goodbye:
+  - text: Goodbye!
+  - text: See ya later!
+  - text: You may text me anytime!
+  - text: Bye!
+  utter_ask_incident_title:
+  - text: What should we use for the title of this incident?
+  utter_ask_problem_description:
+  - text: What is the problem description for the issue?
+  utter_help:
+  - text: |-
+      I can help you in many ways feel free to ask me anything.
+      You can ask me things like:
+      - Frequently ask question of (Booster Pump, Hydrojet Machine, Vacuum Truck)
+      - I can guide you on trainings:
+          - Booster Pump
+          - Hydrojet Machine
+          - Vacuum Truck
+      - **(Coming to release)**
+  utter_green_help:
+  - text: |-
+      I can asisst you with some training and learning of following operations
+      You can choose the following learning options
+      - Operating of Hydrojet Machine
+      - Operating of Booster Pump
+      - Operating of Vacuum Truck
+  utter_green_option_hydrojet_machine:
+  - text: |-
+      Awesome, in here we will be covering the following chapters 20 000 psi hydrojet machine
+      1. Hydrojet Checklist/Inspection
+      2. Hoses Connection To Gun
+      3. Start of Engine
+      4. Check For Leakage
+    buttons:
+    - payload: /next_page
+      title: Next Page
+
+
+  utter_green_option_hydrojet_machine_pg_2:
+  - text: |-
+      **PAGE 2**
+      5. Monitoring
+      6. Stop of Engine
+      7. Housekeeping
+
+  utter_green_option_booster_pump:
+  - text: |-
+      Great, in here we shall be covering the following chapters for 12 bar booster pump
+      1. Booster Pump Setup & Inspection
+      2. Booster Pump Hoses Connection
+      3. Booster Pump Start Engine
+      4. Booster Pump Speed Lever Adjustment
+    buttons:
+    - payload: /next_page
+      title: Next Page
+
+  utter_green_option_booster_pump_pg_2:
+  - text: |-
+      **PAGE 2**
+
+      5. Booster Pump Monitor Pressure
+      6. Booster Pump Check For Leakage
+      7. Booster Pump Initiating To Power Down Procedures
+      8. Booster Pump Speed Lever Down Adjustment
+    buttons:
+    - payload: /next_page
+      title: Next Page
+
+  utter_green_option_booster_pump_pg_3:
+  - text: |-
+      **PAGE 3**
+
+      9. Booster Pump Pull The Stop Lever
+      10. Booster Pump Pressure Discharge
+      11. Booster Pump Outlet Valve
+      12. Booster Pump Disconnection All Hoses
+
+  utter_green_option_vacuum_truck:
+  - text: |-
+      Perfect, in here we are covering the following chapters for Vacuum Truck
+      1. Vacuum Truck Pre-Work Setup
+      2. Vacuum Truck Engine Start
+      3. Vacuum Truck Hoses Connection
+      4. Vacuum Truck Configuration Onboard Control Panel
+    buttons:
+    - payload: /next_page
+      title: Next Page
+
+  utter_green_option_vacuum_truck_pg_2:
+  - text: |-
+
+      **PAGE 2**
+
+      5. Vacuum Truck Commence Suction
+      6. Vacuum Truck End Suction
+      7. Vacuum Truck End Configuration Onboard Control Panel
+      8. Vacuum Truck Disconnection Transfer Hoses
+    buttons:
+    - payload: /next_page
+      title: Next Page
+
+  utter_green_option_vacuum_truck_pg_3:
+  - text: |-
+
+      **PAGE 3**
+
+      9. Vacuum Truck Power-Down
+      10. Housekeeping
+
+  utter_welcome:
+  - text: You're welcome!
+  - text: No worries!
+  - text: I am glad that i am about to help you with that.
+  - text: Sure, you are most welcome!
+  utter_default:
+  - text: I didn't quite understand that. Could you rephrase?
+  utter_ask_confirm:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No, cancel the incident
+    text: |-
+      Should I open an incident with the following details?
+          Title: {incident_title}
+          Description: {problem_description}
+  utter_incident_creation_canceled:
+  - text: Alright, I have cancelled the incident.
+  utter_ask_whatelse:
+  - text: What else can I help you with?
+  utter_chitchat/ask_weather:
+  - text: I am not a weather presenter but I hope it will be sunny outside.
+  utter_chitchat/bot_challenge:
+  - text: Yes, indeed. I was created by a developer of Steve.
+
+  utter_chitchat/affirm_can:
+  - text: Yes, you can!
+  - text: Sure, you can!
+  - text: Of course, you can!
+  - text: Definitely you can!
+  - text: Don't worry you can.
+  utter_chitchat/affirm_yes:
+  - text: Yes.
+  - text: Of course!
+  - text: Definitely yes!
+  utter_chitchat/affirm_should:
+  - text: Yes, you should
+  - text: Of course, you should!
+  - text: You should do that!
+  - text: Sure, you should!
+  utter_chitchat/deny_no:
+  - text: No.
+  - text: No, you can't
+  - text: Nope!
+  utter_chitchat/deny_should_not:
+  - text: No, you shouldn't
+  - text: No, you should not
+  - text: Of course, no
+  utter_chitchat/ask_supervisor:
+  - text: You may refer to your supervisor for more information.
+  - text: Kindly approach to your supervisor for any further clarificaitons.
+
+  utter_chitchat/not_human_challenge:
+  - text: No, I am not a human.
+  - text: You must have misunderstood me as a human.
+  - text: Don't take me as a human. I am created by smartest human in the world.
+  - text: If you think so, please ask my master Steve.
+  utter_ask_number:
+  - text: What is your user id?
+  utter_ask_email:
+  - text: What is your email?
+  utter_ask_name:
+  - text: What is your name please?
+  utter_greet_name:
+  - text: Hi, {name} how are you doing today?
+actions:
+- action_incident_status
+- action_hi
+- action_name_form
+forms:
+  # ask_name_form:
+  #   name:
+  #     - type: from_entity
+  #       entity: name
+  open_incident_form:
+    confirm:
+    - intent: affirm
+      type: from_intent
+      value: true
+    - intent: deny
+      type: from_intent
+      value: false
+    email:
+    - entity: email
+      type: from_entity
+    incident_title:
+    - intent: password_reset
+      type: from_trigger_intent
+      value: Problem with password
+    - intent: problem_email
+      type: from_trigger_intent
+      value: Problem with email
+    - not_intent:
+      - incident_status
+      - help
+      - affirm
+      - deny
+      type: from_text
+    problem_description:
+    - not_intent:
+      - incident_status
+      - help
+      - affirm
+      - deny
+      type: from_text
+e2e_actions: []
