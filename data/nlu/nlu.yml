@@ -693,27 +693,27 @@ nlu:
     - How to clean the surface of the tank using a gun?
     - how does the hydrojet gun operate?
 
-
 - intent: chathydrojet/hydrojet_gun_training
-  examples:
+  examples: |
     - Who can operate the hydrojet gun?
     - Is training required before operating the hydrojet gun?
     - Should we undergo training before operate hydrojet gun?
 
 # END OF HYDROJET MACHINE OPERATION
 
-- intent: chathydrojet/hydrojet_machine_checklist
-  examples: |
-    - What is needed to power on the hydrojet machine?
-    - When to check for hydrojet machine battery connection?
-    - How do you check the battery indicator?
-    - how to know if the hydrojet is able to power up?
+## HYDROJET MACHINE TECHNICAL SPECIFICATIONS
 
-- intent: chathydrojet/hydrojet_water_tank_checklist
+- intent: chathydrojet/hydrojet_machine_battery
   examples: |
-    - where to fill up the water of hydrojet machine?
-    - When do you fill up the water of hydrojet machine?
-    - How much to fill up the water tank of hydrojet machine?
+    - what is needed to power on the hydrojet machine?
+    - what happen to my hydrojet machine battery, its unable to start?
+    - What happen when there is only 1 set of battery	for hydrojet machine?
+    - where to check the hydojet machine polarity of battery?
+    - where to check the hydrojet machine battery indicator?
+    - how do you check the hydrojet machine battery indicator?
+    - how to know if the hydrojet machine is able to power up?
+    - How to connect the hydrojet machine polarity of the battery?
+
 - intent: chathydrojet/hydrojet_weight
   examples: |
     - What is the weight of the hydrojet Machine?
@@ -721,6 +721,7 @@ nlu:
     - How much does hydrojet machine weight
     - How heavy is the Hydrojet machine?
     - The Weight of hydrojet machine?
+
 - intent: chathydrojet/hydrojet_dimension
   examples: |
     - What is the measurement for hydrojet machine?
@@ -730,6 +731,7 @@ nlu:
     - How much size is the hydrojet machine?
     - How big is the hydrojet machine?
     - How do you measure the hydrojet machine?
+
 - intent: chathydrojet/hydrojet_max_pressure
   examples: |
     - What is the maximum pressure of the hydrojet machine?
@@ -744,6 +746,7 @@ nlu:
     - How much must the maximum pressure reach for cleaning using hydrojet machine?
     - hydrojet machine maximum pressure is?
     - Hydrojet machine highest pressure?
+
 - intent: chathydrojet/hydrojet_buildin_watertank
   examples: |
     - What is the capacity of the water tank for hydrojet machine?
@@ -756,6 +759,7 @@ nlu:
     - How big is the hydrojet machine water tank
     - hydrojet machine water tank how big?
     - hydrojet machine water tank size?
+
 - intent: chathydrojet/hydrojet_diesel_tank_size
   examples: |
     - What is the capacity of the hydrojet machine diesel tank?
@@ -769,6 +773,21 @@ nlu:
     - Diesel tank of hydrojet machine how big?
     - Size of hydrojet machine diesel tank?
 
+
+# END OF HYDROJET MACHINE TECHNICAL SPECIFICATIONS
+
+- intent: chathydrojet/hydrojet_machine_checklist
+  examples: |
+    - What is needed to power on the hydrojet machine?
+    - When to check for hydrojet machine battery connection?
+    - How do you check the battery indicator?
+    - how to know if the hydrojet is able to power up?
+
+- intent: chathydrojet/hydrojet_water_tank_checklist
+  examples: |
+    - where to fill up the water of hydrojet machine?
+    - When do you fill up the water of hydrojet machine?
+    - How much to fill up the water tank of hydrojet machine?
 
   ## THE END OF HYDROJET MACHINE
 
