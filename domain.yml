@@ -199,12 +199,58 @@ responses:
 
 # END OF HYDROJET MACHINE TECHNICAL SPECIFICATIONS
 
+## HYDROJET MACHINE MAINTENANCE & INSEPCTION
+
+  utter_chathydrojet/certification_hydrojet_machine:
+  - text: |-
+      Maintenance of the hydrojet machine is done every yearly by OEM personnel.
+
+  utter_chathydrojet/inspection_lifting_crane:
+  - text: |-
+      Lifting inspection is required to check on the integrity of the lifting equipment of the machine yearly.
+
+  utter_chathydrojet/inspection_hydrojet_machine:
+  - text: |-
+      Yes, the Hydrojet machine is required to undergo yearly inspection as per MOM guidelines:
+      https://www.mom.gov.sg/workplace-safety-and-health
+
+  utter_chathydrojet/hydrojet_hoses_certification:
+  - text:
+      Yes, the validity for hoses is 1 year for each length after which it is send for recertification again on its integrity.
+  - text:
+      If the case of small leakages, it is recommended to replace new hydrojet hoses.
+
   utter_chathydrojet/hydrojet_machine_checklist:
   - text: Check the battery polarity to ensure good connection and also battery indicator.
 
   utter_chathydrojet/hydrojet_water_tank_checklist:
   - image: null
     text: Ensure water is full in the water tank.
+
+# END OF MAINTENANCE & INSPECTION
+
+## HYDROJET MACHINE SAFETY
+
+  utter_chathydrojet/hydrojet_safety_ppe:
+  - image: https://1.bp.blogspot.com/-t107ry5oJFg/XfHxXmbn1MI/AAAAAAAADi4/iMlHwU6TO60UuEY7uh9-Uzm-B8Mcg8vNQCLcBGAsYHQ/s1600/20191212_104522.jpg
+    text: Additional PPE such as ear plugs or muffles is to be worn as the machine create a loud noise.
+
+  utter_chathydrojet/hydrojet_machine_operating_hour:
+  - text: |-
+      - It is advisable to keep it between 2 hour with breaks in between.
+      - It is to ensure sufficient petrol is required to run the machine and to prevent and overheating during the operation.
+
+  utter_chathydrojet/hydrojet_hoses_check:
+  - text: |-
+      - After completion of connecting all hoses, a leak test is conducted prior to start the work.
+      - Leakage of water will leak if the connection is not connected properly.
+
+  utter_chathydrojet/competency_operating_hydrojet_machine:
+  - text: |-
+      Yes, selected workers must be given training on how to operate the hydrojetting machine.
+
+# END OF HYDROJET MACHINE SAFETY
+
 
 ##  BOOSTER PUMP
   utter_chatbooster/booster_intro:
