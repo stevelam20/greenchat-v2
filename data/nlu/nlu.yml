@@ -524,23 +524,39 @@ nlu:
     - Where do i check for the booster pump maintenance record?
     - Where do i get the booster pump maintenance procedures?
     - Where can i get the booster pump maintenance record?
+## HYDROJET MACHINE
 
-- intent: chathydrojet/positioning_hydrojet_machine
+# HYDROJET MACHINE GENERAL
+- intent: chathydrojet/hydrojet_machine
   examples: |
-    - What if the machine is placed on uneven ground?
-    - What about putting on slope?
-    - What floor/surface can the machine be place on?
-    - Where can i put the machine?
-    - How can i put the machine?
-    - How shall we place the machine?
-    - Does the machine need to be placed on flat ground?
-    - Can the machine operate efficiently on uneven ground?
-    - Can we place on anywhere?
-    - Will it be possible to put on anywhere?
-    - Must it place on even ground?
-    - Is it possible to place the machine on any ground?
-    - If it is place on uneven ground/surface?
-    - Can the machine be place any surfaces/ground?
+    - what is a hydrojet machine?
+    - What is the use of a hydrojet machine?
+    - What type of cleaning does a hydrojet machine does?
+    - what can a hydrojet machine do?
+    - what is the purposes of a hydrojet machine?
+    - what industries uses hydrojet machine?
+    - what is the function of a hydrojet machine?
+    - what kind of cleaning does a hydrojet machine does?
+    - what is hydrojet machine use for?
+    - when is the hydrojet machine been use?
+    - how does a hydrojet machine work?
+    - How does a hydrojet machine looks like?
+    - picture of a hydrojet machine?
+    - Is the hydrojet machine a diesel operated machine?
+    - pic of hydrojet machine?
+    - hydrojet machine picture?
+    - hydrojet machine picture?
+    - hydrojet machine
+    - hydrojet machine image
+    - show picture of hydrojet machine?
+
+- intent: chathydrojet/where_deploy_hydrojet_machine
+  examples: |
+    - which industries is hydrojet machine use for?
+    - where do you deploy hydrojet machine?
+    - where is hydrojet machine usually used?
+    - what is hydrojet machine use for?
+
 - intent: chathydrojet/transfer_hydrojet_machine
   examples: |
     - What is the means of transport for the crane?
@@ -564,12 +580,28 @@ nlu:
     - Show me a photo/picture/image of the lorry crane (Show Picture)
     - Can i see a photo/picture/image of the lorry crane? (Show Picture)
     - Do you have a photo/picture/image of the lorry crane? (Show Picture)
-- intent: chathydrojet/hydrojet_machine_checklist
+
+- intent: chathydrojet/positioning_hydrojet_machine
   examples: |
-    - What is needed to power on the hydrojet machine?
-    - When to check for hydrojet machine battery connection?
-    - How do you check the battery indicator?
-    - how to know if the hydrojet is able to power up?
+    - What if the hydrojet machine is placed on uneven ground?
+    - What about putting the hydrojet machine on slope?
+    - What floor/surface can the hydrojet machine be place on?
+    - Where can i put the hydrojet machine?
+    - How can i put the hydrojet machine?
+    - How shall we place the hydrojet machine?
+    - Does the hydrojet machine need to be placed on flat ground?
+    - Can the hydrojet machine operate efficiently on uneven ground?
+    - Can we place the hydrojet machine on anywhere?
+    - Will the hydrojet machine be possible to put on anywhere?
+    - Must the hydrojet machine be place on even ground?
+    - Is it possible to place the hydrojet machine on any ground?
+    - If hydrojet machine is place on uneven ground/surface?
+    - Can the hydrojet machine be place any surfaces/ground?
+
+## END OF HYDROJET MACHINE GENERAL
+
+## HYDROJET MACHINE OPERATION
+
 - intent: chathydrojet/hydrojet_diesel_checklist
   examples: |
     - what is the hydrojet machine diesel level?
@@ -578,6 +610,105 @@ nlu:
     - when do i check for hydrojet machine diesel level?
     - how do you check the hydrojet machine diesel level?
     - how to know if there is enough diesel in hydrojet machine?
+
+- intent: chathydrojet/hydrojet_machine_connection
+  examples: |
+    - what connection are required to connect the hoses and the hydrojet machine?
+    - What is the length of a high pressure hose for hydrojet machine?
+    - What kind of connection is the hydrojet machine hoses connected?
+    - how are the hoses connected to hydrojet machine?
+    - what kind of connection is use for hydrojet machine?
+    - What are the connection set up for hydrojet machine?
+    - what kind of connection system is available for hydrojet machine?
+    - What kind of whip arrestor to used?
+    - Where do i connect the whip arrestor for hydrojet machine hoses?
+    - Where to install the whip arrestor for hydrojet machine hoses
+    - Where should the whip arrestor install for hydrojet machine?
+    - When should you attached the Whip arrestor for hydrojet machine?
+    - how is the hoses connected to hydrojet machine?
+    - How do i connect the hoses to hydrojet machine?
+    - How is the hoses and hydrojet machine connected together?
+    - how many type of connection are there for hydrojet machine?
+    - how many type of connection is available for hydrojet machine?
+    - How many set up system are there for hydrojet machihe?
+
+- intent: chathydrojet/2_setup_hydrojet_connection
+  examples: |
+    - Why is there 2 setup system for hydrojet machine connection?
+    - When should you use single setup system for hydrojet machine?
+    - When should you use dual setup system for hydrojet machine?
+
+- intent: chathydrojet/hydrojet_engine_transmission
+  examples: |
+    - what is the pressure limit to the machine in pressure?
+    - What is a hydrojet machine RPM controller?
+    - how to increase the hydrojet machine pressure?
+    - How to decrease the hydrojet machine pressure?
+    - How does a hydrojet machine RPM controller looks like?
+    - How do you connect the hydrojet machine transmission?
+    - How do you engage the transmission of the hydrojet machine engine?
+
+- intent: chathydrojet/hydrojet_machine_control_panel
+  examples: |
+    - What is a hydrojet machine control panel?
+    - what is the function of a hydrojet machine control panel?
+    - what is the use of the hydrojet machine control panel?
+    - What is the purpose of a hydrojet machine control panel?
+    - what buttons are available at the hydrojet machine control panel?
+    - what are the function of a hydrojet machine control panel?
+    - what does the hydrojet machine control panel shows?
+    - What is the function of a rabbit?
+    - what is the function of a turtle?
+    - what other function are available at the hydrojet machine control panel?
+    - where can i find the hydrojet machine control panel?
+    - How does the hydrojet machine control panel looks like?
+    - how to operate the hydrojet machine button?
+    - How to increase the speed of the hydrojet machine engine?
+    - How to decrease the speed of the hydrojet machine engine?
+    - How to operate the hydrojet machine control panel?
+
+- intent: chathydrojet/hydroket_splitter
+  examples: |
+    - What is a hydrojet machine splitter?
+    - What is the function of the hydrojet machine splitter?
+    - What equipment is required when i need to use 2 hydrojet guns?
+    - Where can i monitor the hydrojet machine pressure?
+    - Where is the monitor gauge for hydrojet machine?
+    - Where is the secondary pressure gauge for hydrojet machine gun?
+    - Why do i need a spliter for hydrojet machine?
+    - When will i need a hydrojet machine splitter?
+    - How can the dual hydrojet machine gun connection be connected?
+    - Can the splitter gauge for hydrojet machine be use?
+    - Secondary pressure gauge for hydrojet machine gun?
+    - Any secondary monitor gauge for hydrojet machine gun available?
+
+- intent: chathydrojet/hydrojet_gun
+  examples: |
+    - What is the purpose of a hydrojet gun?
+    - What does a hydrojet gun do?
+    - what is the function of a hydrojet gun?
+    - What does a hydrojet gun looks like?
+    - what is the hydrojet gun set up?
+    - How do you operate the hydrojet gun?
+    - How to clean the surface of the tank using a gun?
+    - how does the hydrojet gun operate?
+
+
+- intent: chathydrojet/hydrojet_gun_training
+  examples:
+    - Who can operate the hydrojet gun?
+    - Is training required before operating the hydrojet gun?
+    - Should we undergo training before operate hydrojet gun?
+
+# END OF HYDROJET MACHINE OPERATION
+
+- intent: chathydrojet/hydrojet_machine_checklist
+  examples: |
+    - What is needed to power on the hydrojet machine?
+    - When to check for hydrojet machine battery connection?
+    - How do you check the battery indicator?
+    - how to know if the hydrojet is able to power up?
+
 - intent: chathydrojet/hydrojet_water_tank_checklist
   examples: |
     - where to fill up the water of hydrojet machine?
@@ -637,25 +768,12 @@ nlu:
     - How big is the hydrojet machine diesel tank?
     - Diesel tank of hydrojet machine how big?
     - Size of hydrojet machine diesel tank?
-- intent: chathydrojet/hydrojet_splitter_use
-  examples: |
-    - What is a hydrojet machine splitter?
-    - What is the function of the hydrojet machine splitter?
-    - What equipment is required when i need to use 2 hydrojet guns?
-    - Where can i monitor the hydrojet machine pressure?
-    - Where is the monitor gauge for hydrojet machine?
-    - Where is the secondary pressure gauge for hydrojet machine gun?
-    - Why do i need a spliter for hydrojet machine?
-    - When will i need a hydrojet machine splitter?
-    - How can the dual hydrojet machine gun connection be connected?
-    - Can the splitter gauge for hydrojet machine be use?
-    - Secondary pressure gauge for hydrojet machine gun?
-    - Any secondary monitor gauge for hydrojet machine gun available?
 
 
   ## THE END OF HYDROJET MACHINE
 
                 ## BOOSTER PUMP MACHINE
+
 ## BOOSTER PUMP GENERAL
 
 - intent: chatbooster/booster_intro
