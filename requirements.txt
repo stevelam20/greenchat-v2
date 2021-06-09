@@ -1,4 +1,4 @@
-rasa~=2.6.2-full
+rasa~=2.6.0
 rasa-sdk~=2.6.0
 pytablewriter
 pandas
