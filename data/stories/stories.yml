@@ -11,10 +11,16 @@ stories:
 #   - action: utter_ask_name
 #   - intent: name_entry
 #     entities:
-#     - name: "David"
+#     - name: ""
 #   - action: action_name_form
 #   - active_loop: null
 
+- story: path about time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_time
+  - action: action_show_time
 
 
 - story: out of scope path
@@ -49,6 +55,29 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
+## Ask about names
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_names
+  - action: name_form
+  - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: first_name
+  - slot_was_set:
+    - first_name: vincent
+  - slot_was_set:
+    - requested_slot: last_name
+  - slot_was_set:
+    - last_name: vincent-mcvincent
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+
 ## FIRST OPETION FOR HYDROJET LEARNING
 - story: green hydrojet machine
   steps:
@@ -73,6 +102,31 @@ stories:
   - action: utter_green_option_booster_pump_pg_2
   - intent: next_page
   - action: utter_green_option_booster_pump_pg_3
+
+# - story: Booster Pump Learning 1
+#   steps:
+#   - intent: booster_pump_option
+#   - action: utter_affirm_booster_option
+#   - action: action_set_reminder
+#   - action: utter_booster_pump_setup_1
+#   - action: action_set_reminder
+#   - action: utter_booster_pump_setup_2
+#   - action: action_set_reminder
+#   - action: utter_booster_pump_setup_3
+#   - action: action_set_reminder
+#   - action: utter_booster_pump_setup_4
+#   - action: action_set_reminder
+#   - action: utter_booster_pump_setup_5
+#   - action: action_set_reminder
+#   - intent: from_intent
+#   - active_loop: null
+
+- story: Green Booster Pump Training 1
+  steps:
+  - intent: booster_pump_option
+  - action: action_booster_story1
+  - intent: from_intent
+  
 
 ## FIRST OPTION FOR VACUUM TRUCK LEARNING
 - story: green vacuum truck
