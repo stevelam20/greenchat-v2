@@ -2,4 +2,4 @@ rasa-sdk~=2.6.0
 pytablewriter
 pandas
 numpy~=1.18.5
-yaml
+pyyaml
