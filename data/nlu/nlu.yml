@@ -11,6 +11,12 @@ nlu:
     - hi there
     - hello there
     - yo
+    - good morning
+    - hi
+    - hey there
+    - hey
+    - good evening
+    - hello
     - Hello?
     - HEY
     - hello are you still there
@@ -19,6 +25,8 @@ nlu:
     - Hey
     - Hi
     - hi!
+    - hello there
+    - hi there
     - Hello
     - hello its ella
     - Hola.
@@ -41,9 +49,12 @@ nlu:
     - see you later
     - see ya
     - buh bye
+    - see you later
+    - goodbye
     - i'm done
     - quit
     - stop
+    - bye
     - Adios
     - BYEE
     - GOODBYE
@@ -64,6 +75,7 @@ nlu:
     - good bye
     - good bye rasa bot!
     - good night
+    - goodbye
     - goodbye.
     - goodnight
     - gotta go
@@ -85,6 +97,7 @@ nlu:
     - okay thank you goodbye
     - thank you bye
     - um okay thank you good bye
+    - thank you
     - and thats all thank you and good bye
     - okay thank you
     - thanks
@@ -101,6 +114,7 @@ nlu:
     - great
     - thanks for the help
     - thanks you
+    - thanks!
     - thankyou
     - thnks
     - thx
@@ -173,6 +187,7 @@ nlu:
     - what can I ask you?
     - what do you do?
     - what can you help me with?
+    - help me
     - help, what do you do
     - how do I use this
     - how can you help me
@@ -183,6 +198,8 @@ nlu:
     - come back
     - cool! can I do something else here?
     - hello what can you do for me
+    - help
+    - help me
     - help please
     - help pls
     - help?
@@ -243,6 +260,26 @@ nlu:
     - Check ticket status
     - check incident status
     - look up ticket status
+
+- intent: request_names
+  examples: |
+    - i want to give you my name
+    - give name
+    - you need to know my name
+    - do you know my name?
+
+- lookup: names
+  examples: |
+    - james
+    - john
+    - robert
+    - michael
+    - william
+    - mary
+    - david
+    - richard
+    - joseph
+
 - intent: hydrojet_machine_option
   examples: |
     - I would like to choose hydrojet machine training
@@ -305,6 +342,11 @@ nlu:
     - Yepp
     - Yes
     - Yes I do
+    - Yes, I have a question
+    - Yes, i do have questions
+    - Yes, help me solve my problem
+    - Yes, i have doubts
+    - Yes, help me please
     - Yes please
     - Yes please!
     - Yes, I accept
@@ -312,6 +354,7 @@ nlu:
   examples: |
     - not really
     - no
+    - nah!
     - I don't think so
     - never
     - no way
@@ -332,11 +375,26 @@ nlu:
     - i guess it means - no
     - i'm afraid not
     - i'm not sure- no
+    - I don't have
+    - I don't have any issues
+    - I don't have any questions
+    - I don't have any doubts
+    - i don't have any problems
+    - nope
+    - no thanks
     - not that one
     - don't use that
     - please no
     - no don't do that
     - no, use abraham.lincoln@example.com
+
+- intent: give_time
+  examples: |
+    - can you tell me what time it is
+    - tell me the time
+    - got the time
+    - what time is it
+
 - intent: chitchat/ask_weather
   examples: |
     - What's the weather outside?
@@ -377,14 +435,48 @@ nlu:
     - Can i maintain/adjust the pressure of the booster pump?
     - Can i monitor the pressure from the pressure gauge from the booster pump?
     - Can i use the start button to start the engine?
+    - Can i use diesel on the booster pump?
     - Can i use Euro 4/5/above Diesel grade on the booster pump?
     - Can the drip tray contain oil leakage from the engine and diesel tank on the booster pump?
     - Can i check the quantity level of the diesel on the booster pump?
     - By connecting to the earthing point, am i able to prevent static electricity passing through from the booster pump?
     - Can i do booster pump maintenance?
     - Can i stop the engine on the booster pump by sliding the stop lever?
-    - Can I pump water using the booster pump?
-    - Can I use diesel on the booster pump
+
+    - Can I use vacuum truck to suck water?
+    - Can I use vacuum truck to suck slop?
+    - Can I use vacuum truck to suck oily sludge?
+    - Can I use vacuum truck for tank cleaning?
+    - Can I use 'R' pin to secure the vacuum truck hoses?
+    - Can I use Euro 4 or 5 standard diesel on our vacuum truck?
+    - Can I ground the vacuum truck to avoid build up of static charge?
+    - Can I earth the vacuum truck to avoid build up of static charge?
+    - Can I check level of item inside the vacuum truck?
+    - Can I send the vacuum truck for maintenance?
+    - Can I check the pressure inside the vacuum tank of the vacuum truck during suction operation?
+    - Can I check the pressure inside the vacuum tank of the vacuum truck during discharge operation?
+    - Can I use vacuum truck in oil terminal?
+    - Can I adjust the flowrate of the vacuum truck suction?
+    - Can I adjust the flowrate of the vacuum truck discharge?
+    - Can I monitor the operating pressure of the vacuum truck?
+    - During an emergency, can I press the emergency button when the vacuum truck is still in operation?
+    - Can I wash the vacuum truck's vacuum tank?
+
+    - Can the hydrojet machine be running continuously for 4 hours straight?
+    - can the splitter gauge be used?
+    - Can the hydrojetting machine be running continuously for 4 hours straight?
+    - Can i use diesel on the hydrojetting Machine?
+    - Can i use mobile crane to lift the hydrojetting machine?
+    - Can i maintain/adjust the pressure of the hydrojetting machine?
+    - can the hydrojetting machine run for long period?
+    - is the hydrojetting machine able to operate at long hours?
+    - Can i check the quantity of diesel left in the tank on the diesel gauge?
+    - can the hydrojetting machine be switch on for continuous operation?
+    - can the hydrojetting machine contains its oil if there is an oil leakage?
+    - can i use industrial water to operate the hydrojeting machine?
+
+
+
 - intent: chitchat/affirm_yes
   examples: |
     - Is diesel the fuel consumption to the booster pump?
@@ -413,6 +505,27 @@ nlu:
     - Is there a booster pump maintenance record?
     - Is there a requirement to maintain the booster pump?
     - Do i stop the engine on the booster pump by sliding the stop lever?
+
+    - Can the vacuum truck perform discharge operation?
+    - Can the vacuum truck suck water?
+    - Can the vacuum truck suck slop?
+    - Can the vacuum truck suck oily sludge?
+    - Can the vacuum truck be used in oil terminal?
+    - Can the vacuum truck be used for tank cleaning?
+    - Can the vacuum truck use Euro 4 or 5 standard diesel?
+    - Can the flowrate of the vacuum truck suction be adjusted?
+    - Can the flowrate of the vacuum truck discharge be adjusted?
+    - Can the operating pressure of the vacuum truck be monitored?
+    - Is there a pressure gauge on the vacuum truck?
+    - During an emergency, can the emergency button be pressed when the vacuum truck is still in operation?
+    - Is the vacuum truck equipped with spilling kit?
+    - Is there a spilling kit in the vacuum truck?
+    - Do I need to use drip tray when operating vacuum truck?
+    - Is drip tray required when operating vacuum truck?
+    - Is there a vacuum truck maintenance record?
+    - Does the vacuum truck require regular maintenance?
+    - Do I need approval from supervisor or manager to operate the vacuum truck?
+
 - intent: chitchat/affirm_should
   examples: |
     - Should i use water on the booster pump?
@@ -426,11 +539,35 @@ nlu:
     - Should i deplete/drain the excess oil from the drip tray?
     - Should i monitor the pressure from the pressure gauge from the booster pump?
     - Should i use the start button to start the engine?
+    - Should i use diesel on the booster pump?
     - Should i use Euro 4/5/above Diesel grade on the booster pump?
     - Do i need to use whip arrestor?
     - Do i need to do earthing on the booster pump?
     - Do i need to do booster pump maintenance?
     - Should i stop the engine on the booster pump by sliding the stop lever?
+
+    - Should I use vacuum truck to suck water?
+    - Should I use vacuum truck to suck slop?
+    - Should I use vacuum truck to suck oily sludge?
+    - Should I use vacuum truck for tank cleaning?
+    - Should I use 'R' pin to secure the vacuum truck hoses?
+    - Should I use Euro 4 or 5 standard diesel on our vacuum truck?
+    - Should I ground the vacuum truck to avoid build up of static charge?
+    - Should I earth the vacuum truck to avoid build up of static charge?
+    - Should I monitor the level of item inside the vacuum truck while in operation?
+    - Should I send the vacuum truck for regular maintenance?
+    - Should I check the pressure inside the vacuum tank of the vacuum truck during suction operation?
+    - Should I check the pressure inside the vacuum tank of the vacuum truck during discharge operation?
+    - Should I monitor the operating pressure of the vacuum truck?
+    - During an emergency, should I press the emergency button when the vacuum truck is still in operation?
+    - Should I wash the vacuum tank of the vacuum truck?
+    - Should I get a trained partner to operate the vacuum truck with me?
+    - Should I get the HAZMAT Driver Permit before operating the vacuum truck?
+    - Should I be reading positive pressure from the pressure gauge when the vacuum truck is discharging?
+    - Should I be reading negative pressure from the pressure gauge when the vacuum truck is sucking?
+    - Should I be seeing positive pressure from the pressure gauge when the vacuum truck is discharging?
+    - Should I be seeing negative pressure from the pressure gauge when the vacuum truck is sucking?
+
 - intent: chitchat/deny_no
   examples: |
     - Is petrol the fuel consumption to the booster pump?
@@ -480,9 +617,29 @@ nlu:
     - Can i use the speed lever to stop the engine on the booster pump?
     - Can i use euro 2/3 diesel on the booster pump?
     - Can i use the drip tray to contain water flowing out from the hoses connection?
-    - Can I use petrol on the booster pump
-    - Can I use corrosive material on the booster pump
-    - Can I use petrol on the booster pump?
+
+    - Can i use vacuum truck to suck acid?
+    - Can i use vacuum truck to suck alkaline?
+    - Can I use vacuum truck to suck harden sludge?
+    - Can i use whip arrestors to secure the vacuum truck hoses?
+    - Can I park the vacuum truck on a ramp while operating?
+    - Can I use Euro 3 standard diesel on the vacuum truck?
+    - Can I fill the vacuum tank of the vacuum truck to more than its capacity?
+    - Can I leave the vacuum truck unattended while in operation?
+    - Can I operate the vacuum truck without approval from supervisor or manager?
+    - Can I operate the vacuum truck without permission from supervisor or manager?
+    - Can anyone operate the vacuum truck?
+    - Can the vacuum truck be used to suck acid?
+    - Can the vacuum truck be used to suck alkaline?
+    - Can the vacuum truck be used to suck harden sludge?
+    - Can whip arrestors be used to secure the vacuum truck hoses?
+    - Can the vacuum truck be parked on a ramp while operating?
+    - Can Euro 3 standard diesel be used on the vacuum truck?
+    - Can the vacuum tank of the vacuum truck be filled to more than its capacity?
+    - Can the vacuum truck be left unattended while in operation?
+    - Can the vacuum truck be used without approval from supervisor or manager?
+    - Can the vacuum truck be used without permission from supervisor or manager?
+
 - intent: chitchat/deny_should_not
   examples: |
     - Should i use acid material on the booster pump?
@@ -497,12 +654,31 @@ nlu:
     - Should i use the drip tray to contain water flowing out from the hoses connection?
     - Can I use euro 3 standard diesel on the Greenchem's vacuum truck?
     - Can I use euro 3 standard diesel on the our vacuum truck?
+
+    - Should i use vacuum truck to suck acid?
+    - Should i use vacuum truck to suck alkaline?
+    - Should I use vacuum truck to suck harden sludge?
+    - Should i use whip arrestors to secure the vacuum truck hoses?
+    - Should I park the vacuum truck on a ramp while operating?
+    - Should I use Euro 3 standard diesel on the vacuum truck?
+    - Should I fill the vacuum tank of the vacuum truck to more than its capacity?
+    - Should I leave the vacuum truck unattended while in operation?
+    - Should I operate the vacuum truck without approval from supervisor or manager?
+    - Should I operate the vacuum truck without permission from supervisor or manager?
+    - Should I be reading negative pressure from the pressure gauge when the vacuum truck is discharging?
+    - Should I be reading positive pressure from the pressure gauge when the vacuum truck is sucking?
+    - Should I be seeing negative pressure from the pressure gauge when the vacuum truck is discharging?
+    - Should I be seeing positive pressure from the pressure gauge when the vacuum truck is sucking?
+
 - intent: chitchat/ask_supervisor
   examples: |
     - Where can i get the booster pump maintenance procedures?
     - Where do i check for the booster pump maintenance record?
     - Where do i get the booster pump maintenance procedures?
     - Where can i get the booster pump maintenance record?
+## HYDROJET MACHINE
+
+# HYDROJET MACHINE GENERAL
 - intent: chathydrojet/hydrojet_machine
   examples: |
     - what is a hydrojet machine?
@@ -521,15 +697,18 @@ nlu:
     - Is the hydrojet machine a diesel operated machine?
     - pic of hydrojet machine?
     - hydrojet machine picture?
+    - hydrojet machine picture?
     - hydrojet machine
     - hydrojet machine image
     - show picture of hydrojet machine?
+
 - intent: chathydrojet/where_deploy_hydrojet_machine
   examples: |
     - which industries is hydrojet machine use for?
     - where do you deploy hydrojet machine?
     - where is hydrojet machine usually used?
     - what is hydrojet machine use for?
+
 - intent: chathydrojet/transfer_hydrojet_machine
   examples: |
     - What is the means of transport for the crane?
@@ -553,6 +732,7 @@ nlu:
     - Show me a photo/picture/image of the lorry crane (Show Picture)
     - Can i see a photo/picture/image of the lorry crane? (Show Picture)
     - Do you have a photo/picture/image of the lorry crane? (Show Picture)
+
 - intent: chathydrojet/positioning_hydrojet_machine
   examples: |
     - What if the hydrojet machine is placed on uneven ground?
@@ -569,6 +749,11 @@ nlu:
     - Is it possible to place the hydrojet machine on any ground?
     - If hydrojet machine is place on uneven ground/surface?
     - Can the hydrojet machine be place any surfaces/ground?
+
+## END OF HYDROJET MACHINE GENERAL
+
+## HYDROJET MACHINE OPERATION
+
 - intent: chathydrojet/hydrojet_diesel_checklist
   examples: |
     - what is the hydrojet machine diesel level?
@@ -577,6 +762,7 @@ nlu:
     - when do i check for hydrojet machine diesel level?
     - how do you check the hydrojet machine diesel level?
     - how to know if there is enough diesel in hydrojet machine?
+
 - intent: chathydrojet/hydrojet_machine_connection
   examples: |
     - what connection are required to connect the hoses and the hydrojet machine?
@@ -597,11 +783,13 @@ nlu:
     - how many type of connection are there for hydrojet machine?
     - how many type of connection is available for hydrojet machine?
     - How many set up system are there for hydrojet machihe?
+
 - intent: chathydrojet/2_setup_hydrojet_connection
   examples: |
     - Why is there 2 setup system for hydrojet machine connection?
     - When should you use single setup system for hydrojet machine?
     - When should you use dual setup system for hydrojet machine?
+
 - intent: chathydrojet/hydrojet_engine_transmission
   examples: |
     - what is the pressure limit to the machine in pressure?
@@ -611,7 +799,7 @@ nlu:
     - How does a hydrojet machine RPM controller looks like?
     - How do you connect the hydrojet machine transmission?
     - How do you engage the transmission of the hydrojet machine engine?
-    - what is a hydrojet machine RPM controller
+
 - intent: chathydrojet/hydrojet_machine_control_panel
   examples: |
     - What is a hydrojet machine control panel?
@@ -630,7 +818,7 @@ nlu:
     - How to increase the speed of the hydrojet machine engine?
     - How to decrease the speed of the hydrojet machine engine?
     - How to operate the hydrojet machine control panel?
-    - how does the hydrojet machine control panel looks like ?
+
 - intent: chathydrojet/hydroket_splitter
   examples: |
     - What is a hydrojet machine splitter?
@@ -645,6 +833,7 @@ nlu:
     - Can the splitter gauge for hydrojet machine be use?
     - Secondary pressure gauge for hydrojet machine gun?
     - Any secondary monitor gauge for hydrojet machine gun available?
+
 - intent: chathydrojet/hydrojet_gun
   examples: |
     - What is the purpose of a hydrojet gun?
@@ -655,30 +844,28 @@ nlu:
     - How do you operate the hydrojet gun?
     - How to clean the surface of the tank using a gun?
     - how does the hydrojet gun operate?
-    - what is the purpose of hydrojet gun
+
 - intent: chathydrojet/hydrojet_gun_training
   examples: |
     - Who can operate the hydrojet gun?
     - Is training required before operating the hydrojet gun?
     - Should we undergo training before operate hydrojet gun?
+
+# END OF HYDROJET MACHINE OPERATION
+
+## HYDROJET MACHINE TECHNICAL SPECIFICATIONS
+
 - intent: chathydrojet/hydrojet_machine_battery
-  examples:
-  - text: |
-      what is needed to power on the hydrojet machine?
-  - text: |
-      what happen to my hydrojet machine battery, its unable to start?
-  - text: |
-      What happen when there is only 1 set of battery	for hydrojet machine?
-  - text: |
-      where to check the hydojet machine polarity of battery?
-  - text: |
-      where to check the hydrojet machine battery indicator?
-  - text: |
-      how do you check the hydrojet machine battery indicator?
-  - text: |
-      how to know if the hydrojet machine is able to power up?
-  - text: |
-      How to connect the hydrojet machine polarity of the battery?
+  examples: |
+    - what is needed to power on the hydrojet machine?
+    - what happen to my hydrojet machine battery, its unable to start?
+    - What happen when there is only 1 set of battery	for hydrojet machine?
+    - where to check the hydojet machine polarity of battery?
+    - where to check the hydrojet machine battery indicator?
+    - how do you check the hydrojet machine battery indicator?
+    - how to know if the hydrojet machine is able to power up?
+    - How to connect the hydrojet machine polarity of the battery?
+
 - intent: chathydrojet/hydrojet_weight
   examples: |
     - What is the weight of the hydrojet Machine?
@@ -686,6 +873,7 @@ nlu:
     - How much does hydrojet machine weight
     - How heavy is the Hydrojet machine?
     - The Weight of hydrojet machine?
+
 - intent: chathydrojet/hydrojet_dimension
   examples: |
     - What is the measurement for hydrojet machine?
@@ -695,6 +883,7 @@ nlu:
     - How much size is the hydrojet machine?
     - How big is the hydrojet machine?
     - How do you measure the hydrojet machine?
+
 - intent: chathydrojet/hydrojet_max_pressure
   examples: |
     - What is the maximum pressure of the hydrojet machine?
@@ -709,6 +898,7 @@ nlu:
     - How much must the maximum pressure reach for cleaning using hydrojet machine?
     - hydrojet machine maximum pressure is?
     - Hydrojet machine highest pressure?
+
 - intent: chathydrojet/hydrojet_buildin_watertank
   examples: |
     - What is the capacity of the water tank for hydrojet machine?
@@ -721,6 +911,7 @@ nlu:
     - How big is the hydrojet machine water tank
     - hydrojet machine water tank how big?
     - hydrojet machine water tank size?
+
 - intent: chathydrojet/hydrojet_diesel_tank_size
   examples: |
     - What is the capacity of the hydrojet machine diesel tank?
@@ -733,13 +924,19 @@ nlu:
     - How big is the hydrojet machine diesel tank?
     - Diesel tank of hydrojet machine how big?
     - Size of hydrojet machine diesel tank?
-    - how big is hydrojet machine diesel tank ?
+
+
+# END OF HYDROJET MACHINE TECHNICAL SPECIFICATIONS
+
+## HYDROJET MACHINE MAINTENANCE & INSEPCTION
+
 - intent: chathydrojet/certification_hydrojet_machine
   examples: |
     - What is MOM standard regulation in regards to hydrojet machine inspection and maintenance?
     - What is needed to be inspected on the hydrojet machine?
     - Who is responsible to ensure that the hydrojet machine be maintain yearly?
     - How often does the hydrojet machine being service?
+
 - intent: chathydrojet/inspection_lifting_crane
   examples: |
     - Why is lifting equipment be inspected?
@@ -748,6 +945,7 @@ nlu:
     - How long does the lifting inspection done?
     - How long is the validity of the lifting inspection?
     - Lifting inspection how long?
+
 - intent: chathydrojet/inspection_hydrojet_machine
   examples: |
     - What are the criteria for hydrojet machine inspection?
@@ -760,6 +958,7 @@ nlu:
     - When will hydrojet machine required to be send for inspection?
     - How often does the hydrojet machine need to be inspected/certified?
     - how often does the hydrojet machine need to be inspected?
+    - How often does the hydrojet machine need to be inspected/certified?
     - How often do i need to send hydrojet machine for inspection?
     - How long do we need to send hydrojet machine for inspection?
     - How long does the inspection of hydrojet machine last?
@@ -779,7 +978,7 @@ nlu:
     - Does the hydrojet machine need to be maintain?
     - Do i need to maintain the hydrojet machine?
     - Does hydrojet machine need to be inspected?
-    - what will hydrojet machine required to be send for inspection?
+
 - intent: chathydrojet/hydrojet_hoses_certification
   examples: |
     - What is the validity period of the hydrojet hoses?
@@ -801,17 +1000,24 @@ nlu:
     - Requirements for hydrojet hoses?
     - Expiry of hydrojet hoses?
     - Is there any expiry on hydrojet hoses?
+
 - intent: chathydrojet/hydrojet_machine_checklist
   examples: |
     - What is needed to power on the hydrojet machine?
     - When to check for hydrojet machine battery connection?
     - How do you check the battery indicator?
     - how to know if the hydrojet is able to power up?
+
 - intent: chathydrojet/hydrojet_water_tank_checklist
   examples: |
     - where to fill up the water of hydrojet machine?
     - When do you fill up the water of hydrojet machine?
     - How much to fill up the water tank of hydrojet machine?
+
+# END OF MAINTENANCE & INSPECTION
+
+## HYDROJET MACHINE SAFETY
+
 - intent: chathydrojet/hydrojet_safety_ppe
   examples: |
     - What kind of additional PPE is required when operating the machine?
@@ -827,6 +1033,7 @@ nlu:
     - Show me a photo/picture/image of the PPE
     - Can i see a photo/picture/image of the PPE?
     - Do you have a photo of the PPE?
+
 - intent: chathydrojet/hydrojet_machine_operating_hour
   examples: |
     - What is the maximum amount of hour the hydrojet machine can run?
@@ -835,14 +1042,15 @@ nlu:
     - How long can the hydrojet machine run for?
     - How long can the hydrojet machine operate?
     - How long can i operate the hydrojet machine?
-    - Can the hydrojet machine be running continuously for 4 hours straight?
     - Does the hydrojet machine need to be stopped occasionally?
+
 - intent: chathydrojet/hydrojet_hoses_check
   examples: |
     - How do i check for any leakage in the hydrojet hoses connection?
     - How do i know if the hydrojet hoses are connected properly?
     - How do i ensure that the hydrojet hoses are connected properly?
     - is there a way to check if the hydrojet hoses are connected properly?
+
 - intent: chathydrojet/competency_operating_hydrojet_machine
   examples: |
     - What are the training for hydrojet machine?
@@ -857,6 +1065,21 @@ nlu:
     - Must I trained before using hydrojet machine ?
     - Any training needed to use or operate hydrojet machine?
     - Anyone can use the hydrojet machine?
+
+# END OF SAFETY HYDROJET MACHINE
+
+- synonym: hydrojet machine
+  examples: |
+    - high pressure jet
+    - low flow high pressure
+    - high pressure pump machine
+
+  ## THE END OF HYDROJET MACHINE
+
+                ## BOOSTER PUMP MACHINE
+
+## BOOSTER PUMP GENERAL
+
 - intent: chatbooster/booster_intro
   examples: |
     - What is a Booster Pump?
@@ -891,7 +1114,6 @@ nlu:
     - The pressure of the booster pump?
     - Pressure of the booster pump?
     - Booster pump pressure is?
-    - What are the available pressure on the booster pump
 - intent: chatbooster/deploy_booster_pump
   examples: |
     - What is the application of booster pump?
@@ -911,6 +1133,7 @@ nlu:
     - How does someone qualify to be a booster pump operator?
     - How do I train the booster pump operator?
     - How can i be a booster pump operator?
+
 - intent: chatbooster/booster_material_usage
   examples: |
     - What type of product is suitable to use for booster pump?
@@ -921,6 +1144,9 @@ nlu:
     - Why can't we use oil/corrosive material on the booster pump?
     - Besides water, what other material can be used on the booster pump?
     - If oil/corrosive material is being used, what will happen to the booster pump?
+
+##              PROMPTING TO ASK FOR THE TRAINING LEARNING VIDEO
+##              MAY BE ABLE TO REMOVE FROM CHATBOOSTER FAQ
 - intent: chatbooster/booster_operating_procedures
   examples: |
     - What are the booster pump operating procedures?
@@ -930,12 +1156,17 @@ nlu:
     - How to operate a booster pump?
     - Can you show me how to operate the booster pump?
     - Is there any booster pump operation procedures?
+
+##              CONSIDERED INTENT
+## BOOSTER PUMP OPERATIONS
+
 - intent: chatbooster/booster_in_out_connection
   examples: |
     - What are the types of inlet and outlet connection on the booster pump?
     - What type of inlet and outlet connection are used on the booster pump?
     - What type of connector is used on the booster pump?
     - What are the sizes of the inlet and outlet connection on the booster pump?
+    - What type of inlet and outlet connection are used on the booster pump?
     - What does the inlet and outlet connection booster pump look like?
     - What are the inlet and outlet connection of the booster pump?
     - Where do i connect the hoses on the booster pump?
@@ -960,6 +1191,7 @@ nlu:
     - What type of hose connectors to be used on the booster pump?
     - What are the sizes of the inlet and outlet hoses connection on the booster pump?
     - What does the booster pump hoses connection look like?
+    - What are the sizes of the inlet and outlet hoses connection on the booster pump?
     - What type of inlet and outlet should be used on the booster pump?
     - What are the hoses connection on the booster pump?
     - What do the booster pump inlet and outlet hoses connection look like?
@@ -1011,6 +1243,9 @@ nlu:
     - How does the booster pump start button looks like?
     - Can you show me the image/picture of the start button on the booster pump
     - Do you have the picture/image/photo of the booster pump's start button?
+
+## BOOSTER PUMP TECHNICAL SPECIFICATIONS
+
 - intent: chatbooster/booster_pump_weight
   examples: |
     - What is the weight/mass of the booster pump
@@ -1027,7 +1262,9 @@ nlu:
     - Where to fill up the booster pump with diesel?
     - How much quantity of Diesel to be added on the booster pump?
     - Show me the photo/image/picture of the diesel filling point
-    - What is the fuel consumption of the booster pump?
+
+## BOOSTER PUMP SAFETY ASPECTS
+
 - intent: chatbooster/booster_diesel_gauge
   examples: |
     - What is the purpose of booster pump diesel gauge?
@@ -1116,6 +1353,9 @@ nlu:
     - Show me how to connect the earthing cable on the booster pump.
     - Do you have the photo/image/picture of the earthing cable connecting on the booster pump?
     - Can I see the photo/picture/ image of the earthing cable connecting on the booster pump?
+
+## BOOSTER PUMP MAINTENANCE & INSPECTION
+
 - intent: chatbooster/booster_maintenance
   examples: |
     - What is the required to assist the mechanic to maintain the booster pump?
@@ -1151,6 +1391,21 @@ nlu:
     - How frequent do i need to certify the booster pump?
     - How long can the booster pump be used before the next inspection?
     - How can i certify the booster pump?
+
+- synonym: booster pump
+  examples: |
+    - water pump
+    - diesel driven booster pump
+    - high flow low pressure pump
+    - water booster pump
+    - water booster
+
+## END OF BOOSTER PUMP
+
+## VACUUM TRUCK
+
+## VACUUM TRUCK GENERAL
+
 - intent: chatvac/vacuum_purpose
   examples: |
     - What is vacuum truck?
@@ -1221,6 +1476,9 @@ nlu:
     - Can I see an image of the product label?
     - Do you have a photo of the product label?
     - Do you have an image of the product label?
+
+## VACUUM TRUCK OPERATIONS
+
 - intent: chatvac/vac_truck_hose
   examples: |
     - What hose is used on the vacuum truck?
@@ -1305,6 +1563,7 @@ nlu:
     - Do you have an image of vacuum truck PTO switch?
     - Do you have a picture of vacuum truck PTO switch?
     - Do you have a photo of vacuum truck PTO switch?
+
 - intent: chatvac/buddy_operate_vac_truck
   examples: |
     - What is the minimum number of people needed to operate the vacuum truck?
@@ -1313,6 +1572,9 @@ nlu:
     - How many helper is required to operate the vacuum truck?
     - Can the vacuum truck operator operate the vacuum truck alone?
     - Should the vacuum truck operator operate the vacuum truck alone?
+
+## VACUUM TRUCK SPECIFICATIONS
+
 - intent: chatvac/vac_discharge_pressure
   examples: |
     - What is the vacuum truck maximum pressure for discharging?
@@ -1351,6 +1613,9 @@ nlu:
     - What is the suction capacity of Greenchem's 15,000 litres vacuum truck?
     - What is the suction flow rate of Greenchem's 15,000 litres vacuum truck?
     - How fast can Greenchem's 15,000 litres vacuum truck suck?
+
+## VACUUM TRUCK SAFETY
+
 - intent: chatvac/vac_truck_ppe
   examples: |
     - What are the PPE required when operating the vacuum truck?
@@ -1437,6 +1702,9 @@ nlu:
     - Can I see a picture of the vacuum truck emergency button?
     - Can I see an image of the vacuum truck emergency button?
     - Do you have a photo of the vacuum truck emergency button?
+
+## VACUUM TRUCK MAINTENANCE
+
 - intent: chatvac/vac_maintenance
   examples: |
     - What is the vacuum truck maintenance schedule?
@@ -1481,24 +1749,7 @@ nlu:
     - Is the vacuum tank of the vacuum truck able to be cleaned?
     - Does the vacuum truck's vacuum tank require cleaning?
     - Must the vacuum truck's vacuum tank be cleaned?
-- synonym: high
-  examples: |
-    - escalated
-    - escalate
-    - urgent
-    - really important
-- synonym: hydrojet machine
-  examples: |
-    - high pressure jet
-    - low flow high pressure
-    - high pressure pump machine
-- synonym: booster pump
-  examples: |
-    - water pump
-    - diesel driven booster pump
-    - high flow low pressure pump
-    - water booster pump
-    - water booster
+
 - synonym: vacuum truck
   examples: |
     - vacuum trucks
@@ -1508,3 +1759,13 @@ nlu:
     - high suction truck
     - fast suction tankers
     - fast suction trucks
+
+## END OF VACUUM TRUCK
+
+
+- synonym: high
+  examples: |
+    - escalated
+    - escalate
+    - urgent
+    - really important
