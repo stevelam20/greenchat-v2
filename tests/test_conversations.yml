@@ -140,3 +140,4 @@ stories:
   - action: utter_green_option_vacuum_truck_pg_2
   - intent: next_page
   - action: utter_green_option_vacuum_truck_pg_3
+  
